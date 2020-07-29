@@ -5,6 +5,17 @@ import Slider from 'react-slick';
 import Layout from '../components/Layout';
 
 import image from '../assets/images/bg-image/slider-mainbg-003.jpg';
+import imageCustomer1 from '../assets/images/customers/cre-logo.png';
+import imageCustomer2 from '../assets/images/customers/ende-andina-logo.png';
+import imageCustomer3 from '../assets/images/customers/ende.png';
+import imageCustomer4 from '../assets/images/customers/gobernacion-logo.png';
+import imageCustomer5 from '../assets/images/customers/tde-logo.png';
+import imageCustomer6 from '../assets/images/customers/valle-hermoso-logo.png';
+import imageNews1 from '../assets/images/news/termoelctrica_Del_Sur.jpg';
+import imageNews2 from '../assets/images/news/finergy2019.jpg';
+import imageProject1 from '../assets/images/projects/ciclo-combinado-termoelectrica-warnes.jpg';
+import imageProject2 from '../assets/images/projects/diseno-pailon-sur.jpg';
+import imageProject3 from '../assets/images/projects/subestacion-tarija.jpg';
 
 var slick_slider = {
   dots: false,
@@ -52,36 +63,40 @@ const IndexPage = () => (
     <section>
       <div className="container-fluid">
         <div className="row">
-          <div id="Home_banner2" className="carousel">
-            <div className="view">
-              <img className="d-block w-100" src={image} alt="Second slide" />
-            </div>
+          <div id="Home_banner2" className="carousel carousel-fade">
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <div className="view">
+                  <img className="d-block w-100" src={image} alt="Second slide" />
+                </div>
 
-            <div className="carousel-caption">
-              <div className="container-xl d-flex">
-                <div className="carousel-caption-inner">
-                  <h5 className="ttm-textcolor-skincolor">
-                    Trust and Client Focus&nbsp;&nbsp;&nbsp;
-                  </h5>
+                <div className="carousel-caption">
+                  <div className="container-xl d-flex">
+                    <div className="carousel-caption-inner">
+                      <h5 className="ttm-textcolor-skincolor">
+                        Trust and Client Focus&nbsp;&nbsp;&nbsp;
+                      </h5>
 
-                  <h2 className="ttm-textcolor-darkgrey">
-                    Best <strong className="ttm-textcolor-skincolor">Digital Agency</strong> And
-                    Bussiness
-                  </h2>
+                      <h2 className="ttm-textcolor-darkgrey">
+                        Best <strong className="ttm-textcolor-skincolor">Digital Agency</strong> And
+                        Bussiness
+                      </h2>
 
-                  <p className="text">
-                    We are equipped with an updated technical knowledge to serve our customers
-                    properly. Our method of application maintains the industry.
-                  </p>
+                      <p className="text">
+                        We are equipped with an updated technical knowledge to serve our customers
+                        properly. Our method of application maintains the industry.
+                      </p>
 
-                  <p>
-                    <button className="ttm-btn ttm-btn-size-md ttm-bgcolor-skincolor ttm-textcolor-white mr-3">
-                      read more
-                    </button>
-                    <button className="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-btn-color-darkgrey">
-                      get altech
-                    </button>
-                  </p>
+                      <p>
+                        <button className="ttm-btn ttm-btn-size-md ttm-bgcolor-skincolor ttm-textcolor-white mr-3">
+                          View more
+                        </button>
+                        <button className="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-btn-color-darkgrey">
+                          Contact us
+                        </button>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -89,7 +104,7 @@ const IndexPage = () => (
         </div>
       </div>
     </section>
-
+    {/* about us */}
     <section className="ttm-row aboutus-section-style2 clearfix">
       <div className="container-xl">
         <div className="row no-gutters align-items-center">
@@ -221,7 +236,7 @@ const IndexPage = () => (
     </section>
 
     {/* service-section */}
-    <section className="ttm-row service-section-style2 res-991-pb-0 ttm-bgcolor-grey clearfix">
+    <section className="ttm-row service-section-style2 ttm-bgcolor-grey clearfix">
       <div className="container-xl">
         <div className="row">
           {/* row */}
@@ -231,7 +246,7 @@ const IndexPage = () => (
               <div className="title-header">
                 <h5>We Make Connections</h5>
                 <h2 className="title">
-                  We provide best <span>Services</span>
+                  We provide best business <span>Units</span>
                 </h2>
               </div>
             </div>
@@ -247,7 +262,7 @@ const IndexPage = () => (
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Experience Design</h5>
+                  <h5>Power Generation</h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -275,7 +290,7 @@ const IndexPage = () => (
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>IT Consultancy</h5>
+                  <h5>Power Substations</h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -303,7 +318,7 @@ const IndexPage = () => (
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Cyber Security</h5>
+                  <h5>Oil & Gas</h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -331,7 +346,7 @@ const IndexPage = () => (
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Digital Services</h5>
+                  <h5>Industry</h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -360,7 +375,7 @@ const IndexPage = () => (
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Experience Design</h5>
+                  <h5>Distribution Electrical Grids</h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -388,7 +403,7 @@ const IndexPage = () => (
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>IT Consultancy</h5>
+                  <h5>Lines of Transmission</h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -416,7 +431,7 @@ const IndexPage = () => (
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Cyber Security</h5>
+                  <h5>Lighting Systems</h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -451,70 +466,90 @@ const IndexPage = () => (
             <Slider
               className="row slick_slider ttm-boxes-spacing-30px"
               {...slick_slider}
-              slidesToShow={5}
+              slidesToShow={6}
+              variableWidth
             >
               <div className="ttm-box-col-wrapper">
                 <div className="client-box ttm-box-view-boxed-logo">
                   <div className="client">
-                    <div className="ttm-client-logo-tooltip" data-tooltip="client-01">
-                      <img
-                        className="img-fluid"
-                        src="https://via.placeholder.com/94X47/444444.png"
-                        alt="image"
-                      />
-                    </div>
+                    <img className="img-fluid" src={imageCustomer1} alt="image" />
                   </div>
                 </div>
               </div>
               <div className="ttm-box-col-wrapper">
                 <div className="client-box ttm-box-view-boxed-logo">
                   <div className="client">
-                    <div className="ttm-client-logo-tooltip" data-tooltip="client-02">
-                      <img
-                        className="img-fluid"
-                        src="https://via.placeholder.com/94X47/444444.png"
-                        alt="image"
-                      />
-                    </div>
+                    <img className="img-fluid" src={imageCustomer2} alt="image" />
                   </div>
                 </div>
               </div>
               <div className="ttm-box-col-wrapper">
                 <div className="client-box ttm-box-view-boxed-logo">
                   <div className="client">
-                    <div className="ttm-client-logo-tooltip" data-tooltip="client-03">
-                      <img
-                        className="img-fluid"
-                        src="https://via.placeholder.com/94X47/444444.png"
-                        alt="image"
-                      />
-                    </div>
+                    <img className="img-fluid" src={imageCustomer3} alt="image" />
                   </div>
                 </div>
               </div>
               <div className="ttm-box-col-wrapper">
                 <div className="client-box ttm-box-view-boxed-logo">
                   <div className="client">
-                    <div className="ttm-client-logo-tooltip" data-tooltip="client-04">
-                      <img
-                        className="img-fluid"
-                        src="https://via.placeholder.com/94X47/444444.png"
-                        alt="image"
-                      />
-                    </div>
+                    <img className="img-fluid" src={imageCustomer4} alt="image" />
                   </div>
                 </div>
               </div>
               <div className="ttm-box-col-wrapper">
                 <div className="client-box ttm-box-view-boxed-logo">
                   <div className="client">
-                    <div className="ttm-client-logo-tooltip" data-tooltip="client-05">
-                      <img
-                        className="img-fluid"
-                        src="https://via.placeholder.com/94X47/444444.png"
-                        alt="image"
-                      />
-                    </div>
+                    <img className="img-fluid" src={imageCustomer5} alt="image" />
+                  </div>
+                </div>
+              </div>
+              <div className="ttm-box-col-wrapper">
+                <div className="client-box ttm-box-view-boxed-logo">
+                  <div className="client">
+                    <img className="img-fluid" src={imageCustomer6} alt="image" />
+                  </div>
+                </div>
+              </div>
+              <div className="ttm-box-col-wrapper">
+                <div className="client-box ttm-box-view-boxed-logo">
+                  <div className="client">
+                    <img className="img-fluid" src={imageCustomer1} alt="image" />
+                  </div>
+                </div>
+              </div>
+              <div className="ttm-box-col-wrapper">
+                <div className="client-box ttm-box-view-boxed-logo">
+                  <div className="client">
+                    <img className="img-fluid" src={imageCustomer2} alt="image" />
+                  </div>
+                </div>
+              </div>
+              <div className="ttm-box-col-wrapper">
+                <div className="client-box ttm-box-view-boxed-logo">
+                  <div className="client">
+                    <img className="img-fluid" src={imageCustomer3} alt="image" />
+                  </div>
+                </div>
+              </div>
+              <div className="ttm-box-col-wrapper">
+                <div className="client-box ttm-box-view-boxed-logo">
+                  <div className="client">
+                    <img className="img-fluid" src={imageCustomer4} alt="image" />
+                  </div>
+                </div>
+              </div>
+              <div className="ttm-box-col-wrapper">
+                <div className="client-box ttm-box-view-boxed-logo">
+                  <div className="client">
+                    <img className="img-fluid" src={imageCustomer5} alt="image" />
+                  </div>
+                </div>
+              </div>
+              <div className="ttm-box-col-wrapper">
+                <div className="client-box ttm-box-view-boxed-logo">
+                  <div className="client">
+                    <img className="img-fluid" src={imageCustomer6} alt="image" />
                   </div>
                 </div>
               </div>
@@ -551,11 +586,7 @@ const IndexPage = () => (
             <div className="featured-imagebox featured-imagebox-blog">
               <div className="featured-thumbnail">
                 {/* featured-thumbnail */}
-                <img
-                  className="img-fluid"
-                  alt=""
-                  src="https://via.placeholder.com/654X490/444444.jpg"
-                />
+                <img className="img-fluid" alt="" src={imageNews1} />
                 <div className="ttm-blog-overlay-iconbox">
                   <a href={process.env.PUBLIC_URL + '/Single_blog'}>
                     <i className="ti ti-plus" />
@@ -577,27 +608,9 @@ const IndexPage = () => (
                   {/* featured-title */}
                   <h5>
                     <a href={process.env.PUBLIC_URL + '/Single_blog'}>
-                      You Must Try 20 Secret Of Digital Transform
+                      Authorities inaugurate 2nd phase of the Termoeléctrica del Sur in Tarija
                     </a>
                   </h5>
-                </div>
-                <div className="post-meta">
-                  {/* post-meta */}
-                  <span className="ttm-meta-line">
-                    <i className="fa fa-comments" />
-                    2,comments
-                  </span>
-                  <span className="ttm-meta-line">
-                    <i className="fa fa-user" />
-                    Admin
-                  </span>
-                </div>
-                <div className="featured-desc">
-                  {/* featured-description */}
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the...
-                  </p>
                 </div>
                 <a className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20">
                   Read More <i className="ti ti-angle-double-right" />
@@ -609,11 +622,7 @@ const IndexPage = () => (
             <div className="featured-imagebox featured-imagebox-blog">
               <div className="featured-thumbnail">
                 {/* featured-thumbnail */}
-                <img
-                  className="img-fluid"
-                  alt=""
-                  src="https://via.placeholder.com/654X490/444444.jpg"
-                />
+                <img className="img-fluid" alt="" src={imageNews2} />
                 <div className="ttm-blog-overlay-iconbox">
                   <a href={process.env.PUBLIC_URL + '/Single_blog'}>
                     <i className="ti ti-plus" />
@@ -635,27 +644,9 @@ const IndexPage = () => (
                   {/* featured-title */}
                   <h5>
                     <a href={process.env.PUBLIC_URL + '/Single_blog'}>
-                      Define World Best IT Solution Technology
+                      ESE presents stand at Finergy 2019; He received the "Molino Chiquitano" award
                     </a>
                   </h5>
-                </div>
-                <div className="post-meta">
-                  {/* post-meta */}
-                  <span className="ttm-meta-line">
-                    <i className="fa fa-comments" />
-                    3,comments
-                  </span>
-                  <span className="ttm-meta-line">
-                    <i className="fa fa-user" />
-                    Admin
-                  </span>
-                </div>
-                <div className="featured-desc">
-                  {/* featured-description */}
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the...
-                  </p>
                 </div>
                 <a
                   className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20"
@@ -670,11 +661,7 @@ const IndexPage = () => (
             <div className="featured-imagebox featured-imagebox-blog">
               <div className="featured-thumbnail">
                 {/* featured-thumbnail */}
-                <img
-                  className="img-fluid"
-                  alt=""
-                  src="https://via.placeholder.com/654X490/444444.jpg"
-                />
+                <img className="img-fluid" alt="" src={imageNews1} />
                 <div className="ttm-blog-overlay-iconbox">
                   <a href={process.env.PUBLIC_URL + '/Single_blog'}>
                     <i className="ti ti-plus" />
@@ -688,7 +675,7 @@ const IndexPage = () => (
                   {/* ttm-box-post-date */}
                   <span className="ttm-entry-date">
                     <time className="entry-date" dateTime="2019-01-16T07:07:55+00:00">
-                      22<span className="entry-month entry-year">May</span>
+                      17<span className="entry-month entry-year">Apr</span>
                     </time>
                   </span>
                 </div>
@@ -696,32 +683,11 @@ const IndexPage = () => (
                   {/* featured-title */}
                   <h5>
                     <a href={process.env.PUBLIC_URL + '/Single_blog'}>
-                      10 PHP Frameworks You Need To Use Anywhere
+                      Authorities inaugurate 2nd phase of the Termoeléctrica del Sur in Tarija
                     </a>
                   </h5>
                 </div>
-                <div className="post-meta">
-                  {/* post-meta */}
-                  <span className="ttm-meta-line">
-                    <i className="fa fa-comments" />
-                    1,comments
-                  </span>
-                  <span className="ttm-meta-line">
-                    <i className="fa fa-user" />
-                    Admin
-                  </span>
-                </div>
-                <div className="featured-desc">
-                  {/* featured-description */}
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the...
-                  </p>
-                </div>
-                <a
-                  className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20"
-                  href={process.env.PUBLIC_URL + '/Single_blog'}
-                >
+                <a className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20">
                   Read More <i className="ti ti-angle-double-right" />
                 </a>
               </div>
@@ -731,11 +697,7 @@ const IndexPage = () => (
             <div className="featured-imagebox featured-imagebox-blog">
               <div className="featured-thumbnail">
                 {/* featured-thumbnail */}
-                <img
-                  className="img-fluid"
-                  alt=""
-                  src="https://via.placeholder.com/654X490/444444.jpg"
-                />
+                <img className="img-fluid" alt="" src={imageNews2} />
                 <div className="ttm-blog-overlay-iconbox">
                   <a href={process.env.PUBLIC_URL + '/Single_blog'}>
                     <i className="ti ti-plus" />
@@ -749,7 +711,7 @@ const IndexPage = () => (
                   {/* ttm-box-post-date */}
                   <span className="ttm-entry-date">
                     <time className="entry-date" dateTime="2019-01-16T07:07:55+00:00">
-                      04<span className="entry-month entry-year">Aug</span>
+                      12<span className="entry-month entry-year">Dec</span>
                     </time>
                   </span>
                 </div>
@@ -757,31 +719,13 @@ const IndexPage = () => (
                   {/* featured-title */}
                   <h5>
                     <a href={process.env.PUBLIC_URL + '/Single_blog'}>
-                      Digital Conference Of IT Tech Events in 2019
+                      ESE presents stand at Finergy 2019; He received the "Molino Chiquitano" award
                     </a>
                   </h5>
                 </div>
-                <div className="post-meta">
-                  {/* post-meta */}
-                  <span className="ttm-meta-line">
-                    <i className="fa fa-comments" />
-                    4,comments
-                  </span>
-                  <span className="ttm-meta-line">
-                    <i className="fa fa-user" />
-                    Admin
-                  </span>
-                </div>
-                <div className="featured-desc">
-                  {/* featured-description */}
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                    Ipsum has been the...
-                  </p>
-                </div>
                 <a
-                  href={process.env.PUBLIC_URL + '/Single_blog'}
                   className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20"
+                  href="single_blog"
                 >
                   Read More <i className="ti ti-angle-double-right" />
                 </a>
@@ -830,220 +774,39 @@ const IndexPage = () => (
           {...slick_slider}
           slidesToShow={5}
         >
-          <div className="ttm-box-col-wrapper">
-            <div className="featured-imagebox featured-imagebox-portfolio style1">
-              {/* featured-thumbnail */}
-              <div className="featured-thumbnail">
-                <img
-                  className="img-fluid"
-                  alt=""
-                  src="https://via.placeholder.com/600X750/444444.jpg"
-                />
-              </div>
-              {/* featured-thumbnail end*/}
-              {/* ttm-box-view-overlay */}
-              <div className="ttm-box-view-overlay">
-                <div className="featured-iconbox ttm-media-link">
-                  {/* ttm-media-link */}
-                  <a onClick={() => this.setState({ isOpen: true })} className="ttm_image">
-                    <i className="ti ti-search" />
-                  </a>
-                  <a href={process.env.PUBLIC_URL + '/Single_style1'} className="ttm_link">
-                    <i className="ti ti-link" />
+          {[1, 2, 3, 4, 5, 6, 7].map((item) => (
+            <div className="ttm-box-col-wrapper">
+              {/* featured-imagebox-services */}
+              <div className="featured-imagebox featured-imagebox-services style1">
+                <div className="featured-thumbnail">
+                  {/* featured-thumbnail */}
+                  <img className="img-fluid" src={imageProject1} alt="image" />
+                </div>
+                <div className="featured-content box-shadow">
+                  <div className="featured-title">
+                    {/* featured-title */}
+                    <h5>
+                      <a href={process.env.PUBLIC_URL + '/It_consultancy'}>
+                        Extension of single cycle to combined cycle of the Warnes Thermoelectric
+                        Plant
+                      </a>
+                    </h5>
+                  </div>
+                  <div className="featured-desc">
+                    {/* featured-title */}
+                    <p>They will install two new modules. It is expected to open in 2019</p>
+                  </div>
+                  <a
+                    className="ttm-btn ttm-btn-size-sm ttm-textcolor-skincolor btn-inline ttm-icon-btn-right mt-2"
+                    href={process.env.PUBLIC_URL + '/It_consultancy'}
+                  >
+                    Read More <i className="ti ti-angle-double-right" />
                   </a>
                 </div>
               </div>
-              {/* ttm-box-view-overlay end*/}
-              <div className="featured-content">
-                <div className="featured-title">
-                  {/* featured-title */}
-                  <h5>
-                    <a href={process.env.PUBLIC_URL + '/Single_style1'}>Business Seminarsetwst</a>
-                  </h5>
-                </div>
-              </div>
+              {/* featured-imagebox-services */}
             </div>
-          </div>
-          <div className="ttm-box-col-wrapper">
-            {/* featured-imagebox-portfolio */}
-            <div className="featured-imagebox featured-imagebox-portfolio style1">
-              {/* featured-thumbnail */}
-              <div className="featured-thumbnail">
-                <img
-                  className="img-fluid"
-                  alt=""
-                  src="https://via.placeholder.com/600X750/444444.jpg"
-                />
-              </div>
-              {/* featured-thumbnail end*/}
-              {/* ttm-box-view-overlay */}
-              <div className="ttm-box-view-overlay">
-                <div className="featured-iconbox ttm-media-link">
-                  {/* ttm-media-link */}
-                  <a onClick={() => this.setState({ isOpen: true })}>
-                    <i className="ti ti-search" />
-                  </a>
-                  <a href={process.env.PUBLIC_URL + '/Single_style1'} className="ttm_link">
-                    <i className="ti ti-link" />
-                  </a>
-                </div>
-              </div>
-              {/* ttm-box-view-overlay end*/}
-              <div className="featured-content">
-                <div className="featured-title">
-                  {/* featured-title */}
-                  <h5>
-                    <a href={process.env.PUBLIC_URL + '/Single_style1'}>IT Management</a>
-                  </h5>
-                </div>
-              </div>
-            </div>
-            {/* featured-thumbnail */}
-          </div>
-          <div className="ttm-box-col-wrapper">
-            {/* featured-imagebox-portfolio */}
-            <div className="featured-imagebox featured-imagebox-portfolio style1">
-              {/* featured-thumbnail */}
-              <div className="featured-thumbnail">
-                <img
-                  className="img-fluid"
-                  alt=""
-                  src="https://via.placeholder.com/600X750/444444.jpg"
-                />
-              </div>
-              {/* featured-thumbnail end*/}
-              {/* ttm-box-view-overlay */}
-              <div className="ttm-box-view-overlay">
-                <div className="featured-iconbox ttm-media-link">
-                  {/* ttm-media-link */}
-                  <a onClick={() => this.setState({ isOpen: true })}>
-                    <i className="ti ti-search" />
-                  </a>
-                  <a href={process.env.PUBLIC_URL + '/Single_style1'} className="ttm_link">
-                    <i className="ti ti-link" />
-                  </a>
-                </div>
-              </div>
-              {/* ttm-box-view-overlay end*/}
-              <div className="featured-content">
-                <div className="featured-title">
-                  {/* featured-title */}
-                  <h5>
-                    <a href={process.env.PUBLIC_URL + '/Single_style1'}>Cyber Security Analysis</a>
-                  </h5>
-                </div>
-              </div>
-            </div>
-            {/* featured-thumbnail */}
-          </div>
-          <div className="ttm-box-col-wrapper">
-            {/* featured-imagebox-portfolio */}
-            <div className="featured-imagebox featured-imagebox-portfolio style1">
-              {/* featured-thumbnail */}
-              <div className="featured-thumbnail">
-                <img
-                  className="img-fluid"
-                  alt=""
-                  src="https://via.placeholder.com/600X750/444444.jpg"
-                />
-              </div>
-              {/* featured-thumbnail end*/}
-              {/* ttm-box-view-overlay */}
-              <div className="ttm-box-view-overlay">
-                <div className="featured-iconbox ttm-media-link">
-                  {/* ttm-media-link */}
-                  <a onClick={() => this.setState({ isOpen: true })}>
-                    <i className="ti ti-search" />
-                  </a>
-                  <a href={process.env.PUBLIC_URL + '/Single_style1'} className="ttm_link">
-                    <i className="ti ti-link" />
-                  </a>
-                </div>
-              </div>
-              {/* ttm-box-view-overlay end*/}
-              <div className="featured-content">
-                <div className="featured-title">
-                  {/* featured-title */}
-                  <h5>
-                    <a href={process.env.PUBLIC_URL + '/Single_style1'}>Neural Networking</a>
-                  </h5>
-                </div>
-              </div>
-            </div>
-            {/* featured-thumbnail */}
-          </div>
-          <div className="ttm-box-col-wrapper">
-            {/* featured-imagebox-portfolio */}
-            <div className="featured-imagebox featured-imagebox-portfolio style1">
-              {/* featured-thumbnail */}
-              <div className="featured-thumbnail">
-                <img
-                  className="img-fluid"
-                  alt=""
-                  src="https://via.placeholder.com/600X750/444444.jpg"
-                />
-              </div>
-              {/* featured-thumbnail end*/}
-              {/* ttm-box-view-overlay */}
-              <div className="ttm-box-view-overlay">
-                <div className="featured-iconbox ttm-media-link">
-                  {/* ttm-media-link */}
-                  <a onClick={() => this.setState({ isOpen: true })}>
-                    <i className="ti ti-search" />
-                  </a>
-                  <a href={process.env.PUBLIC_URL + '/Single_style1'} className="ttm_link">
-                    <i className="ti ti-link" />
-                  </a>
-                </div>
-              </div>
-              {/* ttm-box-view-overlay end*/}
-              <div className="featured-content">
-                <div className="featured-title">
-                  {/* featured-title */}
-                  <h5>
-                    <a href={process.env.PUBLIC_URL + '/Single_style1'}>Data Management</a>
-                  </h5>
-                </div>
-              </div>
-            </div>
-            {/* featured-thumbnail */}
-          </div>
-          <div className="ttm-box-col-wrapper">
-            {/* featured-imagebox-portfolio */}
-            <div className="featured-imagebox featured-imagebox-portfolio style1">
-              {/* featured-thumbnail */}
-              <div className="featured-thumbnail">
-                <img
-                  className="img-fluid"
-                  alt=""
-                  src="https://via.placeholder.com/600X750/444444.jpg"
-                />
-              </div>
-              {/* featured-thumbnail end*/}
-              {/* ttm-box-view-overlay */}
-              <div className="ttm-box-view-overlay">
-                <div className="featured-iconbox ttm-media-link">
-                  {/* ttm-media-link */}
-                  <a onClick={() => this.setState({ isOpen: true })}>
-                    <i className="ti ti-search" />
-                  </a>
-                  <a href={process.env.PUBLIC_URL + '/Single_style1'} className="ttm_link">
-                    <i className="ti ti-link" />
-                  </a>
-                </div>
-              </div>
-              {/* ttm-box-view-overlay end*/}
-              <div className="featured-content">
-                <div className="featured-title">
-                  {/* featured-title */}
-                  <h5>
-                    <a href={process.env.PUBLIC_URL + '/Single_style1'}>Web Devlopment</a>
-                  </h5>
-                </div>
-              </div>
-            </div>
-            {/* featured-thumbnail */}
-          </div>
+          ))}
         </Slider>
       </div>
     </section>

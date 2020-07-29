@@ -1,93 +1,125 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import Menu from './Menu';
 import Mobilemenu from './Mobile_menu';
 
 import imageLogo from '../assets/images/LOGO_ESE.png';
 
-export class Header3 extends Component {
-  state = {
-    show: false,
+const useScroll = () => {
+  const [isStickyHeader, setStickyHeader] = useState(false);
+
+  const handleScroll = () => {
+    const scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    setStickyHeader(scrolled > 50);
   };
-  toggle = () => this.setState((currentState) => ({ show: !currentState.show }));
-  render() {
-    return (
-      <header id="masthead" className="header ttm-header-style-03">
-        {/* ttm-topbar-wrapper */}
-        <div className="ttm-header-wrap">
-          <div className="site-header-menu">
-            <div id="navbar" className="ttm-stickable-header clearfix">
-              <div className="container-xl">
-                <div className="d-xl-flex flex-xl-row align-items-xl-center justify-content-xl-between">
-                  <div className="site-branding">
-                    <a
-                      className="home-link"
-                      href={process.env.PUBLIC_URL + '/'}
-                      title="Altech"
-                      rel="home"
-                    >
-                      <img id="logo-img" className="img-fluid" alt="logo" src={imageLogo} />
-                    </a>
-                  </div>
-                  <div className="site-navigation">
-                    <div className="ttm-topbar-wrapper clearfix">
-                      <div className="container-xl">
-                        <div className="row">
-                          <div className="col-lg-12 text-right">
-                            <ul className="top-contact">
-                              <li>
-                                <i className="fas fa-map-marker-alt" />
-                                &nbsp;&nbsp;24 Tech Roqad st Ny 10023
-                              </li>
-                              <li>
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
+
+  return { isStickyHeader };
+};
+
+const Header3 = () => {
+  const { isStickyHeader } = useScroll();
+  // const [isShow, setShow] = useState(false);
+
+  // const toggle = () => setShow(!isShow);
+
+  return (
+    <header id="masthead" className="header ttm-header-style-03">
+      {/* ttm-topbar-wrapper */}
+      <div className="ttm-header-wrap res-767-mb-80">
+        <div className="site-header-menu">
+          <div
+            id="navbar"
+            className={`ttm-stickable-header clearfix ${
+              isStickyHeader ? 'fixed-header visible-title' : ''
+            }`}
+          >
+            <div className="container-xl">
+              <div className="d-xl-flex flex-xl-row align-items-xl-center justify-content-xl-between">
+                <div className="site-branding">
+                  <a
+                    className="home-link"
+                    href={process.env.PUBLIC_URL + '/'}
+                    title="Altech"
+                    rel="home"
+                  >
+                    <img id="logo-img" className="img-fluid" alt="logo" src={imageLogo} />
+                  </a>
+                </div>
+                <div className="site-navigation">
+                  <div className="ttm-topbar-wrapper clearfix">
+                    <div className="container-xl">
+                      <div className="row">
+                        <div className="col-lg-12 text-right">
+                          <ul className="top-contact">
+                            <li>
+                              <a href="tel:+591 3 3460561">
+                                <i className="fas fa-phone" />
+                                &nbsp;&nbsp;+591 3 3460561
+                              </a>
+                            </li>
+                            <li>
+                              <a href="mailto:info@example.com.com">
                                 <i className="far fa-envelope" />
-                                &nbsp;&nbsp;<a to="mailto:info@example.com.com">info@example.com</a>
+                                &nbsp;&nbsp;info@ese-srl.com
+                              </a>
+                            </li>
+                            <li>
+                              <i className="far fa-clock" />
+                              &nbsp;&nbsp;Office Hour: 07:30am - 6:30pm
+                            </li>
+                          </ul>
+                          <div className="ttm-social-links-wrapper list-inline">
+                            <ul className="social-icons">
+                              <li>
+                                <a className=" tooltip-bottom" data-tooltip="Facebook">
+                                  <i className="fab fa-facebook-f" />
+                                </a>
                               </li>
                               <li>
-                                <i className="far fa-clock" />
-                                &nbsp;&nbsp;Office Hour: 08:00am - 6:00pm
+                                <a className=" tooltip-bottom" data-tooltip="Twitter">
+                                  <i className="fab fa-twitter" />
+                                </a>
+                              </li>
+                              <li>
+                                <a className=" tooltip-bottom" data-tooltip="Flickr">
+                                  <i className="fab fa-flickr" />
+                                </a>
+                              </li>
+                              <li>
+                                <a className=" tooltip-bottom" data-tooltip="aedin">
+                                  <i className="fab fa-linkedin-in" />
+                                </a>
                               </li>
                             </ul>
-                            <div className="ttm-social-links-wrapper list-inline">
-                              <ul className="social-icons">
-                                <li>
-                                  <a className=" tooltip-bottom" data-tooltip="Facebook">
-                                    <i className="fab fa-facebook-f" />
-                                  </a>
-                                </li>
-                                <li>
-                                  <a className=" tooltip-bottom" data-tooltip="Twitter">
-                                    <i className="fab fa-twitter" />
-                                  </a>
-                                </li>
-                                <li>
-                                  <a className=" tooltip-bottom" data-tooltip="Flickr">
-                                    <i className="fab fa-flickr" />
-                                  </a>
-                                </li>
-                                <li>
-                                  <a className=" tooltip-bottom" data-tooltip="aedin">
-                                    <i className="fab fa-linkedin-in" />
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div className="container-xl">
-                      <div className="row align-items-center ml-auto">
-                        <div className="ml-auto">
-                          <Menu />
-                          <div className="mobilemenu">
-                            <Mobilemenu />
-                          </div>
+                  </div>
+                  <div className="container-xl">
+                    <div className="row align-items-center ml-auto">
+                      <div className="ml-auto">
+                        <Menu />
+                        <div className="mobilemenu">
+                          <Mobilemenu />
                         </div>
-                        <div className="ml-auto right-btn">
-                          <button className="ml-4 ttm-btn ttm-btn-size-xs ttm-bgcolor-skincolor">
-                            get a quote
-                          </button>
-                        </div>
+                      </div>
+                      <div className="ml-auto right-btn">
+                        <a
+                          href="http://portal.ese-srl.com/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="ml-4 ttm-btn ttm-btn-size-xs ttm-bgcolor-skincolor"
+                        >
+                          Intranet
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -96,9 +128,9 @@ export class Header3 extends Component {
             </div>
           </div>
         </div>
-      </header>
-    );
-  }
-}
+      </div>
+    </header>
+  );
+};
 
 export default Header3;

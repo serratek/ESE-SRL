@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import imageLogo from '../assets/images/LOGO_ESE_WHITE.png';
+import imageISO from '../assets/images/ISO-90012015.png';
 
 export default class Footer extends Component {
   render() {
@@ -30,7 +31,7 @@ export default class Footer extends Component {
                     <div className="featured-content">
                       {/*  featured-content */}
                       <div className="featured-desc">
-                        <p>4789 Melmorn Street, Zakilahon Ton Mashintron Town USA</p>
+                        <p>Industrial Park of Santa Cruz P.I. 23 and 24. Transversal Avenue 1</p>
                       </div>
                     </div>
                   </div>
@@ -39,8 +40,11 @@ export default class Footer extends Component {
               </div>
               <div className="col-lg-4 col-md-4 col-sm-6 order-md-3 res-767-mt-20">
                 <div className="text-sm-right">
-                  <a className="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-btn-color-white">
-                    <i className="far fa-envelope" /> Info@example.com
+                  <a
+                    href="mailto:info@ese-srl.com"
+                    className="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-btn-color-white"
+                  >
+                    <i className="far fa-envelope" /> info@ese-srl.com
                   </a>
                 </div>
               </div>
@@ -76,7 +80,7 @@ export default class Footer extends Component {
                         </div>
                         <div className="featured-title">
                           {/*  featured-title */}
-                          <h5>+1 002-123-4567</h5>
+                          <h5>+591 3 3460561</h5>
                         </div>
                       </div>
                     </div>
@@ -89,28 +93,28 @@ export default class Footer extends Component {
                   <h3 className="widget-title">Quick Links</h3>
                   <ul id="menu-footer-services">
                     <li>
-                      <a>Make Appointment</a>
+                      <a>Home</a>
                     </li>
                     <li>
-                      <a>Customer Services</a>
+                      <a>About us</a>
                     </li>
                     <li>
-                      <a>Department Services</a>
+                      <a>Business Units</a>
                     </li>
                     <li>
-                      <a>About Company</a>
+                      <a>Projects</a>
                     </li>
                     <li>
-                      <a>Our Case Studies</a>
+                      <a>Social Contribution</a>
                     </li>
                     <li>
-                      <a>Free Consultation</a>
+                      <a>Jobs</a>
                     </li>
                     <li>
-                      <a>Meet Our Experts</a>
+                      <a>News</a>
                     </li>
                     <li>
-                      <a>Our Business Growth</a>
+                      <a>Contact us</a>
                     </li>
                   </ul>
                 </div>
@@ -172,24 +176,8 @@ export default class Footer extends Component {
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area res-767-mb-40">
                 <div className="widget flicker_widget clearfix">
-                  <h3 className="widget-title">News Letter</h3>
+                  <h3 className="widget-title">Follow Us On</h3>
                   <div className="textwidget widget-text">
-                    Sign up today for hints, tips and the latest product news
-                    <form
-                      id="subscribe-form"
-                      className="newsletter-form"
-                      method="post"
-                      action="#"
-                      data-mailchimp="true"
-                    >
-                      <div className="mailchimp-inputbox clearfix" id="subscribe-content">
-                        <i className="fa fa-envelope" />
-                        <input type="email" name="email" placeholder="Email Address.." required />
-                        <input type="submit" value="" />
-                      </div>
-                      <div id="subscribe-msg" />
-                    </form>
-                    <h5>Follow Us On</h5>
                     <div className="social-icons circle social-hover">
                       <ul className="list-inline">
                         <li className="social-facebook">
@@ -230,6 +218,7 @@ export default class Footer extends Component {
                         </li>
                       </ul>
                     </div>
+                    <img src={imageISO} className="img-fluid mt-40" alt="ISO" />
                   </div>
                 </div>
               </div>
@@ -238,32 +227,16 @@ export default class Footer extends Component {
         </div>
         <div className="bottom-footer-text ttm-bgcolor-darkgrey ttm-textcolor-white">
           <div className="container-xl">
-            <div className="row copyright align-items-center res-767-text-center">
-              <div className="col-md-6">
+            <div className="row copyright align-items-center text-center">
+              <div className="col-md-12">
                 <div>
                   <span>
-                    Copyright © 2020&nbsp;<a to="/">Altech</a> by{' '}
-                    <a to="https://themetechmount.com/" target="_blank">
-                      Themetechmount
+                    Copyright © 2020&nbsp;<a to="/">ESE SRL</a>. All rights reserved. Created by{' '}
+                    <a to="https://devhance.co/" target="_blank">
+                      Devhance
                     </a>
+                    .
                   </span>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="text-md-right res-767-mt-10">
-                  <div className="d-lg-inline-flex">
-                    <ul id="menu-footer-menu" className="footer-nav-menu">
-                      <li>
-                        <a>About Us</a>
-                      </li>
-                      <li>
-                        <a>Services</a>
-                      </li>
-                      <li>
-                        <a>Privacy</a>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>

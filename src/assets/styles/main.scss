@@ -716,6 +716,14 @@ li.menu-hasdropdown {
     font-weight: 400;
   }
 }
+.mobile-link {
+  color: $darkgrey-color;
+  display: block;
+  padding: 15px 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 16px;
+}
 
 /** ttm-rt-contact(HeaderIcons - Search, Cart) **/
 .ttm-header-icons {
@@ -1232,6 +1240,7 @@ li.menu-hasdropdown {
     right: 0;
     left: 0;
     bottom: 23%;
+    z-index: 1;
   }
   .carousel-caption-inner {
     text-align: left;

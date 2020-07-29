@@ -1501,7 +1501,7 @@ body {
   }
   &.style1 {
     .featured-content {
-      padding: 34px 50px 30px;
+      padding: 34px 20px 30px;
       margin: -55px 20px 0;
       text-align: center;
       border-bottom: 3px solid $skin-color;
@@ -1850,10 +1850,13 @@ body {
       width: 100%;
       display: table;
       &:hover img {
-        filter: grayscale(1);
+        filter: grayscale(0);
       }
       img {
-        margin: 0 auto;
+        border-radius: 3px;
+        filter: grayscale(1);
+        max-height: 85px;
+        height: 100%;
       }
     }
   }
