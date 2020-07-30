@@ -1,13 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
+import PageTitle from './PageTitle';
 import Header from './Header';
 import Footer from './Footer';
 
 // Styles
 import '../assets/styles/main.scss';
 
-const Layout = ({ children, title }) => {
+const Layout = ({ isMainPage = false, isPageTitle, children, title }) => {
   return (
     <>
       <Helmet>
@@ -16,9 +17,12 @@ const Layout = ({ children, title }) => {
       </Helmet>
 
       <div className="page">
-        <div className="site-main">
+        <div className={`site-main ${isMainPage ? 'home-page' : ''} `}>
           <Header />
-          <div>{children}</div>
+          <div>
+            {isPageTitle && <PageTitle title={title} />}
+            {children}
+          </div>
           <Footer />
         </div>
       </div>

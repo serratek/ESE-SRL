@@ -1164,7 +1164,7 @@ li.menu-hasdropdown {
 ------------------------*/
 .ttm-page-title-row {
   position: relative;
-  //   @include replace-image(url('../images/ttm-pagetitle-bg.jpg'));
+  @include replace-image(url('../images/ttm-pagetitle-bg.jpg'));
   display: block;
   padding-top: 255px;
   padding-bottom: 110px;
@@ -2146,6 +2146,26 @@ ul {
       color: $white-color;
       cursor: pointer;
     }
+  }
+}
+
+.c-timeline {
+  border: 5px solid #de6b00;
+  border-radius: 5px;
+  background: #de6b00;
+  .img-fluid {
+    filter: sepia(100%);
+  }
+  .vertical-timeline-element-icon i {
+    display: block;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
   }
 }
 

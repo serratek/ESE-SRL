@@ -251,9 +251,15 @@
   }
 
   // ttm-header-style-03
+  .home-page {
+    .ttm-header-style-03 {
+      .site-header-menu {
+        background-color: transparent;
+      }
+    }
+  }
   .ttm-header-style-03 {
     .site-header-menu {
-      background-color: transparent;
       height: 141px;
       position: absolute;
       width: 100%;
@@ -770,7 +776,11 @@
 
   //ttm-tabs
   .ttm-tabs ul.tabs.tabs li {
-    padding: 8px 12px;
+    padding: 8px 2px;
+    font-size: 14px;
+    i {
+      font-size: 24px !important;
+    }
   }
 
   // testimonial
@@ -897,7 +907,7 @@
 
   //ttm-tabs
   .ttm-tabs {
-    ul.tabs li {
+    ul.tabs.tabs li {
       padding: 8px 12px;
       i {
         display: none !important;

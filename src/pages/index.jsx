@@ -59,7 +59,7 @@ var slick_slider = {
 };
 
 const IndexPage = () => (
-  <Layout title="Home">
+  <Layout title="Home" isMainPage>
     <section>
       <div className="container-fluid">
         <div className="row">

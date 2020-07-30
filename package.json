@@ -2,7 +2,7 @@
   "name": "gatsby-starter-boilerplate",
   "description": "Gatsby starter boilerplate",
   "version": "1.0.0",
-  "author": "Vadym Necheporenko",
+  "author": "Vadym Necheporenko <ne4eporenko.v@gmail.com> (https://devhance.co/)",
   "dependencies": {
     "bootstrap": "^4.5.0",
     "gatsby": "^2.24.11",
@@ -30,9 +30,13 @@
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
+    "react-fade-in": "^1.1.0",
     "react-helmet": "^6.1.0",
-    "react-slick": "^0.27.1"
+    "react-slick": "^0.27.1",
+    "react-tabs": "^3.1.1",
+    "react-vertical-timeline-component": "^3.0.2"
   },
   "keywords": [
     "gatsby"
