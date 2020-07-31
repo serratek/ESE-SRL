@@ -1,4 +1,6 @@
 import React, { Component, useState, useEffect } from 'react';
+import { Link } from 'gatsby';
+
 import Menu from './Menu';
 import Mobilemenu from './Mobile_menu';
 
@@ -43,14 +45,9 @@ const Header3 = () => {
             <div className="container-xl">
               <div className="d-xl-flex flex-xl-row align-items-xl-center justify-content-xl-between">
                 <div className="site-branding">
-                  <a
-                    className="home-link"
-                    href={process.env.PUBLIC_URL + '/'}
-                    title="Altech"
-                    rel="home"
-                  >
+                  <Link className="home-link" to={'/'} title="ESE SRL" rel="home">
                     <img id="logo-img" className="img-fluid" alt="logo" src={imageLogo} />
-                  </a>
+                  </Link>
                 </div>
                 <div className="site-navigation">
                   <div className="ttm-topbar-wrapper clearfix">
