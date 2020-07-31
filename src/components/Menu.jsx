@@ -38,7 +38,7 @@ const Menu = () => {
           </ul>
         </li>
         <li className="menu-hasdropdown">
-          <Link tp="/projects/">Projects</Link>
+          <Link to="/projects/">Projects</Link>
         </li>
         <li className="menu-hasdropdown">
           <a>Social Contribution</a>
