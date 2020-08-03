@@ -47,7 +47,7 @@ const Menu = () => {
           <a>Jobs</a>
         </li>
         <li className="menu-hasdropdown">
-          <a>News</a>
+          <Link to="/news/">News</Link>
         </li>
         <li className="menu-hasdropdown">
           <a>Contact us</a>

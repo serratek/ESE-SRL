@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import LatestNews from '../components/LatestNews';
+
 import imageLogo from '../assets/images/LOGO_ESE_WHITE.png';
 import imageISO from '../assets/images/ISO-90012015.png';
 
@@ -122,56 +124,7 @@ export default class Footer extends Component {
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area res-991-mb-40 res-767-mb-0">
                 <div className="widget widget_text clearfix">
                   <h3 className="widget-title">Latest News</h3>
-                  <ul className="widget-post ttm-recent-post-list">
-                    <li>
-                      <a href={process.env.PUBLIC_URL + '/Single_blog'}>
-                        <img
-                          className="img-fluid"
-                          alt="post-img"
-                          src="https://via.placeholder.com/150X150/444444.jpg"
-                        />
-                      </a>
-                      <a href={process.env.PUBLIC_URL + '/Single_blog'}>
-                        Define World Best IT Solution Technology
-                      </a>
-                      <span className="post-date">
-                        <i className="fa fa-calendar" />
-                        May 01, 2019
-                      </span>
-                    </li>
-                    <li>
-                      <a href={process.env.PUBLIC_URL + '/Single_blog'}>
-                        <img
-                          className="img-fluid"
-                          alt="post-img"
-                          src="https://via.placeholder.com/150X150/444444.jpg"
-                        />
-                      </a>
-                      <a href={process.env.PUBLIC_URL + '/Single_blog'}>
-                        You Must Try 20 Secret Of Digital Transform
-                      </a>
-                      <span className="post-date">
-                        <i className="fa fa-calendar" />
-                        May 03, 2019
-                      </span>
-                    </li>
-                    <li>
-                      <a href={process.env.PUBLIC_URL + '/Single_blog'}>
-                        <img
-                          className="img-fluid"
-                          alt="post-img"
-                          src="https://via.placeholder.com/150X150/444444.jpg"
-                        />
-                      </a>
-                      <a href={process.env.PUBLIC_URL + '/Single_blog'}>
-                        10 PHP Frameworks You Need To Use Anywhere
-                      </a>
-                      <span className="post-date">
-                        <i className="fa fa-calendar" />
-                        May 05, 2019
-                      </span>
-                    </li>
-                  </ul>
+                  <LatestNews />
                 </div>
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area res-767-mb-40">
