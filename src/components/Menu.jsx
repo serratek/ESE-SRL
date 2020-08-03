@@ -44,13 +44,13 @@ const Menu = () => {
           <Link to="/social-contribution/">Social Contribution</Link>
         </li>
         <li className="menu-hasdropdown">
-          <a>Jobs</a>
+          <Link to="/jobs/">Jobs</Link>
         </li>
         <li className="menu-hasdropdown">
           <Link to="/news/">News</Link>
         </li>
         <li className="menu-hasdropdown">
-          <a>Contact us</a>
+          <Link to="/contact-us/">Contact us</Link>
         </li>
       </ul>
     </nav>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'gatsby';
 import {
   MDBNavbar,
   MDBNavbarNav,
@@ -40,12 +41,14 @@ class Mobilemenu extends Component {
         <MDBCollapse isOpen={this.state.collapse1} navbar>
           <MDBNavbarNav left>
             <MDBNavItem active>
-              <a className="mobile-link">Home</a>
+              <Link to="/" className="mobile-link">
+                Home
+              </Link>
             </MDBNavItem>
             <MDBNavItem>
-              <a href="about" className="mobile-link">
+              <Link to="/about-us/" className="mobile-link">
                 About us
-              </a>
+              </Link>
             </MDBNavItem>
             <MDBNavItem>
               <MDBDropdown>
@@ -53,51 +56,54 @@ class Mobilemenu extends Component {
                   <span>Business Units</span>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu>
-                  <MDBDropdownItem href={process.env.PUBLIC_URL + '/Aboutus_01'}>
-                    About Us 1
+                  <MDBDropdownItem>
+                    <Link to="/power-generation/">Power Generation</Link>
                   </MDBDropdownItem>
-                  <MDBDropdownItem href={process.env.PUBLIC_URL + '/Aboutus_02'}>
-                    About Us 2
+                  <MDBDropdownItem>
+                    <Link to="/power-substations/">Power Substations</Link>
                   </MDBDropdownItem>
-                  <MDBDropdownItem href={process.env.PUBLIC_URL + '/Services_01'}>
-                    Services 1
+                  <MDBDropdownItem>
+                    <Link to="/oil-and-gas/">Oil & Gas</Link>
                   </MDBDropdownItem>
-                  <MDBDropdownItem href={process.env.PUBLIC_URL + '/Services_02'}>
-                    Services 2
+                  <MDBDropdownItem>
+                    <Link to="/industry/">Industry</Link>
                   </MDBDropdownItem>
-                  <MDBDropdownItem href={process.env.PUBLIC_URL + '/Our_expert'}>
-                    Our Expert
+                  <MDBDropdownItem>
+                    <Link to="/distribution-electrical-grids/">Distribution Electrical Grids</Link>
                   </MDBDropdownItem>
-                  <MDBDropdownItem href={process.env.PUBLIC_URL + '/Faq'}>FAQs</MDBDropdownItem>
-                  <MDBDropdownItem href={process.env.PUBLIC_URL + '/Contact_01'}>
-                    Contact Us 1
+                  <MDBDropdownItem>
+                    <Link to="/lines-of-transmission/">Lines of Transmission</Link>
                   </MDBDropdownItem>
-                  <MDBDropdownItem href={process.env.PUBLIC_URL + '/Contact_02'}>
-                    Contact Us 2
-                  </MDBDropdownItem>
-                  <MDBDropdownItem href={process.env.PUBLIC_URL + '/Error'}>
-                    Error Page
-                  </MDBDropdownItem>
-                  <MDBDropdownItem href={process.env.PUBLIC_URL + '/Element'}>
-                    Elements
+                  <MDBDropdownItem>
+                    <Link to="/lighting-systems/">Lighting Systems</Link>
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>
             <MDBNavItem>
-              <a className="mobile-link">Projects</a>
+              <Link to="/projects/" className="mobile-link">
+                Projects
+              </Link>
             </MDBNavItem>
             <MDBNavItem>
-              <a className="mobile-link">Social Contribution</a>
+              <Link to="/social-contribution/" className="mobile-link">
+                Social Contribution
+              </Link>
             </MDBNavItem>
             <MDBNavItem>
-              <a className="mobile-link">Jobs</a>
+              <Link to="/jobs/" className="mobile-link">
+                Jobs
+              </Link>
             </MDBNavItem>
             <MDBNavItem>
-              <a className="mobile-link">News</a>
+              <Link to="/news/" className="mobile-link">
+                News
+              </Link>
             </MDBNavItem>
             <MDBNavItem>
-              <a className="mobile-link">Contact us</a>
+              <Link to="/contact-us/" className="mobile-link">
+                Contact us
+              </Link>
             </MDBNavItem>
           </MDBNavbarNav>
         </MDBCollapse>

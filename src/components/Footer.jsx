@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'gatsby';
 
 import LatestNews from '../components/LatestNews';
 
@@ -95,28 +96,28 @@ export default class Footer extends Component {
                   <h3 className="widget-title">Quick Links</h3>
                   <ul id="menu-footer-services">
                     <li>
-                      <a>Home</a>
+                      <Link to="/">Home</Link>
                     </li>
                     <li>
-                      <a>About us</a>
+                      <Link to="/about-us/">About us</Link>
                     </li>
                     <li>
-                      <a>Business Units</a>
+                      <Link to="/business-units/">Business Units</Link>
                     </li>
                     <li>
-                      <a>Projects</a>
+                      <Link to="/projects/">Projects</Link>
                     </li>
                     <li>
-                      <a>Social Contribution</a>
+                      <Link to="/social-contribution/">Social Contribution</Link>
                     </li>
                     <li>
-                      <a>Jobs</a>
+                      <Link to="/jobs/">Jobs</Link>
                     </li>
                     <li>
-                      <a>News</a>
+                      <Link to="/news/">News</Link>
                     </li>
                     <li>
-                      <a>Contact us</a>
+                      <Link to="/contact-us/">Contact us</Link>
                     </li>
                   </ul>
                 </div>
