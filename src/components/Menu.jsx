@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 
 const Menu = () => {
@@ -41,7 +41,7 @@ const Menu = () => {
           <Link to="/projects/">Projects</Link>
         </li>
         <li className="menu-hasdropdown">
-          <a>Social Contribution</a>
+          <Link to="/social-contribution/">Social Contribution</Link>
         </li>
         <li className="menu-hasdropdown">
           <a>Jobs</a>

@@ -181,7 +181,7 @@
   @include replace-image(url('https://via.placeholder.com/1920X283/888888.jpg'));
 }
 .bg-img6 {
-  @include replace-image(url('https://via.placeholder.com/1630X512/888888.jpg'));
+  @include replace-image(url('../images/social-contribution/banner-aporte-social-02.jpg'));
   .ttm-bg-layer,
   .ttm-bg-layer-inner {
     margin-left: -400px;
@@ -1787,6 +1787,9 @@ body {
 }
 .ttm-bgcolor-darkgrey,
 .ttm-bgcolor-skincolor {
+  h6 {
+    color: rgba($white-color, 1);
+  }
   .testimonial-slide.style1 {
     h6,
     label {
