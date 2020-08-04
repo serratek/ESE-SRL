@@ -108,16 +108,6 @@ const Header3 = () => {
                           <Mobilemenu />
                         </div>
                       </div>
-                      <div className="ml-auto right-btn">
-                        <a
-                          href="http://portal.ese-srl.com/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="ml-4 ttm-btn ttm-btn-size-xs ttm-bgcolor-skincolor"
-                        >
-                          Intranet
-                        </a>
-                      </div>
                     </div>
                   </div>
                 </div>
