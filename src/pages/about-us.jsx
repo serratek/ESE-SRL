@@ -42,7 +42,7 @@ const AboutUsPage = () => (
         <div className="row">
           <div className="col-lg-12">
             <div className="ttm-tabs text-center ttm-tab-style-classic style1">
-              <Tabs defaultIndex={0} onSelect={(index) => console.log(index)}>
+              <Tabs defaultIndex={0}>
                 {/* tabs */}
                 <TabList className="tabs">
                   <Tab className="tab" title="Our History">
@@ -51,27 +51,27 @@ const AboutUsPage = () => (
                       Our History
                     </span>
                   </Tab>
-                  <Tab className="tab" title="Media">
+                  <Tab className="tab" title="Philosophy of Life">
                     <span>
                       <i className="ttm-icon ti-cup"></i> Philosophy of Life
                     </span>
                   </Tab>
-                  <Tab className="tab" title="Industrial">
+                  <Tab className="tab" title="Quality Policies">
                     <span>
                       <i className="ttm-icon ti-check-box"></i> Quality Policies
                     </span>
                   </Tab>
-                  <Tab className="tab" title="Banking">
+                  <Tab className="tab" title="Health, Safety and Evironmental Policies">
                     <span>
                       <i className="ttm-icon ti-shield"></i>Health, Safety and Evironmental Policies
                     </span>
                   </Tab>
-                  <Tab className="tab" title="Medical">
+                  <Tab className="tab" title="Main Figures">
                     <span>
                       <i className="ttm-icon ti-target"></i> Main Figures
                     </span>
                   </Tab>
-                  <Tab className="tab" title="Medical">
+                  <Tab className="tab" title="Organigrama">
                     <span>
                       <i className="ttm-icon ti-settings"></i> Organigrama
                     </span>
@@ -709,14 +709,15 @@ const AboutUsPage = () => (
                       {/* row end*/}
                     </TabPanel>
                     <TabPanel>
-                      <div className="content-inner">
+                      <div className="content-inner active">
                         <div className="row">
-                          <div className="col-12">
+                          <div className="col-12 text-left">
                             <img
                               className="img-fluid grey-boder"
                               src={imageOrganigrama}
                               title="Organigrama"
                               alt="Organigrama"
+                              style={{ width: '100vw' }}
                             />
                           </div>
                         </div>

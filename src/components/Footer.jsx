@@ -172,7 +172,12 @@ export default class Footer extends Component {
                         </li>
                       </ul>
                     </div>
-                    <img src={imageISO} className="img-fluid mt-40" alt="ISO" />
+                    <img
+                      src={imageISO}
+                      className="img-fluid w-100 mt-40"
+                      alt="ISO"
+                      style={{ maxWidth: 260 }}
+                    />
                   </div>
                 </div>
               </div>
