@@ -60,7 +60,7 @@ var slick_slider = {
 };
 
 const IndexPage = () => (
-  <Layout title="Home" isMainPage>
+  <Layout title="We transform ideas into Energy" isMainPage>
     <section>
       <div className="container-fluid">
         <div className="row">
@@ -79,13 +79,13 @@ const IndexPage = () => (
                       </h5>
 
                       <h2 className="ttm-textcolor-darkgrey">
-                        Best <strong className="ttm-textcolor-skincolor">Digital Agency</strong> And
-                        Bussiness
+                        We transform ideas into{' '}
+                        <strong className="ttm-textcolor-skincolor">Energy</strong>
                       </h2>
 
                       <p className="text">
-                        We are equipped with an updated technical knowledge to serve our customers
-                        properly. Our method of application maintains the industry.
+                        We are invested in satisfying our clients' and to exceed their expectations,
+                        through efficient solutions.
                       </p>
 
                       <p>
