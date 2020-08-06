@@ -89,12 +89,18 @@ const IndexPage = () => (
                       </p>
 
                       <p>
-                        <button className="ttm-btn ttm-btn-size-md ttm-bgcolor-skincolor ttm-textcolor-white mr-3">
-                          View more
-                        </button>
-                        <button className="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-btn-color-darkgrey">
+                        <Link
+                          to="/#about-us"
+                          className="ttm-btn ttm-btn-size-md ttm-bgcolor-skincolor ttm-textcolor-white mr-3"
+                        >
+                          Read more
+                        </Link>
+                        <Link
+                          to="/contact-us/"
+                          className="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-btn-color-darkgrey"
+                        >
                           Contact us
-                        </button>
+                        </Link>
                       </p>
                     </div>
                   </div>
@@ -106,7 +112,7 @@ const IndexPage = () => (
       </div>
     </section>
     {/* about us */}
-    <section className="ttm-row aboutus-section-style2 clearfix">
+    <section id="about-us" className="ttm-row aboutus-section-style2 clearfix">
       <div className="container-xl">
         <div className="row no-gutters align-items-center">
           {/* row */}
