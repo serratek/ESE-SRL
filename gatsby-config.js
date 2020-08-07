@@ -21,5 +21,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: '@prismicio/gatsby-source-prismic-graphql',
+      options: {
+        repositoryName: 'esesrl', // required
+        previews: false, // optional, default: true
+      },
+    },
   ],
 };

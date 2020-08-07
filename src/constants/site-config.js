@@ -23,6 +23,8 @@ const config = {
   themeColor: '#3eb5f1', // Used for setting manifest and progress theme colors.
   backgroundColor: '#3eb5f1', // Used for setting manifest background color.
   copyright: 'Copyright © Devhance 2020. All rights reserved.', // Copyright string for the footer of the website and RSS feed.
+  locales: ['es', 'en'],
+  defaultLang: 'en',
 };
 
 // Validate

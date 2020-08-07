@@ -1,20 +1,49 @@
-const _ = require('lodash');
 const path = require('path');
-const { createFilePath } = require('gatsby-source-filesystem');
-const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+const fs = require('fs');
 
-exports.createPages = ({ actions, graphql }) => {};
+const config = require('./src/constants/site-config');
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
-  fmImagesToRelative(node); // convert image paths for gatsby images
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions;
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
+  const getPages = config.locales.map((locale) => {
+    const templateFolder = './src/templates';
+    const PAGES = fs
+      .readdirSync(templateFolder)
+      .map((file) => file)
+      .filter((page) => {
+        if (page !== 'article.jsx') {
+          return page;
+        }
+      });
+
+    PAGES.forEach((template) => {
+      const getSlug = () => {
+        if (template.includes('.jsx')) {
+          return template.replace('.jsx', '');
+        }
+        if (template.includes('.js')) {
+          return template.replace('.js', '');
+        }
+      };
+      const prefix = locale === config.defaultLang ? '' : locale;
+      const slug = getSlug() === 'index' ? '' : `${getSlug()}/`;
+      const langPrismic = () => {
+        switch (locale) {
+          case 'es':
+            return 'es-bo';
+          case 'en':
+            return 'en-gb';
+        }
+      };
+
+      createPage({
+        path: `${prefix}/${slug}`,
+        component: path.resolve(`./src/templates/${template}`),
+        context: { locale: locale, lang: langPrismic() },
+      });
     });
-  }
+  });
+
+  return Promise.all([getPages]);
 };
