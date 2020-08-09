@@ -12,9 +12,10 @@ exports.createPages = async ({ actions, graphql }) => {
       .readdirSync(templateFolder)
       .map((file) => file)
       .filter((page) => {
-        if (page !== 'article.jsx') {
-          return page;
-        }
+        // if (page !== 'article.jsx') {
+        //   return page;
+        // }
+        return page;
       });
 
     PAGES.forEach((template) => {
