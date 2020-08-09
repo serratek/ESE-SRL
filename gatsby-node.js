@@ -33,7 +33,7 @@ exports.createPages = async ({ actions, graphql }) => {
           case 'es':
             return 'es-bo';
           case 'en':
-            return 'en-gb';
+            return 'en-us';
         }
       };
 

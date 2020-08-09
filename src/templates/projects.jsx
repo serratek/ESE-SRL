@@ -1,48 +1,100 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { graphql } from 'gatsby';
+import { RichText } from 'prismic-reactjs';
+import { PrismicLink } from 'apollo-link-prismic';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import ApolloClient from 'apollo-client';
+import gql from 'graphql-tag';
 
 import Layout from '../components/Layout';
 
-import imageProject1 from '../assets/images/projects/ciclo-combinado-termoelectrica-warnes.jpg';
-import imageCustomer from '../assets/images/projects/ende-siemens.jpg';
+import config from '../constants/site-config';
 
-const ProjectPage = () => {
+const client = new ApolloClient({
+  link: PrismicLink({
+    uri: config.apiEndpoint,
+  }),
+  cache: new InMemoryCache(),
+});
+
+const ProjectPage = ({ data, pageContext }) => {
+  const PrismicDataAllProjects = data.prismic.allProjects;
+  const [prismicProjects, setPrismicProjects] = useState(PrismicDataAllProjects.edges);
+
+  useEffect(() => {
+    let collectedData;
+    const loadMoreProjects = async (res) => {
+      const response = await client.query({
+        query: gql`
+          query($lang: String!, $after: String!) {
+            allProjects(lang: $lang, after: $after) {
+              edges {
+                node {
+                  title
+                  description
+                  image
+                  logo
+                  _meta {
+                    id
+                  }
+                }
+              }
+              pageInfo {
+                hasNextPage
+                endCursor
+              }
+            }
+          }
+        `,
+        variables: { lang: pageContext.lang, after: res.pageInfo.endCursor },
+      });
+      collectedData = [...prismicProjects, ...response.data.allProjects.edges];
+
+      if (response.data.allProjects.pageInfo.hasNextPage) {
+        loadMoreProjects(response.data.allProjects);
+      } else {
+        setPrismicProjects(collectedData);
+        return Promise.resolve();
+      }
+    };
+
+    if (PrismicDataAllProjects.pageInfo.hasNextPage) {
+      loadMoreProjects(PrismicDataAllProjects);
+    }
+  }, []);
+
+  console.log(PrismicDataAllProjects.edges.length, prismicProjects.length);
+
   return (
     <Layout title="Customers and Projects" isPageTitle>
       <div className="ttm-row grid-section clearfix">
         <div className="container-xl">
           {/* row */}
           <div className="row">
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
+            {prismicProjects.map(({ node }, index) => (
               <div className="col-md-6" key={index}>
                 <div className="featured-imagebox featured-imagebox-services style1 mb-30">
                   <div className="featured-thumbnail">
-                    <img className="img-fluid w-100" src={imageProject1} alt="image" />
+                    <img className="img-fluid w-100" src={node.image.url} alt="image" />
                   </div>
                   <div className="featured-content box-shadow">
                     <div className="featured-title mb-20">
-                      <h5>
-                        Extension of single cycle to combined cycle of the Warnes Thermoelectric
-                        Plant
-                      </h5>
+                      <h5>{RichText.asText(node.title)}</h5>
                     </div>
                     <div className="featured-desc">
-                      <p>They will install two new modules. It is expected to open in 2019.</p>
-
-                      <p>
-                        <b>Benefit:</b> It will inject 280 megawatts (MW) into the SIN and together
-                        with 200 MW, will generate 480 MW of power
-                      </p>
+                      {RichText.render(node.description)}
                       {/* separator */}
                       <div className="separator">
                         <div className="sep-line mt-20 mb-20" />
                       </div>
                       {/* separator */}
-
-                      <img
-                        className="img-fluid"
-                        src={imageCustomer}
-                        alt="Extension of single cycle to combined cycle of the Warnes Thermoelectric Plant"
-                      />
+                      {node.logo && (
+                        <img
+                          className="img-fluid"
+                          src={node.logo.url}
+                          alt="Extension of single cycle to combined cycle of the Warnes Thermoelectric Plant"
+                        />
+                      )}
                     </div>
                   </div>
                 </div>
@@ -54,5 +106,29 @@ const ProjectPage = () => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  query($lang: String!) {
+    prismic {
+      allProjects(lang: $lang) {
+        edges {
+          node {
+            title
+            description
+            image
+            logo
+            _meta {
+              id
+            }
+          }
+        }
+        pageInfo {
+          hasNextPage
+          endCursor
+        }
+      }
+    }
+  }
+`;
 
 export default ProjectPage;
