@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Link from './LocalizedLink';
+
 const BusinessUnits = () => {
   return (
     <section className="ttm-row service-section-style2 ttm-bgcolor-grey clearfix">
@@ -45,7 +47,9 @@ const BusinessUnits = () => {
                   {/*  ttm-icon */}
                 </div>
               </div>
-              <a className="ttm-btn btn-inline style2">Read More </a>
+              <Link to="/power-generation/" className="ttm-btn btn-inline style2">
+                Read More{' '}
+              </Link>
             </div>
             {/*  featured-icon-box END */}
           </div>
@@ -73,7 +77,9 @@ const BusinessUnits = () => {
                   {/*  ttm-icon */}
                 </div>
               </div>
-              <a className="ttm-btn btn-inline style2">Read More </a>
+              <Link to="/power-substations/" className="ttm-btn btn-inline style2">
+                Read More{' '}
+              </Link>
             </div>
             {/*  featured-icon-box END */}
           </div>
@@ -101,7 +107,9 @@ const BusinessUnits = () => {
                   {/*  ttm-icon */}
                 </div>
               </div>
-              <a className="ttm-btn btn-inline style2">Read More </a>
+              <Link to="/oil-and-gas/" className="ttm-btn btn-inline style2">
+                Read More{' '}
+              </Link>
             </div>
             {/*  featured-icon-box END */}
           </div>
@@ -129,7 +137,9 @@ const BusinessUnits = () => {
                   {/*  ttm-icon */}
                 </div>
               </div>
-              <a className="ttm-btn btn-inline style2">Read More </a>
+              <Link to="/industry/" className="ttm-btn btn-inline style2">
+                Read More{' '}
+              </Link>
             </div>
 
             {/*  featured-icon-box END */}
@@ -158,7 +168,9 @@ const BusinessUnits = () => {
                   {/*  ttm-icon */}
                 </div>
               </div>
-              <a className="ttm-btn btn-inline style2">Read More </a>
+              <Link to="/distribution-electrical-grids/" className="ttm-btn btn-inline style2">
+                Read More{' '}
+              </Link>
             </div>
             {/*  featured-icon-box END */}
           </div>
@@ -186,7 +198,9 @@ const BusinessUnits = () => {
                   {/*  ttm-icon */}
                 </div>
               </div>
-              <a className="ttm-btn btn-inline style2">Read More </a>
+              <Link to="/lines-of-transmission/" className="ttm-btn btn-inline style2">
+                Read More{' '}
+              </Link>
             </div>
             {/*  featured-icon-box END */}
           </div>
@@ -214,7 +228,9 @@ const BusinessUnits = () => {
                   {/*  ttm-icon */}
                 </div>
               </div>
-              <a className="ttm-btn btn-inline style2">Read More </a>
+              <Link to="/lighting-systems/" className="ttm-btn btn-inline style2">
+                Read More{' '}
+              </Link>
             </div>
             {/*  featured-icon-box END */}
           </div>

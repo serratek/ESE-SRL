@@ -6,8 +6,6 @@ import { injectIntl } from 'react-intl';
 
 import Link from './LocalizedLink';
 
-import imageNews from '../assets/images/news/finergy2019.jpg';
-
 const LatestNews = ({ intl: { locale } }) => {
   return (
     <StaticQuery
