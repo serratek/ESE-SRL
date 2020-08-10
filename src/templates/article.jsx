@@ -2,11 +2,12 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Date, RichText } from 'prismic-reactjs';
 import { FormattedMessage } from 'react-intl';
+import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from 'react-share';
 
 import Layout from '../components/Layout';
 import BlogSidebar from '../components/BlogSidebar';
 
-const NewsPage = ({ data }) => {
+const NewsPage = ({ data, location: { href } }) => {
   const articleData = data.prismic.article;
 
   return (
@@ -68,21 +69,29 @@ const NewsPage = ({ data }) => {
                     <div className="clearfix">
                       <div className="social-icons square">
                         <ul className="list-inline mb-0 d-inline-block">
-                          <li className="social-facebook">
-                            <a>
-                              <i className="fab fa-facebook-f" aria-hidden="true" />
-                            </a>
-                          </li>
-                          <li className="social-twitter">
-                            <a>
-                              <i className="fab fa-twitter" aria-hidden="true" />
-                            </a>
-                          </li>
-                          <li className="social-linkedin">
-                            <a>
-                              <i className="fab fa-linkedin-in" aria-hidden="true" />
-                            </a>
-                          </li>
+                          <FacebookShareButton title="Article" url={href}>
+                            <li className="social-facebook">
+                              <a>
+                                <i className="fab fa-facebook-f" aria-hidden="true" />
+                              </a>
+                            </li>
+                          </FacebookShareButton>
+
+                          <TwitterShareButton title="Article" url={href}>
+                            <li className="social-twitter">
+                              <a>
+                                <i className="fab fa-twitter" aria-hidden="true" />
+                              </a>
+                            </li>
+                          </TwitterShareButton>
+
+                          <LinkedinShareButton title="Article" url={href}>
+                            <li className="social-linkedin">
+                              <a>
+                                <i className="fab fa-linkedin-in" aria-hidden="true" />
+                              </a>
+                            </li>
+                          </LinkedinShareButton>
                         </ul>
                       </div>
                     </div>

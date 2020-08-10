@@ -1,11 +1,11 @@
 const config = {
-  siteTitle: 'Devhance', // Site title.
-  siteTitleShort: 'Devhance', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: 'Devhance', // Alternative site title for SEO.
+  siteTitle: 'ESE SRL', // Site title.
+  siteTitleShort: 'ESE SRL', // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitleAlt: 'ESE SRL', // Alternative site title for SEO.
   siteLogo: 'src/images/favicon/favicon.png', // Logo used for SEO and manifest.
   siteFavicon: 'src/images/favicon/favicon.png',
   siteImage: 'https://devhance.co/images/photos/devhance.png',
-  siteUrl: 'http://localhost:8000/', // Domain of your website without pathPrefix.
+  siteUrl: 'http://ese-srl.com', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: 'siteDescription', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
@@ -14,10 +14,10 @@ const config = {
   googleAnalyticsID: '', // GA tracking ID.
   dateFromFormat: 'YYYY-MM-DD', // Date format used in the frontmatter.
   dateFormat: 'DD/MM/YYYY', // Date format for display.
-  userName: 'Devhance Team', // Username to display in the author segment.
-  userEmail: 'hello@devhance.co', // Email used for RSS feed's author segment
+  userName: 'ESE SRL', // Username to display in the author segment.
+  userEmail: 'info@ese-srl.com', // Email used for RSS feed's author segment
   userTwitter: '@devhance_co', // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: 'Ukraine, Kyiv', // User location to display in the author segment.
+  userLocation: 'Bolivia', // User location to display in the author segment.
   userAvatar: 'src/images/favicon/favicon.png', // User avatar to display in the author segment.
   userDescription: '', // User description to display in the author segment.
   themeColor: '#3eb5f1', // Used for setting manifest and progress theme colors.

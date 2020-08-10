@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from '../components/LocalizedLink';
 import { Date, RichText } from 'prismic-reactjs';
 
 import Layout from '../components/Layout';

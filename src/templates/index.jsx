@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from '../components/LocalizedLink';
 import Slider from 'react-slick';
 
 import Layout from '../components/Layout';

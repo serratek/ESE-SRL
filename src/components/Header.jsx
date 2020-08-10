@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+import Link from './LocalizedLink';
 
 import Menu from './Menu';
 import Mobilemenu from './Mobile_menu';

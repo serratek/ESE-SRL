@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
 import {
   MDBNavbar,
   MDBNavbarNav,
@@ -11,6 +10,8 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem,
 } from 'mdbreact';
+
+import Link from './LocalizedLink';
 
 class Mobilemenu extends Component {
   state = {

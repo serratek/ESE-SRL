@@ -28,7 +28,6 @@ exports.createPages = async ({ actions, graphql }) => {
             }
           };
           const prefix = getPrefix() === config.defaultLang ? '' : getPrefix();
-
           createPage({
             path: `${prefix}/news/${node._meta.uid}/`,
             component: path.resolve(`src/templates/article.jsx`),
@@ -82,7 +81,6 @@ exports.createPages = async ({ actions, graphql }) => {
           if (page !== 'article.jsx') {
             return page;
           }
-          return page;
         });
 
       PAGES.forEach((template) => {

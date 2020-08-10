@@ -1,7 +1,9 @@
 import React from 'react';
-import { Link, graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import { RichText } from 'prismic-reactjs';
+
+import Link from './LocalizedLink';
 
 import imageNews from '../assets/images/news/finergy2019.jpg';
 
@@ -36,6 +38,7 @@ const LatestNews = () => {
       render={(data) => {
         const prismicData = data.prismic.allArticles.edges;
         console.log(data);
+
         return (
           <ul className="widget-post ttm-recent-post-list">
             {prismicData.map(({ node }, index) => (

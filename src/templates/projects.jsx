@@ -63,8 +63,6 @@ const ProjectPage = ({ data, pageContext }) => {
     }
   }, []);
 
-  console.log(PrismicDataAllProjects.edges.length, prismicProjects.length);
-
   return (
     <Layout title="Customers and Projects" isPageTitle>
       <div className="ttm-row grid-section clearfix">
