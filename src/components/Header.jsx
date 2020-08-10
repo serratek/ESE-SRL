@@ -1,10 +1,13 @@
 import React, { Component, useState, useEffect } from 'react';
-import Link from './LocalizedLink';
+import { Link as GatsbyLink } from 'gatsby';
 
+import Link from './LocalizedLink';
 import Menu from './Menu';
 import Mobilemenu from './Mobile_menu';
 
 import imageLogo from '../assets/images/LOGO_ESE.png';
+import iconES from '../assets/images/flag_Espana.jpg';
+import iconEN from '../assets/images/flag_United Kingdom.jpg';
 
 const useScroll = () => {
   const [isStickyHeader, setStickyHeader] = useState(false);
@@ -25,11 +28,8 @@ const useScroll = () => {
   return { isStickyHeader };
 };
 
-const Header3 = () => {
+const Header3 = ({ locale }) => {
   const { isStickyHeader } = useScroll();
-  // const [isShow, setShow] = useState(false);
-
-  // const toggle = () => setShow(!isShow);
 
   return (
     <header id="masthead" className="header ttm-header-style-03">
@@ -70,6 +70,14 @@ const Header3 = () => {
                             <li>
                               <i className="far fa-clock" />
                               &nbsp;&nbsp;Office Hour: 07:30am - 6:30pm
+                            </li>
+                            <li>
+                              <GatsbyLink to={locale === 'en' ? '/' : '/en'} className="mr-2">
+                                <img src={iconES} alt="es" />
+                              </GatsbyLink>
+                              <GatsbyLink to={'/en'}>
+                                <img src={iconEN} alt="en" />
+                              </GatsbyLink>
                             </li>
                           </ul>
                           <div className="ttm-social-links-wrapper list-inline">

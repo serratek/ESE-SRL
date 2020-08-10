@@ -38,7 +38,7 @@ const Layout = ({ isMainPage = false, isPageTitle, children, title, location }) 
 
       <div className="page">
         <div className={`site-main ${isMainPage ? 'home-page' : ''} `}>
-          <Header />
+          <Header locale={locale} />
           <div>
             {isPageTitle && <PageTitle title={title} />}
             {children}
