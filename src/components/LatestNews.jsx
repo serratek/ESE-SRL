@@ -1,25 +1,27 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
-import { RichText } from 'prismic-reactjs';
+import { Date, RichText } from 'prismic-reactjs';
+import { injectIntl } from 'react-intl';
 
 import Link from './LocalizedLink';
 
 import imageNews from '../assets/images/news/finergy2019.jpg';
 
-const LatestNews = () => {
+const LatestNews = ({ intl: { locale } }) => {
   return (
     <StaticQuery
       query={graphql`
         query {
           prismic {
-            allArticles(first: 3) {
+            allArticles(first: 10) {
               edges {
                 node {
                   title
                   date
                   _meta {
                     uid
+                    lang
                   }
                   image
                   imageSharp {
@@ -36,26 +38,41 @@ const LatestNews = () => {
         }
       `}
       render={(data) => {
-        const prismicData = data.prismic.allArticles.edges;
-        console.log(data);
+        const langPrismic = () => {
+          switch (locale) {
+            case 'es':
+              return 'es-bo';
+            case 'en':
+              return 'en-us';
+          }
+        };
+        const prismicData = data.prismic.allArticles.edges
+          .filter(({ node }) => node._meta.lang === langPrismic())
+          .slice(0, 3);
 
         return (
           <ul className="widget-post ttm-recent-post-list">
             {prismicData.map(({ node }, index) => (
               <li key={index}>
-                <Link to="/article/">
+                <Link to={`/news/${node._meta.uid}`}>
                   <Img fixed={node.imageSharp.childImageSharp.fixed} alt="post-img" />
                 </Link>
                 <div>
-                  <Link to="/article/">
+                  <Link to={`/news/${node._meta.uid}`}>
                     {RichText.asText(node.title).length > 45
                       ? `${RichText.asText(node.title).slice(0, 45)}...`
                       : RichText.asText(node.title)}
                   </Link>
-                  <span className="post-date">
-                    <i className="fa fa-calendar" />
-                    May 01, 2020
-                  </span>
+                  {node.date && (
+                    <span className="post-date">
+                      <i className="fa fa-calendar" />
+                      {Date(node.date).toLocaleDateString('en-GB', {
+                        month: 'short',
+                        day: 'numeric',
+                        year: 'numeric',
+                      })}
+                    </span>
+                  )}
                 </div>
               </li>
             ))}
@@ -66,4 +83,4 @@ const LatestNews = () => {
   );
 };
 
-export default LatestNews;
+export default injectIntl(LatestNews);

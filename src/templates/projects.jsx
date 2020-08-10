@@ -73,7 +73,11 @@ const ProjectPage = ({ data, pageContext }) => {
               <div className="col-md-6" key={index}>
                 <div className="featured-imagebox featured-imagebox-services style1 mb-30">
                   <div className="featured-thumbnail">
-                    <img className="img-fluid w-100" src={node.image.url} alt="image" />
+                    <img
+                      className="img-fluid w-100"
+                      src={node.image.url}
+                      alt={RichText.asText(node.title)}
+                    />
                   </div>
                   <div className="featured-content box-shadow">
                     <div className="featured-title mb-20">
@@ -86,13 +90,7 @@ const ProjectPage = ({ data, pageContext }) => {
                         <div className="sep-line mt-20 mb-20" />
                       </div>
                       {/* separator */}
-                      {node.logo && (
-                        <img
-                          className="img-fluid"
-                          src={node.logo.url}
-                          alt="Extension of single cycle to combined cycle of the Warnes Thermoelectric Plant"
-                        />
-                      )}
+                      {node.logo && <img className="img-fluid" src={node.logo.url} alt="logo" />}
                     </div>
                   </div>
                 </div>

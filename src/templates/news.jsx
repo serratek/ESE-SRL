@@ -45,16 +45,18 @@ const NewsPage = ({ pageContext }) => {
                             <i className="fa fa-user" />
                             By {node.author}
                           </span>
-                          <span className="ttm-meta-line entry-date">
-                            <i className="fa fa-calendar" />
-                            <time className="entry-date published" dateTime={node.date}>
-                              {Date(node.date).toLocaleDateString('en-GB', {
-                                month: 'long',
-                                day: 'numeric',
-                                year: 'numeric',
-                              })}
-                            </time>
-                          </span>
+                          {node.date && (
+                            <span className="ttm-meta-line entry-date">
+                              <i className="fa fa-calendar" />
+                              <time className="entry-date published" dateTime={node.date}>
+                                {Date(node.date).toLocaleDateString('en-GB', {
+                                  month: 'long',
+                                  day: 'numeric',
+                                  year: 'numeric',
+                                })}
+                              </time>
+                            </span>
+                          )}
                         </div>
                       </div>
                       <div className="entry-content">
