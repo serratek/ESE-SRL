@@ -1,13 +1,16 @@
 import React from 'react';
+import { graphql } from 'gatsby';
+import { Date, RichText } from 'prismic-reactjs';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import BlogSidebar from '../components/BlogSidebar';
 
-import imageNews from '../assets/images/news/finergy2019.jpg';
+const NewsPage = ({ data }) => {
+  const articleData = data.prismic.article;
 
-const NewsPage = () => {
   return (
-    <Layout title="News" isPageTitle>
+    <Layout title={RichText.asText(articleData.title)} isPageTitle>
       <div className="clearfix">
         <div className="sidebar ttm-bgcolor-white clearfix">
           <div className="container-xl">
@@ -19,7 +22,11 @@ const NewsPage = () => {
                   {/* post-featured-wrapper */}
                   <div className="ttm-post-featured-wrapper">
                     <div className="ttm-post-featured">
-                      <img className="img-fluid w-100" src={imageNews} alt="post-01" />
+                      <img
+                        className="img-fluid w-100"
+                        src={articleData.image.url}
+                        alt={RichText.asText(articleData.title)}
+                      />
                     </div>
                   </div>
                   {/* post-featured-wrapper end */}
@@ -30,15 +37,17 @@ const NewsPage = () => {
                         <div className="post-meta">
                           <span className="ttm-meta-line byline">
                             <i className="fa fa-user" />
-                            By Admin
+                            By {articleData.author}
                           </span>
                           <span className="ttm-meta-line entry-date">
                             <i className="fa fa-calendar" />
-                            <time
-                              className="entry-date published"
-                              dateTime="2018-07-28T00:39:29+00:00"
-                            >
-                              July 28, 2020
+
+                            <time className="entry-date published" dateTime={articleData.date}>
+                              {Date(articleData.date).toLocaleDateString('en-GB', {
+                                month: 'long',
+                                day: 'numeric',
+                                year: 'numeric',
+                              })}
                             </time>
                           </span>
                         </div>
@@ -48,40 +57,7 @@ const NewsPage = () => {
                         <div className="sep-line mt-3 mb-4" />
                       </div>
                       {/* separator */}
-                      <p>
-                        For the third consecutive year, ESE participated in the International Energy
-                        Fair (Finergy 2019). During this version, held on the third floor of the
-                        Marriott hotel, the company received the "Chiquitano mill" award as the best
-                        stand of the electricity sector, among some 31 participating companies.
-                      </p>
-                      <p>
-                        The event was arranged on Thursday, March 28 with a toast and a subsequent
-                        report from the authorities to each of the stands. This year ESE presented
-                        several novelties: Four LED luminaires of 32, 35 90 and 140 W have been seen
-                        that produce up to 50% savings in energy consumption rates; The Fluke
-                        thermograph was presented to perform the measurements of the heat points in
-                        the electrical installations and of the media, in a practical way, the main
-                        safety standards that a worker in the electrical sector should have.
-                      </p>
-                      <p>
-                        During the two days of the fair, ESE was visited by students, politicians,
-                        authorities, academics and the general public. Most of the attendees who are
-                        in the ESE stand information about our 8 business units and the main
-                        projects we developed, as well as information about the equipment that is on
-                        display.
-                      </p>
-                      <p>
-                        We are grateful for the award received, thanks to the organizers and the
-                        people who praised this event," he said. Diego Vera, CFO of ESE.
-                      </p>
-                      <p>
-                        Finergy is an event that takes place since 2017 as a boost for the
-                        electricity sector of the Secretariat of Energy of the Government of Santa
-                        Cruz, the College of Engineers and Electronics of Santa Cruz and the Society
-                        of Engineers of Bolivia, subsidiary Santa Cruz.
-                      </p>
-
-                      <img className="img-fluid" src={imageNews} alt="post-06" />
+                      {RichText.render(articleData.content)}
                     </div>
 
                     {/* separator */}
@@ -126,5 +102,19 @@ const NewsPage = () => {
     </Layout>
   );
 };
+
+export const pageQuery = graphql`
+  query Article($uid: String!, $lang: String!) {
+    prismic {
+      article(lang: $lang, uid: $uid) {
+        title
+        date
+        image
+        author
+        content
+      }
+    }
+  }
+`;
 
 export default NewsPage;

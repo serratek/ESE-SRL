@@ -1,12 +1,20 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { Date, RichText } from 'prismic-reactjs';
 
 import Layout from '../components/Layout';
 import BlogSidebar from '../components/BlogSidebar';
 
-import imageNews from '../assets/images/news/finergy2019.jpg';
+import usePagination from '../utils/usePagination';
 
-const NewsPage = () => {
+const POSTS_PER_PAGE = 5;
+
+const NewsPage = ({ pageContext }) => {
+  const { next, prev, jump, currentData, currentPage, maxPage } = usePagination(
+    pageContext.allNews,
+    POSTS_PER_PAGE
+  );
+
   return (
     <Layout title="News" isPageTitle>
       <div className="clearfix">
@@ -16,12 +24,16 @@ const NewsPage = () => {
             <div className="row">
               <div className="col-lg-9 content-area">
                 {/* ttm-service-single-content-are */}
-                {[1, 2, 3, 4].map((item, index) => (
+                {currentData().map(({ node }, index) => (
                   <article className="post ttm-blog-classic clearfix" key={index}>
                     {/* post-featured-wrapper */}
                     <div className="ttm-post-featured-wrapper ttm-featured-wrapper">
                       <div className="ttm-post-featured">
-                        <img className="img-fluid w-100" src={imageNews} alt="post-01" />
+                        <img
+                          className="img-fluid w-100"
+                          src={node.image.url}
+                          alt={RichText.asText(node.title)}
+                        />
                       </div>
                     </div>
                     {/* post-featured-wrapper end */}
@@ -31,15 +43,16 @@ const NewsPage = () => {
                         <div className="post-meta">
                           <span className="ttm-meta-line byline">
                             <i className="fa fa-user" />
-                            By Admin
+                            By {node.author}
                           </span>
                           <span className="ttm-meta-line entry-date">
                             <i className="fa fa-calendar" />
-                            <time
-                              className="entry-date published"
-                              dateTime="2018-07-28T00:39:29+00:00"
-                            >
-                              July 28, 2020
+                            <time className="entry-date published" dateTime={node.date}>
+                              {Date(node.date).toLocaleDateString('en-GB', {
+                                month: 'long',
+                                day: 'numeric',
+                                year: 'numeric',
+                              })}
                             </time>
                           </span>
                         </div>
@@ -47,19 +60,16 @@ const NewsPage = () => {
                       <div className="entry-content">
                         <header className="entry-header">
                           <h2 className="entry-title">
-                            <Link to="/article/">
-                              ESE presents stand at Finergy 2019; He received the "Molino
-                              Chiquitano" award
+                            <Link to={`/news/${node._meta.uid}`}>
+                              {RichText.asText(node.title)}
                             </Link>
                           </h2>
                         </header>
                         <div className="ttm-box-desc-text">
                           <p>
-                            For the third consecutive year, ESE participated in the International
-                            Energy Fair (Finergy 2019). During this version, held on the third floor
-                            of the Marriott hotel, the company received the "Chiquitano mill" award
-                            as the best stand of the electricity sector, among some 31 participating
-                            companies...
+                            {RichText.asText(node.content).length > 300
+                              ? RichText.asText(node.content).slice(0, 300) + '...'
+                              : RichText.asText(node.content)}
                           </p>
                         </div>
                         {/* separator */}
@@ -70,7 +80,7 @@ const NewsPage = () => {
                         <div className="ttm-blogbox-desc-footer">
                           <div className="ttm-blogbox-footer-readmore d-inline-block">
                             <Link
-                              to="/article/"
+                              to={`/news/${node._meta.uid}`}
                               className="ttm-btn ttm-btn-size-sm ttm-textcolor-skincolor btn-inline ttm-icon-btn-right"
                             >
                               Read More <i className="ti ti-angle-double-right" />
@@ -86,11 +96,25 @@ const NewsPage = () => {
                 <div className="row">
                   <div className="col-md-12 text-center">
                     <div className="ttm-pagination">
-                      <span className="page-numbers current">1</span>
-                      <a className="page-numbers">2</a>
-                      <a className="next page-numbers">
+                      <button className="next page-numbers" onClick={() => prev()}>
+                        <i className="ti ti-arrow-left" />
+                      </button>
+
+                      {[...Array(maxPage).keys()].map((number) => (
+                        <button
+                          key={number}
+                          className={
+                            number + 1 === currentPage ? 'page-numbers current' : 'page-numbers'
+                          }
+                          onClick={() => jump(number + 1)}
+                        >
+                          {number + 1}
+                        </button>
+                      ))}
+
+                      <button className="next page-numbers" onClick={() => next()}>
                         <i className="ti ti-arrow-right" />
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>

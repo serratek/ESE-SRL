@@ -1,42 +1,65 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, StaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+import { RichText } from 'prismic-reactjs';
 
 import imageNews from '../assets/images/news/finergy2019.jpg';
 
 const LatestNews = () => {
   return (
-    <ul className="widget-post ttm-recent-post-list">
-      <li>
-        <Link to="/article/">
-          <img src={imageNews} alt="post-img" />
-        </Link>
-        <Link to="/article/">More than 120 workers perform the reading of meters for CRE</Link>
-        <span className="post-date">
-          <i className="fa fa-calendar" />
-          May 01, 2020
-        </span>
-      </li>
-      <li>
-        <Link to="/article/">
-          <img src="https://via.placeholder.com/150X150/444444.jpg" alt="post-img" />
-        </Link>
-        <Link to="/article/">You Must Try 20 Secret Of Digital Transform</Link>
-        <span className="post-date">
-          <i className="fa fa-calendar" />
-          May 03, 2019
-        </span>
-      </li>
-      <li>
-        <Link to="/article/">
-          <img src="https://via.placeholder.com/150X150/444444.jpg" alt="post-img" />
-        </Link>
-        <Link to="/article/">10 PHP Frameworks You Need To Use Anywhere</Link>
-        <span className="post-date">
-          <i className="fa fa-calendar" />
-          May 05, 2019
-        </span>
-      </li>
-    </ul>
+    <StaticQuery
+      query={graphql`
+        query {
+          prismic {
+            allArticles(first: 3) {
+              edges {
+                node {
+                  title
+                  date
+                  _meta {
+                    uid
+                  }
+                  image
+                  imageSharp {
+                    childImageSharp {
+                      fixed(width: 70, height: 70) {
+                        ...GatsbyImageSharpFixed
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={(data) => {
+        const prismicData = data.prismic.allArticles.edges;
+        console.log(data);
+        return (
+          <ul className="widget-post ttm-recent-post-list">
+            {prismicData.map(({ node }, index) => (
+              <li key={index}>
+                <Link to="/article/">
+                  <Img fixed={node.imageSharp.childImageSharp.fixed} alt="post-img" />
+                </Link>
+                <div>
+                  <Link to="/article/">
+                    {RichText.asText(node.title).length > 45
+                      ? `${RichText.asText(node.title).slice(0, 45)}...`
+                      : RichText.asText(node.title)}
+                  </Link>
+                  <span className="post-date">
+                    <i className="fa fa-calendar" />
+                    May 01, 2020
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        );
+      }}
+    />
   );
 };
 
