@@ -113,7 +113,7 @@ const Header3 = ({ locale }) => {
                       <div className="ml-auto">
                         <Menu />
                         <div className="mobilemenu">
-                          <Mobilemenu />
+                          <Mobilemenu locale={locale}/>
                         </div>
                       </div>
                     </div>

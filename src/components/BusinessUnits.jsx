@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import Link from './LocalizedLink';
 
@@ -30,7 +31,9 @@ const BusinessUnits = () => {
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Power Generation</h5>
+                  <h5>
+                    <FormattedMessage id={'menu.powerGeneration'} />
+                  </h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -60,7 +63,9 @@ const BusinessUnits = () => {
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Power Substations</h5>
+                  <h5>
+                    <FormattedMessage id={'menu.powerSubstations'} />
+                  </h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -90,7 +95,9 @@ const BusinessUnits = () => {
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Oil & Gas</h5>
+                  <h5>
+                    <FormattedMessage id={'menu.oilGas'} />
+                  </h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -120,7 +127,9 @@ const BusinessUnits = () => {
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Industry</h5>
+                  <h5>
+                    <FormattedMessage id={'menu.industry'} />
+                  </h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -151,7 +160,9 @@ const BusinessUnits = () => {
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Distribution Electrical Grids</h5>
+                  <h5>
+                    <FormattedMessage id={'menu.distributionElectricalGrids'} />
+                  </h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -181,7 +192,9 @@ const BusinessUnits = () => {
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Lines of Transmission</h5>
+                  <h5>
+                    <FormattedMessage id={'menu.linesOfTransmission'} />
+                  </h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}
@@ -211,7 +224,9 @@ const BusinessUnits = () => {
                 {/*  featured-content */}
                 <div className="featured-title">
                   {/*  featured-title */}
-                  <h5>Lighting Systems</h5>
+                  <h5>
+                    <FormattedMessage id={'menu.lightingSystems'} />
+                  </h5>
                 </div>
                 <div className="featured-desc">
                   {/*  featured-desc */}

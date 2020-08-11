@@ -134,7 +134,7 @@ const IndexPage = ({ data }) => {
                 {/* section title */}
                 <div className="section-title with-desc clearfix">
                   <div className="title-header">
-                    <h5>About Altech</h5>
+                    <h5>About Us</h5>
                     <h2 className="title">
                       We deal with the aspects of professional <span>IT Services</span>
                     </h2>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Link from './LocalizedLink';
+import { FormattedMessage } from 'react-intl';
 
+import Link from './LocalizedLink';
 import LatestNews from '../components/LatestNews';
 
 import imageLogo from '../assets/images/LOGO_ESE_WHITE.png';
@@ -59,11 +60,11 @@ export default class Footer extends Component {
             <div className="row">
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                 <div className="widget widget_text  clearfix">
-                  <h3 className="widget-title">About Our Company</h3>
+                  <h3 className="widget-title">
+                    <FormattedMessage id={'footer.aboutTitle'} />
+                  </h3>
                   <div className="textwidget widget-text">
-                    We are the best world Information Technology Company. Providing the highest
-                    quality in hardware &amp; Network solutions. About more than 20 years of
-                    experience and 1000 of innovative achievements.
+                    <FormattedMessage id={'footer.aboutDesc'} />
                   </div>
                   <div className="quicklink-box">
                     {/*  featured-icon-box */}
@@ -93,31 +94,49 @@ export default class Footer extends Component {
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
                 <div className="widget link-widget clearfix">
-                  <h3 className="widget-title">Quick Links</h3>
+                  <h3 className="widget-title">
+                    <FormattedMessage id={'footer.quickLinks'} />
+                  </h3>
                   <ul id="menu-footer-services">
                     <li>
-                      <Link to="/">Home</Link>
+                      <Link to="/">
+                        <FormattedMessage id={'menu.home'} />
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/about-us/">About us</Link>
+                      <Link to="/about-us/">
+                        <FormattedMessage id={'menu.aboutUs'} />
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/business-units/">Business Units</Link>
+                      <Link to="/business-units/">
+                        <FormattedMessage id={'menu.businessUnits'} />
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/projects/">Projects</Link>
+                      <Link to="/projects/">
+                        <FormattedMessage id={'menu.projects'} />
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/social-contribution/">Social Contribution</Link>
+                      <Link to="/social-contribution/">
+                        <FormattedMessage id={'menu.socialContribution'} />
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/jobs/">Jobs</Link>
+                      <Link to="/jobs/">
+                        <FormattedMessage id={'menu.jobs'} />
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/news/">News</Link>
+                      <Link to="/news/">
+                        <FormattedMessage id={'menu.news'} />
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/contact-us/">Contact us</Link>
+                      <Link to="/contact-us/">
+                        <FormattedMessage id={'menu.contactUs'} />
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -130,7 +149,9 @@ export default class Footer extends Component {
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area res-767-mb-40">
                 <div className="widget flicker_widget clearfix">
-                  <h3 className="widget-title">Follow Us On</h3>
+                  <h3 className="widget-title">
+                    <FormattedMessage id={'footer.followUs'} />
+                  </h3>
                   <div className="textwidget widget-text">
                     <div className="social-icons circle social-hover">
                       <ul className="list-inline">

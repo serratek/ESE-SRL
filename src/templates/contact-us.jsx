@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import GoogleMap from '../components/GoogleMap';
