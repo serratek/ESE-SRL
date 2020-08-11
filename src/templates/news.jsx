@@ -1,8 +1,9 @@
 import React from 'react';
-import Link from '../components/LocalizedLink';
 import { Date, RichText } from 'prismic-reactjs';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
+import Link from '../components/LocalizedLink';
 import BlogSidebar from '../components/BlogSidebar';
 
 import usePagination from '../utils/usePagination';

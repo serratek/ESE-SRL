@@ -1,13 +1,14 @@
 import React from 'react';
-import Link from '../components/LocalizedLink';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import FadeIn from 'react-fade-in';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import CountUp from 'react-countup';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
+import Link from '../components/LocalizedLink';
 
 import imageNosotros1 from '../assets/images/pages/about-us/nosotros1.jpg';
 import imageArturoVera from '../assets/images/pages/about-us/arturo-vera.jpg';
@@ -28,9 +29,16 @@ const AboutUsPage = () => (
             {/* section title */}
             <div className="section-title text-center with-desc clearfix">
               <div className="title-header">
-                <h5>What We Offer For You</h5>
+                <h5>
+                  <FormattedMessage id={'about.1s.subtitle'} />
+                </h5>
                 <h2 className="title">
-                  Here are some <span>Information </span>
+                  <FormattedMessage
+                    id={'about.1s.title'}
+                    values={{
+                      colored: (chunks) => <span>{chunks}</span>,
+                    }}
+                  />
                 </h2>
               </div>
             </div>
@@ -48,32 +56,37 @@ const AboutUsPage = () => (
                   <Tab className="tab" title="Our History">
                     <span>
                       <i className="ttm-icon ti-user"></i>
-                      Our History
+                      <FormattedMessage id={'about.tab1'} />
                     </span>
                   </Tab>
                   <Tab className="tab" title="Philosophy of Life">
                     <span>
-                      <i className="ttm-icon ti-cup"></i> Philosophy of Life
+                      <i className="ttm-icon ti-cup"></i>
+                      <FormattedMessage id={'about.tab2'} />
                     </span>
                   </Tab>
                   <Tab className="tab" title="Quality Policies">
                     <span>
-                      <i className="ttm-icon ti-check-box"></i> Quality Policies
+                      <i className="ttm-icon ti-check-box"></i>{' '}
+                      <FormattedMessage id={'about.tab3'} />
                     </span>
                   </Tab>
                   <Tab className="tab" title="Health, Safety and Evironmental Policies">
                     <span>
-                      <i className="ttm-icon ti-shield"></i>Health, Safety and Evironmental Policies
+                      <i className="ttm-icon ti-shield"></i>
+                      <FormattedMessage id={'about.tab4'} />
                     </span>
                   </Tab>
                   <Tab className="tab" title="Main Figures">
                     <span>
-                      <i className="ttm-icon ti-target"></i> Main Figures
+                      <i className="ttm-icon ti-target"></i>
+                      <FormattedMessage id={'about.tab5'} />
                     </span>
                   </Tab>
                   <Tab className="tab" title="Organigrama">
                     <span>
-                      <i className="ttm-icon ti-settings"></i> Organigrama
+                      <i className="ttm-icon ti-settings"></i>{' '}
+                      <FormattedMessage id={'about.tab6'} />
                     </span>
                   </Tab>
                 </TabList>
@@ -85,25 +98,15 @@ const AboutUsPage = () => (
                         <div className="row">
                           <div className="col-lg-6">
                             <div className="text-left">
-                              <h3 className="title fs-30">Our History</h3>
-                              <p>
-                                The history of the Electromechanical Services Company ESE SRL began
-                                to come out ahead in the late 1980s. The world was shocking about
-                                the fall of the Berlin Wall, a lot of people were also debating the
-                                dissolution of the Soviet Union and other ones were marveling at
-                                Maradona's skill on the court. In Bolivia, the democracy was
-                                starting to take its first steps and the economy was afloat
-                                following an intentional process known as hyperinflation. The
-                                population in the country did not work with the internet or less
-                                with cell phones.
-                              </p>
-                              <p>
-                                That same year the INE reported that Santa Cruz had an estimated
-                                population of 800,000. Hundreds of families migrated to this region
-                                attracted by investments and projects that were developed mainly in
-                                agriculture, industry and commerce. And as the population grew, so
-                                did the demand for water, energy, health and education.
-                              </p>
+                              <h3 className="title fs-30">
+                                <FormattedMessage id={'about.tab1.title'} />
+                              </h3>
+                              <FormattedMessage
+                                id={'about.tab1.content1'}
+                                values={{
+                                  p: (chunks) => <p>{chunks}</p>,
+                                }}
+                              />
                             </div>
                           </div>
                           <div className="col-lg-6">
@@ -121,66 +124,12 @@ const AboutUsPage = () => (
                             </div>
                           </div>
                           <div className="col-12 text-left">
-                            <p>
-                              At the end of 1989, Arturo Vera Velasco, a young man who learned how
-                              to install coils from his 15 years and who knew how to face each
-                              problem with self-effacement, was the founder of Electromechanical
-                              Services Company ESE SRL. The principles with which company started
-                              were inherent to what he was: to work with honesty, responsibility and
-                              above all with professionalism to satisfy his clients.{' '}
-                            </p>
-                            <p>
-                              The company began to provide services with two workers, a van and a
-                              small office located at the end of Paraguá Avenue, in the north of
-                              Santa Cruz. The confidence of the companies we were winning step by
-                              step. Institutions like CRE, YPFB, among others, supported the work of
-                              ESE. Step by step, more workers joined.{' '}
-                            </p>
-                            <p>
-                              {' '}
-                              In 1994, as the company grew and maintained a balance between its
-                              accounts and the workforce, the executives of this firm acquired land
-                              in the area with the largest concentration of private companies in
-                              Santa Cruz: the Industrial Park. Months later, they built the office
-                              where the company currently operates.
-                            </p>
-                            <p>
-                              Twenty-seven years have passed since that day. Vera, along with her
-                              two sons, Marco, Diego and the professional contribution of each of
-                              his workers, has developed more than a hundred projects of economic
-                              and social relevance. Nowadays is one of the few companies in the
-                              country that offer EPC -Engineering, Procurement & Construction-
-                              services or also known as turnkey signatures.
-                            </p>
-                            <p>
-                              During these years, ESE together with CRE contributed to the expansion
-                              of public lighting in Santa Cruz. It also became one of the pioneer
-                              companies in incorporating specialized equipment for the service of
-                              maintenance of live lines in low and medium voltage and developed
-                              experience in the construction of electrical grids in the east, west,
-                              valley and the mountain range.
-                            </p>
-                            <p>
-                              ESE, with the incorporation of new technologies, the company entered
-                              into the Electrical Maintenance Services to the Oil Companies (SEEP)
-                              and in the Industrial Services of Electromechanical Assembly (SEM). As
-                              a subcontractor, the company participated and is involved in the
-                              design, construction and assembly of large thermoelectric plants in
-                              the country, such as El Kenko 2 (El Alto), Del Sur (Tarija), Warnes
-                              (Santa Cruz) and Entre Ríos (Cochabamba) . We have also built a dozen
-                              power substations located in strategic locations in Tarija,
-                              Chuquisaca, La Paz, Beni and Cochabamba.
-                            </p>
-                            <p>
-                              The company has the certificate of the integrated management system
-                              audited by Tüv Rheinland Quality: ISO 9001, Occupational Safety and
-                              Health: OHSAS 18001; and Environment: ISO 14001. Actually, ESE keeps
-                              alive its principles with which it began: to be a company that leads
-                              the electromechanical services sector, meeting the management, health,
-                              safety and environmental standards. It generates more than 600 direct
-                              jobs and has received various awards for being a contractor company
-                              with great technical attributes.
-                            </p>
+                            <FormattedMessage
+                              id={'about.tab1.content2'}
+                              values={{
+                                p: (chunks) => <p>{chunks}</p>,
+                              }}
+                            />
                             <div className="c-timeline">
                               <VerticalTimeline>
                                 <VerticalTimelineElement
