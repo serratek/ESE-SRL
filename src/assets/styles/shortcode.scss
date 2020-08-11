@@ -3505,3 +3505,26 @@ ul.payment_methods {
     }
   }
 }
+
+/* ===============================================
+    25.My Custom
+------------------------*/
+.featured-roles {
+  .featured-role {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    &:not(:last-child) {
+      border-bottom: 1px solid #ebebeb;
+    }
+    > div:first-child {
+      width: 100%;
+      max-width: 80%;
+    }
+
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+  }
+}

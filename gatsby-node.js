@@ -3,6 +3,27 @@ const fs = require('fs');
 
 const config = require('./src/constants/site-config');
 
+const makeRequest = (graphql, request) =>
+  new Promise((resolve, reject) => {
+    resolve(
+      graphql(request).then((result) => {
+        if (result.errors) {
+          reject(result.errors);
+        }
+        return result;
+      })
+    );
+  });
+
+const getPrefix = (lang) => {
+  switch (lang) {
+    case 'es-bo':
+      return 'es';
+    case 'en-us':
+      return 'en';
+  }
+};
+
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
@@ -19,20 +40,13 @@ exports.createPages = async ({ actions, graphql }) => {
         await createPageRecursively(query, endCursor);
       } else {
         allArticlesData.forEach(({ node }) => {
-          const getPrefix = () => {
-            switch (node._meta.lang) {
-              case 'es-bo':
-                return 'es';
-              case 'en-us':
-                return 'en';
-            }
-          };
-          const prefix = getPrefix() === config.defaultLang ? '' : getPrefix();
+          const prefix =
+            getPrefix(node._meta.lang) === config.defaultLang ? '' : getPrefix(node._meta.lang);
           createPage({
             path: `${prefix}/news/${node._meta.uid}/`,
             component: path.resolve(`src/templates/article.jsx`),
             context: {
-              locale: getPrefix(),
+              locale: getPrefix(node._meta.lang),
               lang: node._meta.lang,
               uid: node._meta.uid,
             },
@@ -71,6 +85,42 @@ exports.createPages = async ({ actions, graphql }) => {
     );
   };
 
+  const getJobs = await makeRequest(
+    graphql,
+    `
+      {
+        prismic {
+          allJobs {
+            edges {
+              node {
+                _meta {
+                  lang
+                  id
+                  uid
+                }
+              }
+            }
+          }
+        }
+      }
+    `
+  ).then((result) => {
+    result.data.prismic.allJobs.edges.forEach(({ node }) => {
+      const prefix =
+        getPrefix(node._meta.lang) === config.defaultLang ? '' : getPrefix(node._meta.lang);
+
+      createPage({
+        path: `${prefix}/jobs/${node._meta.uid}/`,
+        component: path.resolve(`src/templates/job.jsx`),
+        context: {
+          locale: getPrefix(node._meta.lang),
+          lang: node._meta.lang,
+          uid: node._meta.uid,
+        },
+      });
+    });
+  });
+
   const getPages = async () =>
     config.locales.map((locale) => {
       const templateFolder = './src/templates';
@@ -78,7 +128,7 @@ exports.createPages = async ({ actions, graphql }) => {
         .readdirSync(templateFolder)
         .map((file) => file)
         .filter((page) => {
-          if (page !== 'article.jsx') {
+          if (page !== 'article.jsx' && page !== 'job.jsx') {
             return page;
           }
         });
@@ -123,5 +173,5 @@ exports.createPages = async ({ actions, graphql }) => {
       });
     });
 
-  return Promise.all([await getArticles(), await getPages()]);
+  return Promise.all([await getArticles(), getJobs, await getPages()]);
 };
