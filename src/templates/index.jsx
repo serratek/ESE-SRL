@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { Date, RichText } from 'prismic-reactjs';
 import Slider from 'react-slick';
 import { FormattedMessage } from 'react-intl';
+import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import Link from '../components/LocalizedLink';
@@ -377,10 +378,9 @@ const IndexPage = ({ data }) => {
                 <div className="featured-imagebox featured-imagebox-blog">
                   <div className="featured-thumbnail">
                     {/* featured-thumbnail */}
-                    <img
-                      className="img-fluid"
+                    <Img
+                      fluid={node.imageSharp.childImageSharp.fluid}
                       alt={RichText.asText(node.title)}
-                      src={node.image.url}
                     />
                     <div className="ttm-blog-overlay-iconbox">
                       <Link to={`/news/${node._meta.uid}`}>
@@ -475,9 +475,8 @@ const IndexPage = ({ data }) => {
                 <div className="featured-imagebox featured-imagebox-services style1">
                   <div className="featured-thumbnail">
                     {/* featured-thumbnail */}
-                    <img
-                      className="img-fluid"
-                      src={node.image.url}
+                    <Img
+                      fluid={node.imageSharp.childImageSharp.fluid}
                       alt={RichText.asText(node.title)}
                     />
                   </div>
@@ -521,6 +520,13 @@ export const query = graphql`
             title
             date
             image
+            imageSharp {
+              childImageSharp {
+                fluid(maxWidth: 395, maxHeight: 282) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
@@ -530,6 +536,13 @@ export const query = graphql`
             title
             description
             image
+            imageSharp {
+              childImageSharp {
+                fluid(maxWidth: 405, maxHeight: 270) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
             _meta {
               id
             }

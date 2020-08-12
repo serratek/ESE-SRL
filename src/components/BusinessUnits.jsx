@@ -41,7 +41,7 @@ const BusinessUnits = () => {
               <div className="featured-icon">
                 {/*  featured-icon */}
                 <div className="ttm-icon ttm-icon_element-size-xl">
-                  <svg class="icon">
+                  <svg className="icon">
                     <use xlinkHref="#factory" />
                   </svg>
                   {/*  ttm-icon */}
@@ -68,7 +68,7 @@ const BusinessUnits = () => {
               <div className="featured-icon">
                 {/*  featured-icon */}
                 <div className="ttm-icon ttm-icon_element-size-xl">
-                  <svg class="icon">
+                  <svg className="icon">
                     <use xlinkHref="#power-plant" />
                   </svg>
                   {/*  ttm-icon */}
@@ -95,7 +95,7 @@ const BusinessUnits = () => {
               <div className="featured-icon">
                 {/*  featured-icon */}
                 <div className="ttm-icon ttm-icon_element-size-xl">
-                  <svg class="icon">
+                  <svg className="icon">
                     <use xlinkHref="#oil-pump" />
                   </svg>
                   {/*  ttm-icon */}
@@ -122,7 +122,7 @@ const BusinessUnits = () => {
               <div className="featured-icon">
                 {/*  featured-icon */}
                 <div className="ttm-icon ttm-icon_element-size-xl">
-                  <svg class="icon">
+                  <svg className="icon">
                     <use xlinkHref="#industry" />
                   </svg>
                   {/*  ttm-icon */}
@@ -150,7 +150,7 @@ const BusinessUnits = () => {
               <div className="featured-icon">
                 {/*  featured-icon */}
                 <div className="ttm-icon ttm-icon_element-size-xl">
-                  <svg class="icon">
+                  <svg className="icon">
                     <use xlinkHref="#power-transformer" />
                   </svg>
                   {/*  ttm-icon */}
@@ -177,7 +177,7 @@ const BusinessUnits = () => {
               <div className="featured-icon">
                 {/*  featured-icon */}
                 <div className="ttm-icon ttm-icon_element-size-xl">
-                  <svg class="icon">
+                  <svg className="icon">
                     <use xlinkHref="#power" />
                   </svg>
                   {/*  ttm-icon */}
@@ -204,7 +204,7 @@ const BusinessUnits = () => {
               <div className="featured-icon">
                 {/*  featured-icon */}
                 <div className="ttm-icon ttm-icon_element-size-xl">
-                  <svg class="icon">
+                  <svg className="icon">
                     <use xlinkHref="#light-bulb-1" />
                   </svg>
                   {/*  ttm-icon */}
