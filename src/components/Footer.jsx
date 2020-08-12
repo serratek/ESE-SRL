@@ -88,7 +88,9 @@ export default class Footer extends Component {
                         </div>
                         <div className="featured-title">
                           {/*  featured-title */}
-                          <h5>+591 3 3460561</h5>
+                          <h5>
+                            <a href="tel:+591 3 3460561">+591 3 3460561</a>
+                          </h5>
                         </div>
                       </div>
                     </div>
@@ -163,6 +165,7 @@ export default class Footer extends Component {
                       <ul className="list-inline">
                         <li className="social-facebook">
                           <a
+                            href="https://www.facebook.com/ESESRL/"
                             className="tooltip-top rounded-circle"
                             target="_blank"
                             data-tooltip="Facebook"
@@ -172,6 +175,7 @@ export default class Footer extends Component {
                         </li>
                         <li className="social-twitter">
                           <a
+                            href="https://twitter.com/ESE_SRL"
                             className="tooltip-top rounded-circle"
                             target="_blank"
                             data-tooltip="Twitter"
@@ -181,20 +185,12 @@ export default class Footer extends Component {
                         </li>
                         <li className="social-flickr">
                           <a
+                            href="https://www.youtube.com/channel/UC52D98RbbJwgVQ3kIR07Bzw/videos"
                             className=" tooltip-top rounded-circle"
                             target="_blank"
-                            data-tooltip="flickr"
+                            data-tooltip="youtube"
                           >
-                            <i className="fab fa-flickr" />
-                          </a>
-                        </li>
-                        <li className="social-linkedin">
-                          <a
-                            className=" tooltip-top rounded-circle"
-                            target="_blank"
-                            data-tooltip="aedIn"
-                          >
-                            <i className="fab fa-linkedin-in" />
+                            <i className="fab fa-youtube" />
                           </a>
                         </li>
                       </ul>

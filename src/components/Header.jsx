@@ -86,23 +86,36 @@ const Header = () => {
                           <div className="ttm-social-links-wrapper list-inline">
                             <ul className="social-icons">
                               <li>
-                                <a className=" tooltip-bottom" data-tooltip="Facebook">
+                                <a
+                                  href="https://www.facebook.com/ESESRL/"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className=" tooltip-bottom"
+                                  data-tooltip="Facebook"
+                                >
                                   <i className="fab fa-facebook-f" />
                                 </a>
                               </li>
                               <li>
-                                <a className=" tooltip-bottom" data-tooltip="Twitter">
+                                <a
+                                  href="https://twitter.com/ESE_SRL"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className=" tooltip-bottom"
+                                  data-tooltip="Twitter"
+                                >
                                   <i className="fab fa-twitter" />
                                 </a>
                               </li>
                               <li>
-                                <a className=" tooltip-bottom" data-tooltip="Flickr">
-                                  <i className="fab fa-flickr" />
-                                </a>
-                              </li>
-                              <li>
-                                <a className=" tooltip-bottom" data-tooltip="aedin">
-                                  <i className="fab fa-linkedin-in" />
+                                <a
+                                  href="https://www.youtube.com/channel/UC52D98RbbJwgVQ3kIR07Bzw/videos"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className=" tooltip-bottom"
+                                  data-tooltip="Youtube"
+                                >
+                                  <i className="fab fa-youtube" />
                                 </a>
                               </li>
                             </ul>
