@@ -9,11 +9,14 @@ const SEO = ({ title }) => {
 
   const seoTitle =
     title && title.id ? intl.formatMessage({ id: title.id }) : title || config.siteTitle;
+  const seoDescription = 'ESE SRL - Empresa de Servicios Electromecánicos';
 
   return (
     <Helmet>
+      <html lang={intl.locale} />
       <title>{seoTitle}</title>
       <meta name="title" content={seoTitle} />
+      <meta name="description" content={seoDescription} />
     </Helmet>
   );
 };
