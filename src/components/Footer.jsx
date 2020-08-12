@@ -82,7 +82,9 @@ export default class Footer extends Component {
                         {/*  featured-content */}
                         <div className="featured-desc">
                           {/*  featured-desc */}
-                          <p>Talk To Our Support</p>
+                          <p>
+                            <FormattedMessage id={'common.talkToOurSupport'} />
+                          </p>
                         </div>
                         <div className="featured-title">
                           {/*  featured-title */}
@@ -145,7 +147,9 @@ export default class Footer extends Component {
               </div>
               <div className="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area res-991-mb-40 res-767-mb-0">
                 <div className="widget widget_text clearfix">
-                  <h3 className="widget-title">Latest News</h3>
+                  <h3 className="widget-title">
+                    <FormattedMessage id={'common.latestNews'} />
+                  </h3>
                   <LatestNews />
                 </div>
               </div>

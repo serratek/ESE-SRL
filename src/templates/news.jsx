@@ -86,7 +86,8 @@ const NewsPage = ({ pageContext }) => {
                               to={`/news/${node._meta.uid}`}
                               className="ttm-btn ttm-btn-size-sm ttm-textcolor-skincolor btn-inline ttm-icon-btn-right"
                             >
-                              Read More <i className="ti ti-angle-double-right" />
+                              <FormattedMessage id={'buttons.readMore'} />{' '}
+                              <i className="ti ti-angle-double-right" />
                             </Link>
                           </div>
                         </div>
