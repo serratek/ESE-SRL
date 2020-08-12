@@ -17,8 +17,6 @@ const SEO = ({ title }) => {
       <title>{seoTitle}</title>
       <meta name="title" content={seoTitle} />
       <meta name="description" content={seoDescription} />
-      <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     </Helmet>
   );
 };
