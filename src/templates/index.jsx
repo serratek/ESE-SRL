@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Date, RichText } from 'prismic-reactjs';
 import Slider from 'react-slick';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import Link from '../components/LocalizedLink';
@@ -94,13 +95,13 @@ const IndexPage = ({ data }) => {
                             to="/#about-us"
                             className="ttm-btn ttm-btn-size-md ttm-bgcolor-skincolor ttm-textcolor-white mr-3"
                           >
-                            Read more
+                            <FormattedMessage id={'buttons.readMore'} />
                           </Link>
                           <Link
                             to="/contact-us/"
                             className="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-btn-color-darkgrey"
                           >
-                            Contact us
+                            <FormattedMessage id={'menu.contactUs'} />
                           </Link>
                         </p>
                       </div>
@@ -417,7 +418,8 @@ const IndexPage = ({ data }) => {
                       to={`/news/${node._meta.uid}`}
                       className="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20"
                     >
-                      Read More <i className="ti ti-angle-double-right" />
+                      <FormattedMessage id={'buttons.readMore'} />{' '}
+                      <i className="ti ti-angle-double-right" />
                     </Link>
                   </div>
                 </div>
@@ -454,7 +456,7 @@ const IndexPage = ({ data }) => {
                 to="/projects/"
                 className="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-btn-color-white"
               >
-                Read More
+                <FormattedMessage id={'buttons.readMore'} />
               </Link>
             </div>
           </div>
@@ -491,7 +493,8 @@ const IndexPage = ({ data }) => {
                       className="ttm-btn ttm-btn-size-sm ttm-textcolor-skincolor btn-inline ttm-icon-btn-right mt-2"
                       to="/projects/"
                     >
-                      Read More <i className="ti ti-angle-double-right" />
+                      <FormattedMessage id={'buttons.readMore'} />{' '}
+                      <i className="ti ti-angle-double-right" />
                     </Link>
                   </div>
                 </div>

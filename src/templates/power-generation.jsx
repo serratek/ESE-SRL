@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
@@ -22,7 +23,7 @@ const settings = {
 
 const PowerGenerationPage = () => {
   return (
-    <Layout title="Power Generation" isPageTitle>
+    <Layout title={{ id: 'menu.powerGeneration' }} isPageTitle>
       {/* page-title end*/}
       <div className="sidebar ttm-sidebar ttm-bgcolor-white clearfix">
         <div className="container-xl">
@@ -35,33 +36,12 @@ const PowerGenerationPage = () => {
                 <div className="ttm-service-description">
                   <div className="row">
                     <div className="col-12">
-                      <p>
-                        In Bolivia, according to the Electricity Authority, about 70% of power
-                        generation comes from thermos plants. And of this figure at least 30% has
-                        installed ESE. In 2012, the company participated, for example as a
-                        subcontractor, in the engineering, supply, construction and assembly works
-                        of the El Kenko II (El Alto) thermoelectric power plant, which injects 17.5
-                        megawatts (MW) National Interconnected (SIN). Subsequently, ESE was also
-                        awarded the engineering, construction and electromechanical assemblies of
-                        Termoeléctrica del Sur (Tarija) in which four turbogenerators of the German
-                        Siemens SGT-800 industry were installed. We have also been awarded the
-                        execution of the civil works and the electromechanical assembly of the
-                        Warnes Thermoelectric plant with the installation of five Siemens
-                        turbogenerators.
-                      </p>
-                      <p>
-                        ESE has demonstrated that it has all the technical and operative capacity to
-                        work as an EPC (Engineering, Procurement and Construction) firm, which
-                        means, to take care of the design, provision of supplies and the
-                        construction of any electromechanical project. We have 498 MW of installed
-                        capacity in Bolivia and 742 MW of power in the process of installation.
-                      </p>
-                      <p className="mb-0">
-                        The company also carried out the electromechanical, pre-commissioning,
-                        commissioning and commissioning of the Río Tercero thermoelectric plant,
-                        located in Córdoba (Argentina), together with the company Carlos Caballero,
-                        generating a favorable acceptance from the client: SoEnergy Argentina.
-                      </p>
+                      <FormattedMessage
+                        id={'businessUnits.powerGeneration.text'}
+                        values={{
+                          p: (chunks) => <p>{chunks}</p>,
+                        }}
+                      />
                     </div>
                   </div>
                   {/* separator */}

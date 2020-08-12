@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import Link from './LocalizedLink';
 import HowCanWeHelpBlock from './HowCanWeHelpBlock';
@@ -10,43 +11,45 @@ const Sidebar = () => {
         <ul className="widget-menu">
           <li>
             <Link to="/power-generation/" activeClassName="active">
-              Power Generation
+              <FormattedMessage id={'menu.powerGeneration'} />
             </Link>
           </li>
           <li>
             <Link to="/power-substations/" activeClassName="active">
-              Power Substations
+              <FormattedMessage id={'menu.powerSubstations'} />
             </Link>
           </li>
           <li>
             <Link to="/oil-and-gas/" activeClassName="active">
-              Oil & Gas
+              <FormattedMessage id={'menu.oilGas'} />
             </Link>
           </li>
           <li>
             <Link to="/industry/" activeClassName="active">
-              Industry
+              <FormattedMessage id={'menu.industry'} />
             </Link>
           </li>
           <li>
             <Link to="/distribution-electrical-grids/" activeClassName="active">
-              Distribution Electrical Grids
+              <FormattedMessage id={'menu.distributionElectricalGrids'} />
             </Link>
           </li>
           <li>
             <Link to="/lines-of-transmission/" activeClassName="active">
-              Lines of Transmission
+              <FormattedMessage id={'menu.linesOfTransmission'} />
             </Link>
           </li>
           <li>
             <Link to="/lighting-systems/" activeClassName="active">
-              Lighting Systems
+              <FormattedMessage id={'menu.lightingSystems'} />
             </Link>
           </li>
         </ul>
       </div>
       <div className="widget widget-text">
-        <h3 className="widget-title">About Us</h3>
+        <h3 className="widget-title">
+          <FormattedMessage id={'menu.aboutUs'} />
+        </h3>
         <div className="ttm-author-widget">
           <div className="author-widget_img">
             <img

@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
@@ -21,7 +22,7 @@ const settings = {
 
 const LinesOfTransmissionyPage = () => {
   return (
-    <Layout title="Lines of Transmission" isPageTitle>
+    <Layout title={{ id: 'menu.linesOfTransmission' }} isPageTitle>
       {/* page-title end*/}
       <div className="sidebar ttm-sidebar ttm-bgcolor-white clearfix">
         <div className="container-xl">
@@ -34,22 +35,12 @@ const LinesOfTransmissionyPage = () => {
                 <div className="ttm-service-description">
                   <div className="row">
                     <div className="col-12">
-                      <p>
-                        The transmission lines allow the transportation of electrical energy from
-                        the generation plants to a substation, between two substations or between
-                        the same generators. These lines are characterized by their wide length,
-                        capacity and power to carry voltage levels up to more than 500 kV.
-                      </p>
-                      <p className="mb-0">
-                        ESE made the electromechanical assembly and civil works between Cochabamba
-                        and La Paz on the 4,500 meters above sea level that included the
-                        construction of entry, exit and expansion bays. Several transmission lines
-                        were also carried out between the boundaries of La Paz and Beni with results
-                        that were highly accepted by customers. ESE has the personnel trained to
-                        make the foundations for transformers, fire walls, porticos, patio
-                        equipment, electrical conduits, control rooms, access roads and all
-                        complementary works.
-                      </p>
+                      <FormattedMessage
+                        id={'businessUnits.linesOfTransmission.text'}
+                        values={{
+                          p: (chunks) => <p>{chunks}</p>,
+                        }}
+                      />
                     </div>
                   </div>
                   {/* separator */}

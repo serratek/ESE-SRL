@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
@@ -21,7 +22,7 @@ const settings = {
 
 const PowerSubstationsPage = () => {
   return (
-    <Layout title="Power Substations" isPageTitle>
+    <Layout title={{ id: 'menu.powerSubstations' }} isPageTitle>
       {/* page-title end*/}
       <div className="sidebar ttm-sidebar ttm-bgcolor-white clearfix">
         <div className="container-xl">
@@ -34,22 +35,12 @@ const PowerSubstationsPage = () => {
                 <div className="ttm-service-description">
                   <div className="row">
                     <div className="col-12">
-                      <p>
-                        Our company has more than a decade of experience in the construction,
-                        construction of civil works and the electromechanical assembly of
-                        substations of 11.5 kV and 230 kV in geographies of the Andes as well as in
-                        the plains and valleys. The lifting of structures, wiring, wiring, support
-                        in Precom, com and commissioning. In addition, ESE has carried out civil
-                        works (foundations, firewall walls, patio equipment, electrical conduits,
-                        control rooms, roads, etc.) under the modality of sold works.
-                      </p>
-                      <p className="mb-0">
-                        ESE, for example, installed 100 Megavoltiamperios (MVA) for the company
-                        Siemens in the community of Entre Ríos, in the Tropic of Cochabamba. Also,
-                        the company connected through substations the electrical system of Tarija to
-                        the National Interconnected System (SIN) through an EPC project. We also
-                        carry out substations in Santiváñez, La Palca, La Cumbre, among others.
-                      </p>
+                      <FormattedMessage
+                        id={'businessUnits.powerSubstations.text'}
+                        values={{
+                          p: (chunks) => <p>{chunks}</p>,
+                        }}
+                      />
                     </div>
                   </div>
                   {/* separator */}

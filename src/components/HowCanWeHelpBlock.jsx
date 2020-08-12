@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 const HowCanWeHelpBlock = () => {
   return (
@@ -7,12 +8,13 @@ const HowCanWeHelpBlock = () => {
         <div className="featured-content featured-content-banner">
           <i className="flaticon flaticon-call" />
           <div className="featured-title ttm-box-title">
-            <h5>How Can We Help?</h5>
+            <h5>
+              <FormattedMessage id={'common.howHelpBlock.title'} />
+            </h5>
           </div>
           <div className="featured-desc">
             <p>
-              If you need any help, please
-              <br /> feel free to contact us.
+              <FormattedMessage id={'common.howHelpBlock.desc'} />
             </p>
           </div>
           <ul>

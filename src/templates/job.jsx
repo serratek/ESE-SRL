@@ -11,29 +11,23 @@ const JobsPage = ({ data }) => {
   const intl = useIntl();
 
   return (
-    <Layout title="Job with ESE" isPageTitle>
+    <Layout title={{ id: 'jobs.seoTitle' }} isPageTitle>
       <section className="ttm-row zero-padding-section clearfix">
         <div className="container-xl">
           <div className="row no-gutters">
             {/* row */}
 
-            <div className="col-lg-5 col-xl-5">
-              <div className="spacing-5">
-                <div className="ttm-pf-single-detail-box mb-35">
-                  <div className="ttm-pf-single-title">
-                    <h5>{RichText.asText(jobData.title)}</h5>
-                  </div>
-                  {RichText.render(jobData.description)}
-                </div>
-              </div>
-            </div>
             <div className="col-lg-7 col-xl-7">
               <div className="spacing-5">
                 {/* section title */}
                 <div className="section-title with-desc clearfix">
                   <div className="title-header">
-                    <h5>Contact Us</h5>
-                    <h2 className="title">Apply for this Job</h2>
+                    <h5>
+                      <FormattedMessage id={'menu.contactUs'} />
+                    </h5>
+                    <h2 className="title">
+                      <FormattedMessage id={'job.subtitle'} />
+                    </h2>
                   </div>
                 </div>
                 {/* section title end */}
@@ -118,12 +112,22 @@ const JobsPage = ({ data }) => {
                         className="ttm-btn ttm-btn-size-md ttm-bgcolor-skincolor mt-5 res-991-mt-20"
                         value
                       >
-                        Submit the Application
+                        <FormattedMessage id={'buttons.submitTheApplication'} />
                       </button>
                     </div>
                   </div>
                 </form>
                 {/* form */}
+              </div>
+            </div>
+            <div className="col-lg-5 col-xl-5">
+              <div className="spacing-5">
+                <div className="ttm-pf-single-detail-box mb-35">
+                  <div className="ttm-pf-single-title">
+                    <h5>{RichText.asText(jobData.title)}</h5>
+                  </div>
+                  {RichText.render(jobData.description)}
+                </div>
               </div>
             </div>
             {/* row */}

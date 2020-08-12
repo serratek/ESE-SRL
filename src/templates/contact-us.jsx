@@ -46,7 +46,9 @@ const ContactUsPage = ({}) => {
                         </div>
                         <div className="featured-desc">
                           {/* featured desc */}
-                          <p>Industrial Park of Santa Cruz P.I. 23 and 24. Transversal Avenue 1</p>
+                          <p>
+                            <FormattedMessage id={'common.fullAddress'} />
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -291,7 +293,7 @@ const ContactUsPage = ({}) => {
                         className="mt-3 ttm-btn ttm-btn-size-md ttm-bgcolor-skincolor"
                         value
                       >
-                        Submit Quote
+                        <FormattedMessage id={'buttons.submitQuote'} />
                       </button>
                     </div>
                   </div>

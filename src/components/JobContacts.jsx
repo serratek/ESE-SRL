@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import GoogleMap from './GoogleMap';
 
@@ -49,7 +50,9 @@ const JobContacts = () => {
                 <div className="featured-content">
                   {/* featured-content */}
                   <div className="featured-title">
-                    <h5>Phone</h5>
+                    <h5>
+                      <FormattedMessage id={'common.phone'} />
+                    </h5>
                     {/* featured-title */}
                   </div>
                   <div className="featured-desc">
@@ -79,7 +82,9 @@ const JobContacts = () => {
                   </div>
                   <div className="featured-desc">
                     {/* featured-description */}
-                    <p>Industrial Park of Santa Cruz P.I. 23 and 24. Transversal Avenue 1</p>
+                    <p>
+                      <FormattedMessage id={'common.fullAddress'} />
+                    </p>
                   </div>
                 </div>
                 {/* featured-content END*/}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
@@ -21,7 +22,7 @@ const settings = {
 
 const OilAndGasPage = () => {
   return (
-    <Layout title="Oil & Gas" isPageTitle>
+    <Layout title={{ id: 'menu.oilGas' }} isPageTitle>
       {/* page-title end*/}
       <div className="sidebar ttm-sidebar ttm-bgcolor-white clearfix">
         <div className="container-xl">
@@ -34,19 +35,12 @@ const OilAndGasPage = () => {
                 <div className="ttm-service-description">
                   <div className="row">
                     <div className="col-12">
-                      <p>
-                        ESE is able to provide integral solutions to companies that are upstream or
-                        downstream of the oil sector. The area staff has more than 15 years of
-                        experience in engineering, construction, commissioning and preventive,
-                        predictive and corrective maintenance of electrical and mechanical systems
-                        in fields, companies and the area of oil operation.
-                      </p>
-                      <p className="mb-0">
-                        Among its main clients are YPFB Transporte, YPFB Refinación, Halliburton
-                        Latin America SRL, Vintage Petroleum, GTB (Gas Trans Boliviano), Petrobras,
-                        among others. "We comply with the procedures and standards of quality,
-                        health and safety in the sector.
-                      </p>
+                      <FormattedMessage
+                        id={'businessUnits.oilGas.text'}
+                        values={{
+                          p: (chunks) => <p>{chunks}</p>,
+                        }}
+                      />
                     </div>
                   </div>
                   {/* separator */}

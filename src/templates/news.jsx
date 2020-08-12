@@ -17,7 +17,7 @@ const NewsPage = ({ pageContext }) => {
   );
 
   return (
-    <Layout title="News" isPageTitle>
+    <Layout title={{ id: 'news.seoTitle' }} isPageTitle>
       <div className="clearfix">
         <div className="sidebar ttm-bgcolor-white clearfix">
           <div className="container-xl">

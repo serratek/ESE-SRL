@@ -51,7 +51,7 @@ const BusinessUnits = () => {
                 </div>
               </div>
               <Link to="/power-generation/" className="ttm-btn btn-inline style2">
-                Read More{' '}
+                <FormattedMessage id={'buttons.readMore'} />
               </Link>
             </div>
             {/*  featured-icon-box END */}
@@ -83,7 +83,7 @@ const BusinessUnits = () => {
                 </div>
               </div>
               <Link to="/power-substations/" className="ttm-btn btn-inline style2">
-                Read More{' '}
+                <FormattedMessage id={'buttons.readMore'} />
               </Link>
             </div>
             {/*  featured-icon-box END */}
@@ -115,7 +115,7 @@ const BusinessUnits = () => {
                 </div>
               </div>
               <Link to="/oil-and-gas/" className="ttm-btn btn-inline style2">
-                Read More{' '}
+                <FormattedMessage id={'buttons.readMore'} />
               </Link>
             </div>
             {/*  featured-icon-box END */}
@@ -147,7 +147,7 @@ const BusinessUnits = () => {
                 </div>
               </div>
               <Link to="/industry/" className="ttm-btn btn-inline style2">
-                Read More{' '}
+                <FormattedMessage id={'buttons.readMore'} />
               </Link>
             </div>
 
@@ -180,7 +180,7 @@ const BusinessUnits = () => {
                 </div>
               </div>
               <Link to="/distribution-electrical-grids/" className="ttm-btn btn-inline style2">
-                Read More{' '}
+                <FormattedMessage id={'buttons.readMore'} />
               </Link>
             </div>
             {/*  featured-icon-box END */}
@@ -212,7 +212,7 @@ const BusinessUnits = () => {
                 </div>
               </div>
               <Link to="/lines-of-transmission/" className="ttm-btn btn-inline style2">
-                Read More{' '}
+                <FormattedMessage id={'buttons.readMore'} />
               </Link>
             </div>
             {/*  featured-icon-box END */}
@@ -244,7 +244,7 @@ const BusinessUnits = () => {
                 </div>
               </div>
               <Link to="/lighting-systems/" className="ttm-btn btn-inline style2">
-                Read More{' '}
+                <FormattedMessage id={'buttons.readMore'} />
               </Link>
             </div>
             {/*  featured-icon-box END */}

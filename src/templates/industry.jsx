@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
@@ -21,7 +22,7 @@ const settings = {
 
 const IndustryPage = () => {
   return (
-    <Layout title="Industry" isPageTitle>
+    <Layout title={{ id: 'menu.industry' }} isPageTitle>
       {/* page-title end*/}
       <div className="sidebar ttm-sidebar ttm-bgcolor-white clearfix">
         <div className="container-xl">
@@ -34,22 +35,12 @@ const IndustryPage = () => {
                 <div className="ttm-service-description">
                   <div className="row">
                     <div className="col-12">
-                      <p>
-                        Do you have new machinery and do not know how to install it? Or do you have
-                        problems with the electrical installation of your industry? Or maybe you
-                        want to install a new system? The Industrial Services of Electromechanical
-                        Assembly (SEM), offers a specialized technical service adapted to the
-                        requirement of your company. During the last five years, SEM staff has
-                        installed industrial machinery of diverse complexity and dimension, assembly
-                        of specialized equipment, medium voltage electrical systems, protection,
-                        cells and installation of transformers.
-                      </p>
-                      <p className="mb-0">
-                        Among our clients we can mention the Vicente Food Company, the company ICON,
-                        Dismatec, Soboce, hotel Camino Real, Los Tajibos. IOL S.A. among other. "We
-                        work hard in the finished and, without conditions, we put dedication to the
-                        work", expresses one of the supervisors of the area.
-                      </p>
+                      <FormattedMessage
+                        id={'businessUnits.industry.text'}
+                        values={{
+                          p: (chunks) => <p>{chunks}</p>,
+                        }}
+                      />
                     </div>
                   </div>
                   {/* separator */}

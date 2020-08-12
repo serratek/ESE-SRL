@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
@@ -21,7 +22,7 @@ const settings = {
 
 const LightingSystemsPage = () => {
   return (
-    <Layout title="Lighting Systems" isPageTitle>
+    <Layout title={{ id: 'menu.lightingSystems' }} isPageTitle>
       {/* page-title end*/}
       <div className="sidebar ttm-sidebar ttm-bgcolor-white clearfix">
         <div className="container-xl">
@@ -34,21 +35,12 @@ const LightingSystemsPage = () => {
                 <div className="ttm-service-description">
                   <div className="row">
                     <div className="col-12">
-                      <p>
-                        In order to have good lighting you have to have a good team. ESE, in
-                        addition to designing and building power lines, realizes the installation of
-                        low-energy lights. Our company was part of several iconic projects in Santa
-                        Cruz. For example, the installation of 1,325 luminaires distributed in 4
-                        kilometers of The Cambodrome. Also, ESE made the lighting of the 22 km long
-                        (round trip) of the avenue G77, inaugurated for a world summit held in Santa
-                        Cruz.
-                      </p>
-                      <p className="mb-0">
-                        Our firm has the representation of a luminaire manufacturer with a long
-                        history, such as Celsa, a company that markets its products in at least 15
-                        countries, and LG, recognized for the use of efficient technologies and
-                        friendly to the environment.
-                      </p>
+                      <FormattedMessage
+                        id={'businessUnits.lightingSystems.text'}
+                        values={{
+                          p: (chunks) => <p>{chunks}</p>,
+                        }}
+                      />
                     </div>
                   </div>
                   {/* separator */}

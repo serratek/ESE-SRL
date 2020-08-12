@@ -64,7 +64,7 @@ const ProjectPage = ({ data, pageContext }) => {
   }, []);
 
   return (
-    <Layout title="Customers and Projects" isPageTitle>
+    <Layout title={{ id: 'projects.seoTitle' }} isPageTitle>
       <div className="ttm-row grid-section clearfix">
         <div className="container-xl">
           {/* row */}

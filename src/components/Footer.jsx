@@ -35,7 +35,9 @@ export default class Footer extends Component {
                     <div className="featured-content">
                       {/*  featured-content */}
                       <div className="featured-desc">
-                        <p>Industrial Park of Santa Cruz P.I. 23 and 24. Transversal Avenue 1</p>
+                        <p>
+                          <FormattedMessage id={'common.fullAddress'} />
+                        </p>
                       </div>
                     </div>
                   </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
@@ -22,7 +23,7 @@ const settings = {
 
 const DistributionElectricalGridsPage = () => {
   return (
-    <Layout title="Distribution Electrical Grids" isPageTitle>
+    <Layout title={{ id: 'menu.distributionElectricalGrids' }} isPageTitle>
       {/* page-title end*/}
       <div className="sidebar ttm-sidebar ttm-bgcolor-white clearfix">
         <div className="container-xl">
@@ -35,24 +36,12 @@ const DistributionElectricalGridsPage = () => {
                 <div className="ttm-service-description">
                   <div className="row">
                     <div className="col-12">
-                      <p>
-                        It is necessary to build well-planned distribution networks in order to link
-                        the electricity generating centers to the points of consumption. And to
-                        design, build and maintain this energy efficiently requires at least three
-                        requirements: have trained personnel, appropriate clothing and specialized
-                        equipment.
-                      </p>
-                      <p className="mb-0">
-                        Tenemos experiencia en diseñar y construir líneas de baja y media tensión
-                        energizadas, desenergizadas tanto aéreas como subterráneas. Desarrollamos
-                        proyectos tanto para empresas y personas particulares como para entidades
-                        públicas. Junto con la Cooperativa Rural de Electrificación (CRE) y los
-                        Gobiernos subnacionales, ESE construye anualmente un promedio de 1.000 km de
-                        líneas que benefician a cientos de familias del área integrada como de los
-                        sistemas aislados de Cordillera, Velasco, Florida, Vallegrande, Puerto
-                        Suárez, entre otros. ESE también ha desarrollado líneas en departamentos
-                        como La Paz, Beni, Tarija y Cochabamba.
-                      </p>
+                      <FormattedMessage
+                        id={'businessUnits.distributionElectricalGrids.text'}
+                        values={{
+                          p: (chunks) => <p>{chunks}</p>,
+                        }}
+                      />
                     </div>
                   </div>
                   {/* separator */}

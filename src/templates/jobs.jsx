@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { RichText } from 'prismic-reactjs';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import Link from '../components/LocalizedLink';
@@ -10,7 +11,7 @@ const JobsPage = ({ data }) => {
   const prismicDataAllJobs = data.prismic.allJobs.edges;
 
   return (
-    <Layout title="Job with ESE" isPageTitle>
+    <Layout title={{ id: 'jobs.seoTitle' }} isPageTitle>
       <section className="ttm-row contact-section clearfix">
         <div className="container-xl">
           <div className="row">
@@ -19,8 +20,12 @@ const JobsPage = ({ data }) => {
               {/* section-title */}
               <div className="section-title with-desc text-center clearfix">
                 <div className="title-header">
-                  <h5>Jobs</h5>
-                  <h2 className="title">Open roles</h2>
+                  <h5>
+                    <FormattedMessage id={'jobs.subtitle'} />
+                  </h5>
+                  <h2 className="title">
+                    <FormattedMessage id={'jobs.title'} />
+                  </h2>
                 </div>
               </div>
               {/* section-title end */}
@@ -49,7 +54,7 @@ const JobsPage = ({ data }) => {
                     to={`/jobs/${node._meta.uid}`}
                     className="mt-3 ttm-btn ttm-btn-size-md ttm-bgcolor-skincolor"
                   >
-                    Apply Now
+                    <FormattedMessage id={'buttons.applyNow'} />
                   </Link>
                 </div>
               </div>
