@@ -1,6 +1,11 @@
 import React from 'react';
+import { useIntl } from 'react-intl';
 
 const PageTitle = ({ title }) => {
+  const intl = useIntl();
+
+  const seoTitle = title && title.id ? intl.formatMessage({ id: title.id }) : title;
+
   return (
     <section>
       {/* page-title */}
@@ -10,7 +15,7 @@ const PageTitle = ({ title }) => {
             <div className="col-md-12">
               <div className="title-box text-center">
                 <div className="page-title-heading">
-                  <h1 className="title">{title}</h1>
+                  <h1 className="title">{seoTitle}</h1>
                 </div>
               </div>
             </div>

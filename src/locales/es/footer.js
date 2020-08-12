@@ -1,8 +1,8 @@
 const translation = {
-  "footer.aboutTitle": "About Our Company",
-  "footer.aboutDesc": "We are the best world Information Technology Company. Providing the highest quality in hardware & Network solutions. About more than 20 years of experience and 1000 of innovative achievements.",
-  "footer.quickLinks": "Quick Links",
-  "footer.followUs": "Follow Us On",
+  "footer.aboutTitle": "Sobre Nuestra Compañía",
+  "footer.aboutDesc": "Transformamos ideas en energía. Estamos orientados a satisfacer las necesidades de nuestros clientes y superar sus expectativas, a través de soluciones eficientes.",
+  "footer.quickLinks": "Vínculos Rápidos",
+  "footer.followUs": "Síguenos En",
 }
 
 export default translation;

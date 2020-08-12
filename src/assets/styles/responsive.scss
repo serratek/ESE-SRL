@@ -288,6 +288,8 @@
     }
     .site-navigation {
       position: relative;
+      max-width: 800px;
+      width: 100%;
       &::after {
         position: absolute;
         bottom: 0;
@@ -310,7 +312,7 @@
         content: '';
         height: 1px;
         bottom: 0;
-        left: -128px;
+        left: -102px;
         right: -3000px;
         background-color: rgba($black-color, 0.06);
       }

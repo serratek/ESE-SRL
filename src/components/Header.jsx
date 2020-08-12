@@ -1,5 +1,6 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link as GatsbyLink } from 'gatsby';
+import { useIntl } from 'react-intl';
 
 import Link from './LocalizedLink';
 import Menu from './Menu';
@@ -28,8 +29,10 @@ const useScroll = () => {
   return { isStickyHeader };
 };
 
-const Header3 = ({ locale }) => {
+const Header = () => {
   const { isStickyHeader } = useScroll();
+  const intl = useIntl();
+  const locale = intl.locale;
 
   return (
     <header id="masthead" className="header ttm-header-style-03">
@@ -113,7 +116,7 @@ const Header3 = ({ locale }) => {
                       <div className="ml-auto">
                         <Menu />
                         <div className="mobilemenu">
-                          <Mobilemenu locale={locale}/>
+                          <Mobilemenu locale={locale} />
                         </div>
                       </div>
                     </div>
@@ -128,4 +131,4 @@ const Header3 = ({ locale }) => {
   );
 };
 
-export default Header3;
+export default Header;

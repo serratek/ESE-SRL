@@ -1,92 +1,88 @@
 const translation = {
-  "about.seoTitle": "About Us",
-  "about.1s.subtitle": "What We Offer For You",
-  "about.1s.title": "Here are some <colored>Information</colored>",
-  "about.tab1": "Our History",
-  "about.tab2": "Philosophy of Life",
-  "about.tab3": "Quality Policies",
-  "about.tab4": "Health, Safety and Evironmental Policies",
-  "about.tab5": "Main Figures",
+  "about.seoTitle": "Nosotros",
+  "about.1s.subtitle": "Nuestra Oferta",
+  "about.1s.title": "Aquí más <colored>Información</colored>",
+  "about.tab1": "Nuestra Historia",
+  "about.tab2": "Filosofía de Vida",
+  "about.tab3": "Valores Estratégicos",
+  "about.tab4": "Política de Gestión",
+  "about.tab5": "Principales Cifras",
   "about.tab6": "Organigrama",
-  "about.tab1.title": "Our History",
+  "about.tab1.title": "Nuestra Historia",
   "about.tab1.content1": `
     <p>
-    The history of the Electromechanical Services Company ESE SRL began
-    to come out ahead in the late 1980s. The world was shocking about
-    the fall of the Berlin Wall, a lot of people were also debating the
-    dissolution of the Soviet Union and other ones were marveling at
-    Maradona's skill on the court. In Bolivia, the democracy was
-    starting to take its first steps and the economy was afloat
-    following an intentional process known as hyperinflation. The
-    population in the country did not work with the internet or less
-    with cell phones.
+    La historia de la Empresa de Servicios Electromecánicos comienza
+     a entretejerse a finales de los 80. El mundo hablaba de la caída 
+     del muro en Berlín, debatía la disolución de la Unión Soviética y se 
+     maravillaba con la destreza de Maradona en la cancha. En Bolivia, 
+     mientras tanto, la democracia empezaba a dar sus primeros pasos y 
+     la economía salía a flote tras un doloso proceso conocido como la 
+     hiperinflación. La población en el país trabajaba sin internet ni 
+     teléfonos celulares.
   </p>
   <p>
-    That same year the INE reported that Santa Cruz had an estimated
-    population of 800,000. Hundreds of families migrated to this region
-    attracted by investments and projects that were developed mainly in
-    agriculture, industry and commerce. And as the population grew, so
-    did the demand for water, energy, health and education.
+  Ese mismo año el INE informó que Santa Cruz tenía una población estimada 
+  de 800.000 habitantes. Cientos de familias migraban a esta región atraída 
+  por inversiones y proyectos que se desarrollaban sobre todo en el agro, 
+  la industria y el comercio. Y a medida que la población crecía también se 
+  incrementaba la demanda de agua, energía, salud y educación.
   </p>`,
   "about.tab1.content2": `
       <p>
-      At the end of 1989, Arturo Vera Velasco, a young man who learned how
-      to install coils from his 15 years and who knew how to face each
-      problem with self-effacement, was the founder of Electromechanical
-      Services Company ESE SRL. The principles with which company started
-      were inherent to what he was: to work with honesty, responsibility and
-      above all with professionalism to satisfy his clients.
+      Un mes antes de que finalizara 1989, Arturo Vera Velasco, un cruceño 
+      que aprendió a colocar bobinas desde sus 15 años y que supo enfrentar 
+      con humildad y perseverancia los vaivenes de la vida, gestó la Empresa
+       de Servicios Electromecánicos ESE. Los valores con los que empezó esta
+        firma eran inherentes a la personalidad de “don Arturo”: honradez, 
+        responsabilidad y sobre todo el profesionalismo para cumplir con sus 
+        labores y satisfacer al cliente. 
     </p>
     <p>
-      The company began to provide services with two workers, a van and a
-      small office located at the end of Paraguá Avenue, in the north of
-      Santa Cruz. The confidence of the companies we were winning step by
-      step. Institutions like CRE, YPFB, among others, supported the work of
-      ESE. Step by step, more workers joined.
+    La empresa empezó a prestar sus servicios con dos trabajadores, una 
+    camioneta y una pequeña oficina ubicada al final de la avenida Paraguá, 
+    al norte de Santa Cruz. La confianza de las empresas la fuimos ganando 
+    paso a paso. Instituciones como la CRE, YPFB, entre otras, respaldaron 
+    el trabajo de ESE. Poco a poco se fue incorporando más obreros. 
     </p>
     <p>
-      In 1994, as the company grew and maintained a balance between its
-      accounts and the workforce, the executives of this firm acquired land
-      in the area with the largest concentration of private companies in
-      Santa Cruz: the Industrial Park. Months later, they built the office
-      where the company currently operates.
+    En 1994, a medida que la empresa crecía y mantenía un equilibrio entre 
+    sus cuentas y la mano de obra, los directivos de esta firma adquirieron 
+    un terreno en la zona de mayor concentración de empresas privadas en 
+    Santa Cruz: el Parque Industrial. Ahí, meses después edificaron la oficina 
+    donde funciona actualmente la compañía.
     </p>
     <p>
-      Twenty-seven years have passed since that day. Vera, along with her
-      two sons, Marco, Diego and the professional contribution of each of
-      his workers, has developed more than a hundred projects of economic
-      and social relevance. Nowadays is one of the few companies in the
-      country that offer EPC -Engineering, Procurement & Construction-
-      services or also known as turnkey signatures.
+    Ya han pasado 27 años desde aquel día y durante este tiempo, Vera, junto 
+    con sus dos hijos, Marco, Diego y el aporte profesional de cada uno de 
+    sus trabajadores, ha desarrollado más de un centenar de proyectos de 
+    relevancia económica y social que la llevaron a ser una de las pocas 
+    empresas en el país que ofrecen los servicios EPC (Engineering, 
+      Procurement & Construction) o también conocidas como firmas ‘llave en mano’.
     </p>
     <p>
-      During these years, ESE together with CRE contributed to the expansion
-      of public lighting in Santa Cruz. It also became one of the pioneer
-      companies in incorporating specialized equipment for the service of
-      maintenance of live lines in low and medium voltage and developed
-      experience in the construction of electrical grids in the east, west,
-      valley and the mountain range.
+    Durante estos años, ESE junto con la CRE contribuyó en la expansión del 
+    alumbrado público en Santa Cruz y en la construcción de plantas de 
+    generación de energía. Así también se convirtió en una de las empresas 
+    pioneras en incorporar equipo especializado para el servicio de mantenimiento 
+    de líneas vivas en baja y media tensión y desarrolló experiencia en la 
+    construcción de redes eléctricas en el oriente, occidente, valle y la cordillera.
     </p>
     <p>
-      ESE, with the incorporation of new technologies, the company entered
-      into the Electrical Maintenance Services to the Oil Companies (SEEP)
-      and in the Industrial Services of Electromechanical Assembly (SEM). As
-      a subcontractor, the company participated and is involved in the
-      design, construction and assembly of large thermoelectric plants in
-      the country, such as El Kenko 2 (El Alto), Del Sur (Tarija), Warnes
-      (Santa Cruz) and Entre Ríos (Cochabamba) . We have also built a dozen
-      power substations located in strategic locations in Tarija,
-      Chuquisaca, La Paz, Beni and Cochabamba.
+    ESE, como subcontratista, participó y está participando en el diseño, 
+    construcción y montaje de grandes termoeléctricas en el país como la 
+    de El Kenko 2 (El Alto), Del Sur (Tarija), Warnes (Santa Cruz) y Entre 
+    Ríos (Cochabamba). Así también hemos realizado la construcción de una 
+    decena de subestaciones de potencia ubicadas en lugares estratégicos 
+    de Tarija, Chuquisaca, La Paz, Beni y Cochabamba.
     </p>
     <p>
-      The company has the certificate of the integrated management system
-      audited by Tüv Rheinland Quality: ISO 9001, Occupational Safety and
-      Health: OHSAS 18001; and Environment: ISO 14001. Actually, ESE keeps
-      alive its principles with which it began: to be a company that leads
-      the electromechanical services sector, meeting the management, health,
-      safety and environmental standards. It generates more than 600 direct
-      jobs and has received various awards for being a contractor company
-      with great technical attributes.
+    La compañía cuenta con el certificado del sistema integrado de gestión 
+    auditado por Tüv Rheinland (ISO 9001:2008). A la fecha ESE mantiene 
+    vivo sus principios con los que empezó: ser una empresa que lidera 
+    el sector de servicios electromecánicos cumpliendo las normas de gestión, 
+    salud, seguridad y medioambiente. Genera más de 1.200 empleos directos y 
+    ha recibido diversos reconocimientos por el ser una empresa contratista 
+    con grandes atributos técnicos.
     </p>`,
   "about.tab1.timeline1": "Nace ESE S.R.L. como un emprendimiento que dé respuesta a la necesidad de contar con una empresa especializada en el área de servicios electromecánicos para la ciudad de Santa Cruz de la Sierra.",
   "about.tab1.timeline2": "Nos hemos convertido en el principal proveedor de servicios de la Cooperativa Rural de Electrificación – CRE Ltda.",
@@ -94,46 +90,47 @@ const translation = {
   "about.tab1.timeline4": "Se consolida un equilibrio tanto administrativo como financiero, que nos ha permitido encarar diversos proyectos de expansión de nuestras unidades de negocios.",
   "about.tab1.timeline5": "Se amplían nuestros horizontes, desarrollando proyectos a nivel internacional, en Argentina.",
   "about.tab1.timeline6": "Se realiza la implantación de nuestro Sistema Integrado de Gestión (Calidad: ISO 9001, Seguridad y Salud Ocupacional: OHSAS 18001 y Medio Ambiente: ISO 14001).",
-  "about.tab2.block1.title": "Mission",
-  "about.tab2.block1.desc": "We provide quality services in the country, protecting and helping as a priority the human being and then the environment with collaborators who work with international standards.",
-  "about.tab2.block2.title": "View",
-  "about.tab2.block2.desc": "We are a leading company in the execution of integral electromechanical services in Bolivia applying international standards of quality, safety, occupational health and environment.",
-  "about.tab2.block3.title": "Our Corporate Values",
-  "about.tab2.block3.desc": "In ESE, both managers and operatives work in an organizational culture that supports four main values:",
-  "about.tab2.block3.list1.title": "Quality.",
-  "about.tab2.block3.list1.desc": "Every activity we develop persists in the fulfillment of the quality standards applied by the multinational companies highlighted in their sectors.",
-  "about.tab2.block3.list2.title": "Commitment.",
-  "about.tab2.block3.list2.desc": "We are a legally established Bolivian company that values above all things the human being and the environment that contributes with taxes, jobs and new technologies to the development of our country.",
-  "about.tab2.block3.list3.title": "Responsability.",
-  "about.tab2.block3.list3.desc": "Every activity of the company focuses on seeking the good living of both its workers, customers, the community and any region where it develops its operations.",
-  "about.tab2.block3.list4.title": "Honesty.",
-  "about.tab2.block3.list4.desc": "Every ESE worker develops his services seeking to satisfy the requirements of the client by carefully managing the resources he has.",
-  "about.tab3.text": "The execution of every project carried out by ESE is governed by an integrated management system that seeks to comply with at least six policies:",
-  "about.tab3.list1.text": "<b>CUSTOMER SATISFACTION.</b> Permanently seek customer satisfaction in all our activities",
-  "about.tab3.list2.text": "<b>LEGALITY.</b> Comply with the main norms and systems in force regarding the environment, safety, occupational health and the integrated management system.",
-  "about.tab3.list3.text": "<b>TRAINING.</b> Train personnel permanently with the purpose of improving their competencies and optimally reach the goals set.",
-  "about.tab3.list4.text": "<b>SAFETY.</b> Plan and work preventively in safety, health and operation systems in order to reduce risks.",
-  "about.tab3.list5.text": "<b>RESPONSIBILITY.</b> Avoiding environmental contamination, we can establish preventive waste management systems.",
-  "about.tab3.list6.text": "<b>PROACTIVITY.</b> Respond constructively and with a positive attitude to any emergency situation or risk that is present in the company.",
-  "about.tab4.text": "ESE's staff practices and promotes work policies that are part of a comprehensive management system framed in the fulfillment of tasks related to operational safety, occupational health, environment and social relationships (C & SSMS) under a relevant principle: prevention and continuous improvement. As a company ESE looks for:",
-  "about.tab4.list1.text": "Ensure compliance with the main regulations of SSMS that are in force in Bolivia.",
-  "about.tab4.list2.text": "To ensure the health and physical integrity of all people both in our own facilities and in other places of work.",
-  "about.tab4.list3.text": "All the staff directly and indirectly involved in the execution of all tasks carried out by the company are committed to applying and enforcing compliance with the current SSMS standards.",
-  "about.tab4.list4.text": "All workers’ aim at starting, developing and concluding with zero accidents. Any damage to the people, environment, property and reputation of the company is considered as unacceptable behavior to the company.",
-  "about.tab4.list5.text": "It is a priority for the company to preserve the environment in all the projects and activities it carries out.",
-  "about.tab4.list6.text": "The executive management of the firm undertakes to provide every worker of this company with the resources necessary to comply with the SSMS standards.",
-  "about.tab5.item1.title": "KILOMETERS OF LINES",
-  "about.tab5.item1.desc": "By year there are the ones that constructed ESE in average during the last decade in the country.",
-  "about.tab5.item1.title": "TURBINES",
-  "about.tab5.item1.desc": "Siemens SGT-800 are the ones that installed ESE in four years",
-  "about.tab5.item1.title": "MEGAWATTS (MW) ISO",
-  "about.tab5.item1.desc": "Of power in generation installed ESE in the country",
-  "about.tab5.item1.title": "MW",
-  "about.tab5.item1.desc": "From power in generation power has ESE in the process of installation.",
-  "about.tab5.item1.title": "JOBS",
-  "about.tab5.item1.desc": "Direct are those generated by the company in the country in a dozen projects",
-  "about.tab5.item1.title": "UNITS",
-  "about.tab5.item1.desc": "Business is the one developed by ESE in Bolivia.",
+  "about.tab2.block1.title": "Misión",
+  "about.tab2.block1.desc": "Desarrollamos soluciones electromecánicas integrales, alineados a los objetivos de nuestros clientes, a través de nuestra experiencia, el compromiso y la competencia de nuestros colaboradores, en cumplimiento con estándares de calidad, seguridad industrial, salud ocupacional y medio ambiente, generando así valor en nuestro entorno.",
+  "about.tab2.block2.title": "Visión",
+  "about.tab2.block2.desc": "Satisfacer a nuestros clientes y superar sus expectativas a través de soluciones electromecánicas que nos consoliden como una empresa de alcance internacional en la ejecución de proyectos EPC.",
+  "about.tab2.block3.title": "Nuestros Valores Corporativos",
+  "about.tab2.block3.desc": "En ESE, tanto los gerentes como los operativos trabajan en una cultura organizacional que sustenta cuatro valores principales:",
+  "about.tab2.block3.list1.title": "Calidad.",
+  "about.tab2.block3.list1.desc": "Toda actividad que desarrollamos persiste en el cumplimiento de los estándares de calidad aplicados por las empresas multinacionales destacadas en sus sectores.",
+  "about.tab2.block3.list2.title": "Compromiso.",
+  "about.tab2.block3.list2.desc": "Somos una empresa boliviana legalmente constituida que valora sobre todo al ser humano y el medio ambiente que contribuye con impuestos, empleos y nuevas tecnologías al desarrollo de nuestro país.",
+  "about.tab2.block3.list3.title": "Responsabilidad.",
+  "about.tab2.block3.list3.desc": "Toda actividad de la empresa se enfoca en buscar el buen vivir tanto de sus trabajadores, clientes, la comunidad y cualquier región donde desarrolle sus operaciones.",
+  "about.tab2.block3.list4.title": "Honestidad.",
+  "about.tab2.block3.list4.desc": "Todo trabajador de ESE desarrolla sus servicios buscando satisfacer los requerimientos del cliente gestionando cuidadosamente los recursos con los que cuenta.",
+  "about.tab3.text": "La ejecución de todo proyecto que realiza ESE se rige por un sistema integrado de gestión que comparte siete valores específicos:",
+  "about.tab3.list1.text": "<b>DISCIPLINA:</b> entendemos que es el valor más difícil de lograr. La disciplina nos ayudará a planificar, llevar a cabo lo planificado y realizar seguimiento hasta alcanzar lo establecido con puntualidad.",
+  "about.tab3.list2.text": "<b>AUTOCRÍTICA:</b> aceptamos nuestros errores los cuales representan experiencia y conocimiento para el desarrollo de nuestras actividades.",
+  "about.tab3.list3.text": "<b>PRO ACTIVIDAD:</b> tomamos acciones sobre las situaciones que se nos presentan: prever, intuir, y actuar de manera positiva.",
+  "about.tab3.list4.text": "<b>PERSEVERANCIA:</b> luchamos en contra de las adversidades para obtener logros.",
+  "about.tab3.list5.text": "<b>DISPONIBILIDAD AL CAMBIO:</b> somos capaces de entender que lo planeado no siempre sucede, por ello nos adecuamos a los cambios que surgen.",
+  "about.tab3.list6.text": "<b>RESPONSABILIDAD:</b> asumimos los acuerdos con compromiso y respeto, lo cual ayuda en el crecimiento y la armonía del entorno en el que nos desenvolvemos e interactuamos.",
+  "about.tab3.list7.text": "<b>APRENDIZAJE:</b> conscientes que para desarrollar nuestras ideas de negocios se necesita aprender cosas que desconocemos, por lo que solo queda prepararse y aprender cosas nuevas. El que no evoluciona está destinado a la desaparición.",
+  "about.tab4.text": "El personal de ESE practica y promueve políticas de trabajo que forman parte de un sistema de gestión integral enmarcado en el cumplimiento de tareas relacionadas con la seguridad operacional, salud ocupacional, medio ambiente y relaciones sociales (C & SSMS) bajo un principio relevante: prevención y mejora continua. Como empresa ESE busca:",
+  "about.tab4.list1.text": "Velar por el cumplimiento de las principales normativas de SSMS vigentes en Bolivia.",
+  "about.tab4.list2.text": "Velar por la salud e integridad física de todas las personas tanto en nuestras propias instalaciones como en otros lugares de trabajo.",
+  "about.tab4.list3.text": "Todo el personal involucrado directa e indirectamente en la ejecución de todas las tareas que desarrolla la empresa se compromete a aplicar y hacer cumplir los estándares SSMS vigentes.",
+  "about.tab4.list4.text": "El objetivo de todos los trabajadores es comenzar, desarrollar y concluir con cero accidentes. Cualquier daño a las personas, el medio ambiente, la propiedad y la reputación de la empresa se considera un comportamiento inaceptable para la empresa.",
+  "about.tab4.list5.text": "Es una prioridad para la empresa preservar el medio ambiente en todos los proyectos y actividades que realiza.",
+  "about.tab4.list6.text": "La dirección ejecutiva de la firma se compromete a proporcionar a cada trabajador de esta empresa los recursos necesarios para cumplir con los estándares SSMS.",
+  "about.tab5.item1.title": "KILÓMETROS DE LÍNEAS",
+  "about.tab5.item1.desc": "Por año son las que construyó ESE en promedio durante la última década en el país.",
+  "about.tab5.item2.title": "TURBINAS",
+  "about.tab5.item2.desc": "Siemens SGT-800 son las que instaló ESE en cuatro años",
+  "about.tab5.item3.title": "MEGAVATIOS (MW) ISO",
+  "about.tab5.item3.desc": "De potencia energética en generación instaló ESE en el país",
+  "about.tab5.item4.title": "MW",
+  "about.tab5.item4.desc": "De potencia energética en generación tiene ESE en proceso de instalación.",
+  "about.tab5.item5.title": "EMPLEOS",
+  "about.tab5.item5.desc": "Directos son los que genera la empresa en el país en una decena de proyectos.",
+  "about.tab5.item6.title": "UNIDADES",
+  "about.tab5.item6.desc": "De negocio son las que desarrolla ESE en Bolivia.",
 }
 
 export default translation;

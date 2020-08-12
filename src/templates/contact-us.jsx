@@ -1,12 +1,14 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { useIntl, FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import GoogleMap from '../components/GoogleMap';
 
-const ContactUsPage = () => {
+const ContactUsPage = ({}) => {
+  const intl = useIntl();
+
   return (
-    <Layout title="Contact Us" isPageTitle>
+    <Layout title={{ id: 'contactUs.seoTitle' }} isPageTitle>
       <section className="ttm-row zero-padding-section clearfix">
         <div className="container-xl">
           <div className="row no-gutters">
@@ -16,8 +18,12 @@ const ContactUsPage = () => {
                 {/* section title */}
                 <div className="section-title with-desc clearfix">
                   <div className="title-header">
-                    <h5>Come Visit Us At</h5>
-                    <h2 className="title">Our Address</h2>
+                    <h5>
+                      <FormattedMessage id={'contactUs.leftBlock.subtitle'} />
+                    </h5>
+                    <h2 className="title">
+                      <FormattedMessage id={'contactUs.leftBlock.title'} />
+                    </h2>
                   </div>
                 </div>
                 {/* section title end */}
@@ -34,7 +40,9 @@ const ContactUsPage = () => {
                       <div className="featured-content">
                         <div className="featured-title">
                           {/* featured title */}
-                          <h5>Office Address</h5>
+                          <h5>
+                            <FormattedMessage id={'contactUs.leftBlock.officeAddress'} />
+                          </h5>
                         </div>
                         <div className="featured-desc">
                           {/* featured desc */}
@@ -62,7 +70,9 @@ const ContactUsPage = () => {
                       <div className="featured-content">
                         <div className="featured-title">
                           {/* featured title */}
-                          <h5>Our Phone Number</h5>
+                          <h5>
+                            <FormattedMessage id={'contactUs.leftBlock.ourPhone'} />
+                          </h5>
                         </div>
                         <div className="featured-desc">
                           {/* featured desc */}
@@ -90,7 +100,9 @@ const ContactUsPage = () => {
                       <div className="featured-content">
                         <div className="featured-title">
                           {/* featured title */}
-                          <h5>Our Fax Number</h5>
+                          <h5>
+                            <FormattedMessage id={'contactUs.leftBlock.ourFax'} />
+                          </h5>
                         </div>
                         <div className="featured-desc">
                           {/* featured desc */}
@@ -118,7 +130,9 @@ const ContactUsPage = () => {
                       <div className="featured-content">
                         <div className="featured-title">
                           {/* featured title */}
-                          <h5>Box</h5>
+                          <h5>
+                            <FormattedMessage id={'contactUs.leftBlock.box'} />
+                          </h5>
                         </div>
                         <div className="featured-desc">
                           {/* featured desc */}
@@ -146,7 +160,9 @@ const ContactUsPage = () => {
                       <div className="featured-content">
                         <div className="featured-title">
                           {/* featured title */}
-                          <h5>Our Email</h5>
+                          <h5>
+                            <FormattedMessage id={'contactUs.leftBlock.ourEmail'} />
+                          </h5>
                         </div>
                         <div className="featured-desc">
                           {/* featured desc */}
@@ -174,7 +190,9 @@ const ContactUsPage = () => {
                       <div className="featured-content">
                         <div className="featured-title">
                           {/* featured title */}
-                          <h5>Contacts for quotes</h5>
+                          <h5>
+                            <FormattedMessage id={'contactUs.leftBlock.contacts'} />
+                          </h5>
                         </div>
                         <div className="featured-desc">
                           {/* featured desc */}
@@ -194,8 +212,12 @@ const ContactUsPage = () => {
                 {/* section title */}
                 <div className="section-title with-desc clearfix">
                   <div className="title-header">
-                    <h5>Send Message</h5>
-                    <h2 className="title">Drop Us A Line</h2>
+                    <h5>
+                      <FormattedMessage id={'contactUs.rightBlock.subtitle'} />
+                    </h5>
+                    <h2 className="title">
+                      <FormattedMessage id={'contactUs.rightBlock.title'} />
+                    </h2>
                   </div>
                 </div>
                 {/* section title end */}
@@ -211,7 +233,7 @@ const ContactUsPage = () => {
                         name="name"
                         type="text"
                         className="form-control bg-white"
-                        placeholder="Full Name*"
+                        placeholder={`${intl.formatMessage({ id: 'inputs.fullName' })}*`}
                         required="required"
                       />
                     </div>
@@ -221,7 +243,7 @@ const ContactUsPage = () => {
                       <input
                         name="phone"
                         type="text"
-                        placeholder="Phone Number*"
+                        placeholder={`${intl.formatMessage({ id: 'inputs.phoneNumber' })}*`}
                         required="required"
                         className="form-control bg-white"
                       />
@@ -232,7 +254,7 @@ const ContactUsPage = () => {
                       <input
                         name="address"
                         type="text"
-                        placeholder="Email Address*"
+                        placeholder={`${intl.formatMessage({ id: 'inputs.emailAddress' })}*`}
                         required="required"
                         className="form-control bg-white"
                       />
@@ -243,7 +265,7 @@ const ContactUsPage = () => {
                       <input
                         name="subject"
                         type="text"
-                        placeholder="Subject"
+                        placeholder={intl.formatMessage({ id: 'inputs.subject' })}
                         required="required"
                         className="form-control bg-white"
                       />
@@ -254,7 +276,7 @@ const ContactUsPage = () => {
                       <textarea
                         name="Massage"
                         rows={5}
-                        placeholder="Write A Massage..."
+                        placeholder={intl.formatMessage({ id: 'inputs.writeMassage' })}
                         required="required"
                         className="form-control bg-white"
                         defaultValue={''}

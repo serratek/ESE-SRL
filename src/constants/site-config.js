@@ -4,7 +4,7 @@ const config = {
   siteTitleAlt: 'ESE SRL', // Alternative site title for SEO.
   siteLogo: 'src/images/favicon/favicon.png', // Logo used for SEO and manifest.
   siteFavicon: 'src/images/favicon/favicon.png',
-  siteImage: 'https://devhance.co/images/photos/devhance.png',
+  siteImage: '',
   siteUrl: 'http://ese-srl.com', // Domain of your website without pathPrefix.
   pathPrefix: '/', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: 'siteDescription', // Website description used for RSS feeds/meta description tag.
@@ -16,13 +16,13 @@ const config = {
   dateFormat: 'DD/MM/YYYY', // Date format for display.
   userName: 'ESE SRL', // Username to display in the author segment.
   userEmail: 'info@ese-srl.com', // Email used for RSS feed's author segment
-  userTwitter: '@devhance_co', // Optionally renders "Follow Me" in the UserInfo segment.
+  userTwitter: '', // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: 'Bolivia', // User location to display in the author segment.
   userAvatar: 'src/images/favicon/favicon.png', // User avatar to display in the author segment.
   userDescription: '', // User description to display in the author segment.
-  themeColor: '#3eb5f1', // Used for setting manifest and progress theme colors.
-  backgroundColor: '#3eb5f1', // Used for setting manifest background color.
-  copyright: 'Copyright © Devhance 2020. All rights reserved.', // Copyright string for the footer of the website and RSS feed.
+  themeColor: '#de6b00', // Used for setting manifest and progress theme colors.
+  backgroundColor: '#de6b00', // Used for setting manifest background color.
+  copyright: '', // Copyright string for the footer of the website and RSS feed.
   locales: ['es', 'en'],
   defaultLang: 'es',
   apiEndpoint: 'https://esesrl.prismic.io/graphql',

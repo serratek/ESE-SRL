@@ -1,12 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { RichText } from 'prismic-reactjs';
+import { useIntl, FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 import JobContacts from '../components/JobContacts';
 
 const JobsPage = ({ data }) => {
   const jobData = data.prismic.job;
+  const intl = useIntl();
 
   return (
     <Layout title="Job with ESE" isPageTitle>
@@ -48,7 +50,7 @@ const JobsPage = ({ data }) => {
                         name="firstName"
                         type="text"
                         className="form-control bg-white border"
-                        placeholder="First Name*"
+                        placeholder={`${intl.formatMessage({ id: 'inputs.firstName' })}*`}
                         required="required"
                       />
                     </div>
@@ -59,7 +61,7 @@ const JobsPage = ({ data }) => {
                         name="lastName"
                         type="text"
                         className="form-control bg-white border"
-                        placeholder="Last Name*"
+                        placeholder={`${intl.formatMessage({ id: 'inputs.lastName' })}*`}
                         required="required"
                       />
                     </div>
@@ -71,7 +73,7 @@ const JobsPage = ({ data }) => {
                         name="address"
                         type="email"
                         placeholder="Email Address*"
-                        required="required"
+                        placeholder={`${intl.formatMessage({ id: 'inputs.emailAddress' })}*`}
                         className="form-control bg-white border"
                       />
                     </div>
@@ -81,7 +83,7 @@ const JobsPage = ({ data }) => {
                       <input
                         name="phone"
                         type="text"
-                        placeholder="Phone Number"
+                        placeholder={intl.formatMessage({ id: 'inputs.phoneNumber' })}
                         className="form-control bg-white border"
                       />
                     </div>
@@ -91,7 +93,7 @@ const JobsPage = ({ data }) => {
                       <textarea
                         name="Massage"
                         rows={5}
-                        placeholder="Write A Massage..."
+                        placeholder={intl.formatMessage({ id: 'inputs.writeMassage' })}
                         required="required"
                         className="form-control bg-white border"
                         defaultValue={''}

@@ -20,7 +20,7 @@ import imageSam from '../assets/images/pages/about-us/sam.jpg';
 import imageOrganigrama from '../assets/images/pages/about-us/organigrama.jpg';
 
 const AboutUsPage = () => (
-  <Layout title="About Us" isPageTitle>
+  <Layout title={{ id: 'about.seoTitle' }} isPageTitle>
     {/* tab section */}
     <section className="ttm-row tab-section clearfix">
       <div className="container-xl">
@@ -148,10 +148,7 @@ const AboutUsPage = () => (
                                     alt="single-img-three"
                                   />
                                   <p>
-                                    Nace ESE S.R.L. como un emprendimiento que dé respuesta a la
-                                    necesidad de contar con una empresa especializada en el área de
-                                    servicios electromecánicos para la ciudad de Santa Cruz de la
-                                    Sierra.
+                                    <FormattedMessage id={'about.tab1.timeline1'} />
                                   </p>
                                 </VerticalTimelineElement>
                                 <VerticalTimelineElement
@@ -169,8 +166,7 @@ const AboutUsPage = () => (
                                     alt="single-img-three"
                                   />
                                   <p>
-                                    Nos hemos convertido en el principal proveedor de servicios de
-                                    la Cooperativa Rural de Electrificación – CRE Ltda.
+                                    <FormattedMessage id={'about.tab1.timeline2'} />
                                   </p>
                                 </VerticalTimelineElement>
                                 <VerticalTimelineElement
@@ -188,8 +184,7 @@ const AboutUsPage = () => (
                                     alt="single-img-three"
                                   />
                                   <p>
-                                    Se construyen las nuevas instalaciones de la empresa, ubicadas
-                                    en el Parque Industrial Manzana 24.
+                                    <FormattedMessage id={'about.tab1.timeline3'} />
                                   </p>
                                 </VerticalTimelineElement>
                                 <VerticalTimelineElement
@@ -207,9 +202,7 @@ const AboutUsPage = () => (
                                     alt="single-img-three"
                                   />
                                   <p>
-                                    Se consolida un equilibrio tanto administrativo como financiero,
-                                    que nos ha permitido encarar diversos proyectos de expansión de
-                                    nuestras unidades de negocios.
+                                    <FormattedMessage id={'about.tab1.timeline4'} />
                                   </p>
                                 </VerticalTimelineElement>
                                 <VerticalTimelineElement
@@ -227,8 +220,7 @@ const AboutUsPage = () => (
                                     alt="single-img-three"
                                   />
                                   <p>
-                                    Se amplían nuestros horizontes, desarrollando proyectos a nivel
-                                    internacional, en Argentina.
+                                    <FormattedMessage id={'about.tab1.timeline5'} />
                                   </p>
                                 </VerticalTimelineElement>
                                 <VerticalTimelineElement
@@ -246,9 +238,7 @@ const AboutUsPage = () => (
                                     alt="single-img-three"
                                   />
                                   <p>
-                                    Se realiza la implantación de nuestro Sistema Integrado de
-                                    Gestión (Calidad: ISO 9001, Seguridad y Salud Ocupacional: OHSAS
-                                    18001 y Medio Ambiente: ISO 14001).
+                                    <FormattedMessage id={'about.tab1.timeline6'} />
                                   </p>
                                 </VerticalTimelineElement>
                               </VerticalTimeline>
@@ -276,14 +266,14 @@ const AboutUsPage = () => (
                               <div className="featured-content text-left">
                                 <div className="featured-title">
                                   {/* featured title */}
-                                  <h5>Mission</h5>
+                                  <h5>
+                                    <FormattedMessage id={'about.tab2.block1.title'} />
+                                  </h5>
                                 </div>
                                 <div className="featured-desc">
                                   {/* featured desc */}
                                   <p>
-                                    We provide quality services in the country, protecting and
-                                    helping as a priority the human being and then the environment
-                                    with collaborators who work with international standards.
+                                    <FormattedMessage id={'about.tab2.block1.desc'} />
                                   </p>
                                 </div>
                               </div>
@@ -308,15 +298,14 @@ const AboutUsPage = () => (
                               <div className="featured-content text-left">
                                 <div className="featured-title">
                                   {/* featured title */}
-                                  <h5>View</h5>
+                                  <h5>
+                                    <FormattedMessage id={'about.tab2.block2.title'} />
+                                  </h5>
                                 </div>
                                 <div className="featured-desc">
                                   {/* featured desc */}
                                   <p>
-                                    We are a leading company in the execution of integral
-                                    electromechanical services in Bolivia applying international
-                                    standards of quality, safety, occupational health and
-                                    environment.
+                                    <FormattedMessage id={'about.tab2.block2.desc'} />
                                   </p>
                                 </div>
                               </div>
@@ -341,51 +330,63 @@ const AboutUsPage = () => (
                               <div className="featured-content text-left">
                                 <div className="featured-title">
                                   {/* featured title */}
-                                  <h5>Our Corporate Values</h5>
+                                  <h5>
+                                    <FormattedMessage id={'about.tab2.block3.title'} />
+                                  </h5>
                                 </div>
                                 <div className="featured-desc">
                                   {/* featured desc */}
                                   <p>
-                                    In ESE, both managers and operatives work in an organizational
-                                    culture that supports four main values:
+                                    <FormattedMessage id={'about.tab2.block3.desc'} />
                                   </p>
                                   <p>
                                     <ul className="ttm-list ttm-list-style-icon">
                                       <li>
                                         <i className="ti-check-box ttm-textcolor-skincolor" />
                                         <span className="ttm-list-li-content">
-                                          <span className="fw-500">Quality.</span> <br />
-                                          Every activity we develop persists in the fulfillment of
-                                          the quality standards applied by the multinational
-                                          companies highlighted in their sectors.
+                                          <span className="fw-500">
+                                            <FormattedMessage
+                                              id={'about.tab2.block3.list1.title'}
+                                            />
+                                          </span>{' '}
+                                          <br />
+                                          <FormattedMessage id={'about.tab2.block3.list1.desc'} />
                                         </span>
                                       </li>
                                       <li>
                                         <i className="ti-check-box ttm-textcolor-skincolor" />
                                         <span className="ttm-list-li-content">
-                                          <span className="fw-500">Commitment.</span> <br />
-                                          We are a legally established Bolivian company that values
-                                          above all things the human being and the environment that
-                                          contributes with taxes, jobs and new technologies to the
-                                          development of our country.
+                                          <span className="fw-500">
+                                            <FormattedMessage
+                                              id={'about.tab2.block3.list2.title'}
+                                            />
+                                          </span>{' '}
+                                          <br />
+                                          <FormattedMessage id={'about.tab2.block3.list2.desc'} />
                                         </span>
                                       </li>
                                       <li>
                                         <i className="ti-check-box ttm-textcolor-skincolor" />
                                         <span className="ttm-list-li-content">
-                                          <span className="fw-500">Responsability.</span> <br />
-                                          Every activity of the company focuses on seeking the good
-                                          living of both its workers, customers, the community and
-                                          any region where it develops its operations.
+                                          <span className="fw-500">
+                                            <FormattedMessage
+                                              id={'about.tab2.block3.list3.title'}
+                                            />
+                                          </span>{' '}
+                                          <br />
+                                          <FormattedMessage id={'about.tab2.block3.list3.desc'} />
                                         </span>
                                       </li>
                                       <li>
                                         <i className="ti-check-box ttm-textcolor-skincolor" />
                                         <span className="ttm-list-li-content">
-                                          <span className="fw-500">Honesty.</span> <br />
-                                          Every ESE worker develops his services seeking to satisfy
-                                          the requirements of the client by carefully managing the
-                                          resources he has.
+                                          <span className="fw-500">
+                                            <FormattedMessage
+                                              id={'about.tab2.block3.list4.title'}
+                                            />
+                                          </span>{' '}
+                                          <br />
+                                          <FormattedMessage id={'about.tab2.block3.list4.desc'} />
                                         </span>
                                       </li>
                                     </ul>
@@ -404,57 +405,73 @@ const AboutUsPage = () => (
                         <div className="row">
                           <div className="col-12 text-left">
                             <p>
-                              The execution of every project carried out by ESE is governed by an
-                              integrated management system that seeks to comply with at least six
-                              policies:
+                              <FormattedMessage id={'about.tab3.text'} />
                             </p>
                             <ul className="ttm-list ttm-list-style-icon">
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  <span className="fw-500">CUSTOMER SATISFACTION. </span>
-                                  Permanently seek customer satisfaction in all our activities
+                                  <FormattedMessage
+                                    id={'about.tab3.list1.text'}
+                                    values={{
+                                      b: (chunks) => <span className="fw-500">{chunks}</span>,
+                                    }}
+                                  />
                                 </span>
                               </li>
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  <span className="fw-500">LEGALITY. </span>
-                                  Comply with the main norms and systems in force regarding the
-                                  environment, safety, occupational health and the integrated
-                                  management system.
+                                  <FormattedMessage
+                                    id={'about.tab3.list2.text'}
+                                    values={{
+                                      b: (chunks) => <span className="fw-500">{chunks}</span>,
+                                    }}
+                                  />
                                 </span>
                               </li>
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  <span className="fw-500">TRAINING. </span>
-                                  Train personnel permanently with the purpose of improving their
-                                  competencies and optimally reach the goals set.
+                                  <FormattedMessage
+                                    id={'about.tab3.list3.text'}
+                                    values={{
+                                      b: (chunks) => <span className="fw-500">{chunks}</span>,
+                                    }}
+                                  />
                                 </span>
                               </li>
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  <span className="fw-500">SAFETY. </span>
-                                  Plan and work preventively in safety, health and operation systems
-                                  in order to reduce risks.
+                                  <FormattedMessage
+                                    id={'about.tab3.list4.text'}
+                                    values={{
+                                      b: (chunks) => <span className="fw-500">{chunks}</span>,
+                                    }}
+                                  />
                                 </span>
                               </li>
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  <span className="fw-500">RESPONSIBILITY. </span>
-                                  Avoiding environmental contamination, we can establish preventive
-                                  waste management systems.
+                                  <FormattedMessage
+                                    id={'about.tab3.list5.text'}
+                                    values={{
+                                      b: (chunks) => <span className="fw-500">{chunks}</span>,
+                                    }}
+                                  />
                                 </span>
                               </li>
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  <span className="fw-500">PROACTIVITY. </span>
-                                  Respond constructively and with a positive attitude to any
-                                  emergency situation or risk that is present in the company.
+                                  <FormattedMessage
+                                    id={'about.tab3.list6.text'}
+                                    values={{
+                                      b: (chunks) => <span className="fw-500">{chunks}</span>,
+                                    }}
+                                  />
                                 </span>
                               </li>
                             </ul>
@@ -470,57 +487,43 @@ const AboutUsPage = () => (
                         <div className="row">
                           <div className="col-12 text-left">
                             <p>
-                              ESE's staff practices and promotes work policies that are part of a
-                              comprehensive management system framed in the fulfillment of tasks
-                              related to operational safety, occupational health, environment and
-                              social relationships (C & SSMS) under a relevant principle: prevention
-                              and continuous improvement. As a company ESE looks for:
+                              <FormattedMessage id={'about.tab4.text'} />
                             </p>
                             <ul className="ttm-list ttm-list-style-icon">
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  Ensure compliance with the main regulations of SSMS that are in
-                                  force in Bolivia.
+                                  <FormattedMessage id={'about.tab4.list1.text'} />
                                 </span>
                               </li>
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  To ensure the health and physical integrity of all people both in
-                                  our own facilities and in other places of work.
+                                  <FormattedMessage id={'about.tab4.list2.text'} />
                                 </span>
                               </li>
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  All the staff directly and indirectly involved in the execution of
-                                  all tasks carried out by the company are committed to applying and
-                                  enforcing compliance with the current SSMS standards.
+                                  <FormattedMessage id={'about.tab4.list3.text'} />
                                 </span>
                               </li>
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  All workers’ aim at starting, developing and concluding with zero
-                                  accidents. Any damage to the people, environment, property and
-                                  reputation of the company is considered as unacceptable behavior
-                                  to the company.
+                                  <FormattedMessage id={'about.tab4.list4.text'} />
                                 </span>
                               </li>
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  It is a priority for the company to preserve the environment in
-                                  all the projects and activities it carries out.
+                                  <FormattedMessage id={'about.tab4.list5.text'} />
                                 </span>
                               </li>
                               <li>
                                 <i className="ti-check-box ttm-textcolor-skincolor" />
                                 <span className="ttm-list-li-content">
-                                  The executive management of the firm undertakes to provide every
-                                  worker of this company with the resources necessary to comply with
-                                  the SSMS standards.
+                                  <FormattedMessage id={'about.tab4.list6.text'} />
                                 </span>
                               </li>
                             </ul>
@@ -545,10 +548,11 @@ const AboutUsPage = () => (
                               </div>
                               <div className="ttm-fid-contents">
                                 {/*  ttm-fid-contents */}
-                                <h3 className="ttm-fid-title">KILOMETERS OF LINES</h3>
+                                <h3 className="ttm-fid-title">
+                                  <FormattedMessage id={'about.tab5.item1.title'} />
+                                </h3>
                                 <p>
-                                  By year there are the ones that constructed ESE in average during
-                                  the last decade in the country.
+                                  <FormattedMessage id={'about.tab5.item1.desc'} />
                                 </p>
                                 {/*  ttm-fid-title */}
                               </div>
@@ -566,8 +570,12 @@ const AboutUsPage = () => (
                               </div>
                               <div className="ttm-fid-contents">
                                 {/*  ttm-fid-contents */}
-                                <h3 className="ttm-fid-title">TURBINES</h3>
-                                <p>Siemens SGT-800 are the ones that installed ESE in four years</p>
+                                <h3 className="ttm-fid-title">
+                                  <FormattedMessage id={'about.tab5.item2.title'} />
+                                </h3>
+                                <p>
+                                  <FormattedMessage id={'about.tab5.item2.desc'} />
+                                </p>
                                 {/*  ttm-fid-title */}
                               </div>
                               {/* ttm-fid-contents end */}
@@ -584,8 +592,12 @@ const AboutUsPage = () => (
                               </div>
                               <div className="ttm-fid-contents">
                                 {/*  ttm-fid-contents */}
-                                <h3 className="ttm-fid-title">MEGAWATTS (MW) ISO</h3>
-                                <p>Of power in generation installed ESE in the country</p>
+                                <h3 className="ttm-fid-title">
+                                  <FormattedMessage id={'about.tab5.item3.title'} />
+                                </h3>
+                                <p>
+                                  <FormattedMessage id={'about.tab5.item3.desc'} />
+                                </p>
                                 {/*  ttm-fid-title */}
                               </div>
                               {/* ttm-fid-contents end */}
@@ -602,10 +614,11 @@ const AboutUsPage = () => (
                               </div>
                               <div className="ttm-fid-contents">
                                 {/*  ttm-fid-contents */}
-                                <h3 className="ttm-fid-title">MW</h3>
+                                <h3 className="ttm-fid-title">
+                                  <FormattedMessage id={'about.tab5.item4.title'} />
+                                </h3>
                                 <p>
-                                  From power in generation power has ESE in the process of
-                                  installation.
+                                  <FormattedMessage id={'about.tab5.item4.desc'} />
                                 </p>
                                 {/*  ttm-fid-title */}
                               </div>
@@ -623,10 +636,11 @@ const AboutUsPage = () => (
                               </div>
                               <div className="ttm-fid-contents">
                                 {/*  ttm-fid-contents */}
-                                <h3 className="ttm-fid-title">JOBS</h3>
+                                <h3 className="ttm-fid-title">
+                                  <FormattedMessage id={'about.tab5.item5.title'} />
+                                </h3>
                                 <p>
-                                  Direct are those generated by the company in the country in a
-                                  dozen projects
+                                  <FormattedMessage id={'about.tab5.item5.desc'} />
                                 </p>
                                 {/*  ttm-fid-title */}
                               </div>
@@ -644,8 +658,12 @@ const AboutUsPage = () => (
                               </div>
                               <div className="ttm-fid-contents">
                                 {/*  ttm-fid-contents */}
-                                <h3 className="ttm-fid-title">UNITS</h3>
-                                <p>Business is the one developed by ESE in Bolivia.</p>
+                                <h3 className="ttm-fid-title">
+                                  <FormattedMessage id={'about.tab5.item6.title'} />
+                                </h3>
+                                <p>
+                                  <FormattedMessage id={'about.tab5.item6.desc'} />
+                                </p>
                                 {/*  ttm-fid-title */}
                               </div>
                               {/* ttm-fid-contents end */}
