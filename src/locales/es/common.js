@@ -1,12 +1,12 @@
 const translation = {
- "common.howHelpBlock.title": "How Can We Help?",
- "common.howHelpBlock.desc": "If you need any help, please feel free to contact us.",
- "common.fullAddress": "Industrial Park of Santa Cruz P.I. 23 and 24. Transversal Avenue 1",
+ "common.howHelpBlock.title": "¿Cómo podemos ayudar?",
+ "common.howHelpBlock.desc": "Si necesita ayuda, por favor no dude en contactarnos.",
+ "common.fullAddress": "Parque Industrial de Santa Cruz P.I. 23 y 24. Avenida Transversal 1",
  "common.email": "Email",
- "common.phone": "Phone",
- "common.address": "Address",
- "common.talkToOurSupport": "Talk To Our Support",
- "common.latestNews": "Latest News",
+ "common.phone": "Teléfono",
+ "common.address": "Dirección",
+ "common.talkToOurSupport": "Hable con Nosotros",
+ "common.latestNews": "Últimas Noticias",
 }
 
 export default translation;

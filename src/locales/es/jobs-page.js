@@ -1,8 +1,8 @@
 const translation = {
-  'jobs.seoTitle': 'Job With ESE',
-  "jobs.subtitle": "Jobs",
-  "jobs.title": "Open roles",
-  "job.subtitle": "Apply for this Job",
+  'jobs.seoTitle': 'Trabaje en ESE',
+  "jobs.subtitle": "Trabajos",
+  "jobs.title": "Trabajos Disponibles",
+  "job.subtitle": "Aplique a este trabajo",
 }
 
 export default translation;

@@ -1,8 +1,8 @@
 const translation = {
-  "buttons.readMore": "Read More",
-  "buttons.submitQuote": "Submit Quote",
-  "buttons.applyNow": "Apply Now",
-  "buttons.submitTheApplication": "Submit The Application",
+  "buttons.readMore": "Leer Más",
+  "buttons.submitQuote": "Ingrese Cotización",
+  "buttons.applyNow": "Aplicar Ahora",
+  "buttons.submitTheApplication": "Ingrese Aplicación",
 }
 
 export default translation;
