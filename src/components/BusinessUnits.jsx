@@ -3,6 +3,8 @@ import { FormattedMessage } from 'react-intl';
 
 import Link from './LocalizedLink';
 
+import SvgSprite from '../assets/images/icons/business-units.inline.svg';
+
 const BusinessUnits = () => {
   return (
     <section className="ttm-row service-section-style2 ttm-bgcolor-grey clearfix">
@@ -35,18 +37,13 @@ const BusinessUnits = () => {
                     <FormattedMessage id={'menu.powerGeneration'} />
                   </h5>
                 </div>
-                <div className="featured-desc">
-                  {/*  featured-desc */}
-                  <p>
-                    Our firm is an expert to creates an efficient user interface that make user
-                    interaction.
-                  </p>
-                </div>
               </div>
               <div className="featured-icon">
                 {/*  featured-icon */}
-                <div className="ttm-icon ttm-icon_element-size-lg">
-                  <i className="flaticon flaticon-system" />
+                <div className="ttm-icon ttm-icon_element-size-xl">
+                  <svg class="icon">
+                    <use xlinkHref="#factory" />
+                  </svg>
                   {/*  ttm-icon */}
                 </div>
               </div>
@@ -67,18 +64,13 @@ const BusinessUnits = () => {
                     <FormattedMessage id={'menu.powerSubstations'} />
                   </h5>
                 </div>
-                <div className="featured-desc">
-                  {/*  featured-desc */}
-                  <p>
-                    We provide an IT management services is for according to an organization’s
-                    needs.
-                  </p>
-                </div>
               </div>
               <div className="featured-icon">
                 {/*  featured-icon */}
-                <div className="ttm-icon ttm-icon_element-size-lg">
-                  <i className="flaticon flaticon-computer" />
+                <div className="ttm-icon ttm-icon_element-size-xl">
+                  <svg class="icon">
+                    <use xlinkHref="#power-plant" />
+                  </svg>
                   {/*  ttm-icon */}
                 </div>
               </div>
@@ -99,18 +91,13 @@ const BusinessUnits = () => {
                     <FormattedMessage id={'menu.oilGas'} />
                   </h5>
                 </div>
-                <div className="featured-desc">
-                  {/*  featured-desc */}
-                  <p>
-                    Expertise in a IT consultancy for the many companies, for their different
-                    working areas.
-                  </p>
-                </div>
               </div>
               <div className="featured-icon">
                 {/*  featured-icon */}
-                <div className="ttm-icon ttm-icon_element-size-lg">
-                  <i className="flaticon flaticon-chart" />
+                <div className="ttm-icon ttm-icon_element-size-xl">
+                  <svg class="icon">
+                    <use xlinkHref="#oil-pump" />
+                  </svg>
                   {/*  ttm-icon */}
                 </div>
               </div>
@@ -131,18 +118,13 @@ const BusinessUnits = () => {
                     <FormattedMessage id={'menu.industry'} />
                   </h5>
                 </div>
-                <div className="featured-desc">
-                  {/*  featured-desc */}
-                  <p>
-                    We develop, migrate &amp; work on applications to ensure that run capably on
-                    cloud.
-                  </p>
-                </div>
               </div>
               <div className="featured-icon">
                 {/*  featured-icon */}
-                <div className="ttm-icon ttm-icon_element-size-lg">
-                  <i className="flaticon flaticon-data" />
+                <div className="ttm-icon ttm-icon_element-size-xl">
+                  <svg class="icon">
+                    <use xlinkHref="#industry" />
+                  </svg>
                   {/*  ttm-icon */}
                 </div>
               </div>
@@ -164,18 +146,13 @@ const BusinessUnits = () => {
                     <FormattedMessage id={'menu.distributionElectricalGrids'} />
                   </h5>
                 </div>
-                <div className="featured-desc">
-                  {/*  featured-desc */}
-                  <p>
-                    Our firm is an expert to creates an efficient user interface that make user
-                    interaction.
-                  </p>
-                </div>
               </div>
               <div className="featured-icon">
                 {/*  featured-icon */}
-                <div className="ttm-icon ttm-icon_element-size-lg">
-                  <i className="flaticon flaticon-system" />
+                <div className="ttm-icon ttm-icon_element-size-xl">
+                  <svg class="icon">
+                    <use xlinkHref="#power-transformer" />
+                  </svg>
                   {/*  ttm-icon */}
                 </div>
               </div>
@@ -196,18 +173,13 @@ const BusinessUnits = () => {
                     <FormattedMessage id={'menu.linesOfTransmission'} />
                   </h5>
                 </div>
-                <div className="featured-desc">
-                  {/*  featured-desc */}
-                  <p>
-                    We provide an IT management services is for according to an organization’s
-                    needs.
-                  </p>
-                </div>
               </div>
               <div className="featured-icon">
                 {/*  featured-icon */}
-                <div className="ttm-icon ttm-icon_element-size-lg">
-                  <i className="flaticon flaticon-computer" />
+                <div className="ttm-icon ttm-icon_element-size-xl">
+                  <svg class="icon">
+                    <use xlinkHref="#power" />
+                  </svg>
                   {/*  ttm-icon */}
                 </div>
               </div>
@@ -228,18 +200,13 @@ const BusinessUnits = () => {
                     <FormattedMessage id={'menu.lightingSystems'} />
                   </h5>
                 </div>
-                <div className="featured-desc">
-                  {/*  featured-desc */}
-                  <p>
-                    Expertise in a IT consultancy for the many companies, for their different
-                    working areas.
-                  </p>
-                </div>
               </div>
               <div className="featured-icon">
                 {/*  featured-icon */}
-                <div className="ttm-icon ttm-icon_element-size-lg">
-                  <i className="flaticon flaticon-chart" />
+                <div className="ttm-icon ttm-icon_element-size-xl">
+                  <svg class="icon">
+                    <use xlinkHref="#light-bulb-1" />
+                  </svg>
                   {/*  ttm-icon */}
                 </div>
               </div>
@@ -252,6 +219,8 @@ const BusinessUnits = () => {
         </div>
         {/* row end */}
       </div>
+
+      <SvgSprite />
     </section>
   );
 };

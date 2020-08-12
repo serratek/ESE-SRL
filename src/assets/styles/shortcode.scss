@@ -554,6 +554,13 @@
       font-size: 45px;
     }
   }
+  &.ttm-icon_element-size-xl {
+    svg.icon {
+      fill: $skin-color;
+      width: 100%;
+      height: 100%;
+    }
+  }
   &.ttm-bgcolor-white {
     color: $skin-color;
     border-color: transparent;
@@ -1050,6 +1057,11 @@ body {
     background-color: $white-color;
     transition: all 0.5s ease-in-out 0s;
     margin-right: -1px;
+    .ttm-icon.ttm-icon_element-size-xl {
+      @include icon-box(75px);
+      margin-bottom: 10px;
+      transition: all 0s;
+    }
     .ttm-icon.ttm-icon_element-size-lg {
       margin-bottom: 10px;
       transition: all 0s;
@@ -1072,6 +1084,9 @@ body {
       a,
       i {
         color: $white-color !important;
+      }
+      svg.icon {
+        fill: $white-color;
       }
     }
     .btn-inline.style2 {
