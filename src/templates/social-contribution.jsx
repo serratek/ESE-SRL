@@ -1,20 +1,28 @@
 import React from 'react';
 import CountUp from 'react-countup';
 import Slider from 'react-slick';
+import { FormattedMessage } from 'react-intl';
 
 import Layout from '../components/Layout';
 
 const SocialContributionPage = () => {
   return (
-    <Layout title="Social Contribution" isPageTitle>
+    <Layout title={{ id: 'socialContribution.seoTitle' }} isPageTitle>
       <div className="ttm-row grid-section clearfix">
         {/* aboutus-section end*/}
         <div className="container-xl">
           <div className="section-title clearfix">
             <div className="title-header">
-              <h5>Social Contribution</h5>
+              <h5>
+                <FormattedMessage id={'socialContribution.subtitle'} />
+              </h5>
               <h2 className="title">
-                Trusted by 5,000+ <span>Happy Customers</span>
+                <FormattedMessage
+                  id={'socialContribution.title'}
+                  values={{
+                    colored: (chunks) => <span>{chunks}</span>,
+                  }}
+                />
               </h2>
             </div>
           </div>
@@ -34,13 +42,7 @@ const SocialContributionPage = () => {
                       <div className="section-title mb-4 clearfix">
                         <div className="title-desc">
                           <p>
-                            During these 27 years ESE, together with other institutions, has
-                            interconnected many families with their life plans, dreams and goals
-                            through public lighting projects, energy distribution lines or simply
-                            solving some electromechanical problem in the industry. Our services,
-                            despite working in many cases as subcontractors, have a significant
-                            social impact. In addition, we currently generate more than 800 direct
-                            and at least 300 indirect jobs. Some of which are involved with this:
+                            <FormattedMessage id={'socialContribution.desc'} />
                           </p>
                         </div>
                       </div>
@@ -60,7 +62,9 @@ const SocialContributionPage = () => {
                               {/*  featured-content */}
                               <div className="featured-title">
                                 {/*  featured-title */}
-                                <h5 className="fw-500">100% Satisfaction</h5>
+                                <h5 className="fw-500">
+                                  <FormattedMessage id={'socialContribution.item1'} />
+                                </h5>
                               </div>
                             </div>
                           </div>
@@ -80,7 +84,9 @@ const SocialContributionPage = () => {
                               {/*  featured-content */}
                               <div className="featured-title">
                                 {/*  featured-title */}
-                                <h5 className="fw-500">World Class Architect</h5>
+                                <h5 className="fw-500">
+                                  <FormattedMessage id={'socialContribution.item2'} />
+                                </h5>
                               </div>
                             </div>
                           </div>
@@ -100,7 +106,9 @@ const SocialContributionPage = () => {
                               {/*  featured-content */}
                               <div className="featured-title">
                                 {/*  featured-title */}
-                                <h5 className="fw-500">World Class Design</h5>
+                                <h5 className="fw-500">
+                                  <FormattedMessage id={'socialContribution.item3'} />
+                                </h5>
                               </div>
                             </div>
                           </div>
@@ -120,9 +128,11 @@ const SocialContributionPage = () => {
                             <div className="ttm-fid-contents text-left">
                               {/*ttm-fid-contents*/}
                               <h4 className="ttm-fid-inner">
-                                <CountUp start={0} end={27} duration={30} />
+                                <CountUp start={0} end={29} duration={30} />
                               </h4>
-                              <h3 className="ttm-fid-title">Years Experience</h3>
+                              <h3 className="ttm-fid-title">
+                                <FormattedMessage id={'socialContribution.item4'} />
+                              </h3>
                               {/*ttm-fid-title*/}
                             </div>
                           </div>
@@ -138,9 +148,11 @@ const SocialContributionPage = () => {
                             </div>
                             <div className="ttm-fid-contents text-left">
                               <h4 className="ttm-fid-inner">
-                                <CountUp start={0} end={800} duration={30} />
+                                <CountUp start={0} end={1000} duration={30} />
                               </h4>
-                              <h3 className="ttm-fid-title">Direct Jobs</h3>
+                              <h3 className="ttm-fid-title">
+                                <FormattedMessage id={'socialContribution.item5'} />
+                              </h3>
                             </div>
                           </div>
                           {/* ttm-fid end*/}
@@ -155,9 +167,11 @@ const SocialContributionPage = () => {
                             </div>
                             <div className="ttm-fid-contents text-left">
                               <h4 className="ttm-fid-inner">
-                                <CountUp start={0} end={300} duration={30} />
+                                <CountUp start={0} end={1000} duration={30} />
                               </h4>
-                              <h3 className="ttm-fid-title">Indirect Jobs</h3>
+                              <h3 className="ttm-fid-title">
+                                <FormattedMessage id={'socialContribution.item6'} />
+                              </h3>
                             </div>
                           </div>
                           {/* ttm-fid end*/}
@@ -176,7 +190,9 @@ const SocialContributionPage = () => {
             <div className="row">
               <div className="col-lg-12">
                 <div className="section-title clearfix">
-                  <h2 className="title">Reviews</h2>
+                  <h2 className="title">
+                    <FormattedMessage id={'socialContribution.reviews'} />
+                  </h2>
                 </div>
               </div>
             </div>
@@ -188,39 +204,37 @@ const SocialContributionPage = () => {
                   <Slider className="slick_slider" arrows={false} autoplay infinite>
                     {[
                       {
-                        text:
-                          '"After 28 years the energy came to Villa Diego. We used to ask for bottle oil from the Caranda plant in order to make lighters. I saw the ESE staff how they opened roads to put each pole. I am very happy because I can buy a refrigerator to store food"',
+                        text: 'socialContribution.review1.text',
                         name: 'ROBERTO SANTIBAÑEZ',
-                        position: 'Agricultor and Communal of Villa Diego',
+                        position: 'socialContribution.review1.position',
                       },
                       {
-                        text:
-                          '"ESE is a very professional company that is providing electric services. It is a big company in its sector and we are very happy with its service"',
+                        text: 'socialContribution.review2.text',
                         name: 'LUIS FERNANDO SAAVEDRA',
-                        position: 'General Manager of DISMAC',
+                        position: 'socialContribution.review2.position',
                       },
                       {
-                        text: `Two months ago we have light here in Quebrada León. I'm going to buy a TV and a cell phone. The ESE workers came to our assemblies in order to coordinate the work of the post of the poles. I am very grateful for what they did"`,
+                        text: 'socialContribution.review3.text',
                         name: 'CORCINO DÍAZ',
-                        position: 'Farmer and Communal of Quebrada Leon-Ichilo',
+                        position: 'socialContribution.review3.position',
                       },
                       {
-                        text: `"In this work in Buenavista, ESE has accompanied us and is not the only work with the Government. The actively participation of the company and its owner manager, Mr. Arturo Vera, has been decisive in advancing Santa Cruz's progress in providing electric power to many families and communities”.`,
+                        text: 'socialContribution.review4.text',
                         name: 'JULIO MATOS',
-                        position:
-                          'Energy director of the rural Infrastructure Program (PIR) - Santa Cruz Government',
+                        position: 'socialContribution.review4.position',
                       },
                       {
-                        text:
-                          '"The ESE company recently did the implementation of the electrical part of a new line of noodles in a satisfactory way. The delivery time was completely fulfilled. In addition, all medium voltage installations, the implementation and current operation of our plant are carried out by ESE."',
+                        text: 'socialContribution.review5.text',
                         name: 'JOSÉ ANTONIO VICENTE',
-                        position: 'Famosa Plant Manager',
+                        position: 'socialContribution.review5.position',
                       },
                     ].map((item, index) => (
                       <div className="testimonials text-center" key={index}>
                         <div className="testimonial-content">
                           {/* testimonials-content */}
-                          <blockquote>{item.text}</blockquote>
+                          <blockquote>
+                            "<FormattedMessage id={item.text} />"
+                          </blockquote>
                           <div className="ttm-ratting-star">
                             <i className="fa fa-star" />
                             <i className="fa fa-star" />
@@ -231,7 +245,9 @@ const SocialContributionPage = () => {
                           <div className="testimonial-caption">
                             {/* testimonials-caption */}
                             <h6>{item.name}</h6>
-                            <label>{item.position}</label>
+                            <label>
+                              <FormattedMessage id={item.position} />
+                            </label>
                           </div>
                         </div>
                       </div>

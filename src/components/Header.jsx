@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link as GatsbyLink } from 'gatsby';
-import { useIntl } from 'react-intl';
+import { useIntl, FormattedMessage } from 'react-intl';
 
 import Link from './LocalizedLink';
 import Menu from './Menu';
@@ -72,7 +72,8 @@ const Header = () => {
                             </li>
                             <li>
                               <i className="far fa-clock" />
-                              &nbsp;&nbsp;Office Hour: 07:30am - 6:30pm
+                              &nbsp;&nbsp;
+                              <FormattedMessage id={'common.officeHour'} />: 07:30am - 6:30pm
                             </li>
                             <li>
                               <GatsbyLink to={locale === 'en' ? '/' : '/en'} className="mr-2">

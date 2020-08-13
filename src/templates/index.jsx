@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
   const prismicAllArticlesData = data.prismic.allArticles.edges;
 
   return (
-    <Layout title="We transform ideas into Energy" isMainPage>
+    <Layout title={{ id: 'home.seoTitle' }} isMainPage>
       <section>
         <div className="container-fluid">
           <div className="row">
@@ -78,17 +78,22 @@ const IndexPage = ({ data }) => {
                     <div className="container-xl d-flex">
                       <div className="carousel-caption-inner">
                         <h5 className="ttm-textcolor-skincolor">
-                          Trust and Client Focus&nbsp;&nbsp;&nbsp;
+                          <FormattedMessage id={'home.fsH5'} />
                         </h5>
 
                         <h2 className="ttm-textcolor-darkgrey">
-                          We transform ideas into{' '}
-                          <strong className="ttm-textcolor-skincolor">Energy</strong>
+                          <FormattedMessage
+                            id={'home.fsH2'}
+                            values={{
+                              colored: (chunks) => (
+                                <strong className="ttm-textcolor-skincolor">{chunks}</strong>
+                              ),
+                            }}
+                          />
                         </h2>
 
                         <p className="text">
-                          We are invested in satisfying our clients' and to exceed their
-                          expectations, through efficient solutions.
+                          <FormattedMessage id={'home.fsP'} />
                         </p>
 
                         <p>
@@ -229,9 +234,16 @@ const IndexPage = ({ data }) => {
               {/* section title */}
               <div className="section-title text-center with-desc clearfix">
                 <div className="title-header">
-                  <h5>Our Blog</h5>
+                  <h5>
+                    <FormattedMessage id={'home.4s.subtitle'} />
+                  </h5>
                   <h2 className="title">
-                    Check Out Our <span>Latest News</span>
+                    <FormattedMessage
+                      id={'home.4s.title'}
+                      values={{
+                        colored: (chunks) => <span>{chunks}</span>,
+                      }}
+                    />
                   </h2>
                 </div>
               </div>
@@ -306,21 +318,15 @@ const IndexPage = ({ data }) => {
         <div className="container-xl pb-5 res-991-pb-0">
           <div className="row align-items-center ttm-textcolor-white">
             <div className="col-lg-5 res-991-text-center">
-              <div className="section-title style3 mb-0 clearfix">
+              <div className="section-title style1 mb-0 clearfix">
                 <div className="title-header mb-0">
-                  <h5>We Make Connections</h5>
-                  <h2 className="title">
-                    Explore recent <span className="ttm-textcolor-white">Projects</span>
-                  </h2>
+                  <h3 className="title">
+                    <FormattedMessage id={'home.5s.title'} />
+                  </h3>
                 </div>
               </div>
             </div>
-            <div className="col-lg-5 res-991-text-center">
-              <div className="title-desc">
-                A project is a temporary endeavor with a defined beginning and end, scope, and
-                assigned resources.
-              </div>
-            </div>
+            <div className="col-lg-5 res-991-text-center"></div>
             <div className="col-lg-2 text-right res-991-text-center res-991-mt-20">
               <Link
                 to="/projects/"

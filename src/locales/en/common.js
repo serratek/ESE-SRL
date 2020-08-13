@@ -7,6 +7,7 @@ const translation = {
  "common.address": "Address",
  "common.talkToOurSupport": "Talk To Our Support",
  "common.latestNews": "Latest News",
+ "common.officeHour": "Office Hour",
 }
 
 export default translation;

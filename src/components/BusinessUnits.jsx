@@ -15,9 +15,16 @@ const BusinessUnits = () => {
             {/* section title */}
             <div className="section-title with-desc text-center clearfix">
               <div className="title-header">
-                <h5>We Make Connections</h5>
+                <h5>
+                  <FormattedMessage id={'home.2s.subtitle'} />
+                </h5>
                 <h2 className="title">
-                  We provide best business <span>Units</span>
+                  <FormattedMessage
+                    id={'home.2s.title'}
+                    values={{
+                      colored: (chunks) => <span>{chunks}</span>,
+                    }}
+                  />
                 </h2>
               </div>
             </div>

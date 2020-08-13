@@ -51,17 +51,8 @@ const Sidebar = () => {
           <FormattedMessage id={'menu.aboutUs'} />
         </h3>
         <div className="ttm-author-widget">
-          <div className="author-widget_img">
-            <img
-              className="author-img img-fluid"
-              src="https://via.placeholder.com/294X190/444444.jpg"
-              alt="author image"
-            />
-          </div>
-          <h4 className="author-name">Altech-author</h4>
           <p className="author-widget_text">
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-            piece orem Ipsum is not simply random text. It has roots in a piece of loream classical.
+            <FormattedMessage id={'home.fsP'} />
           </p>
         </div>
       </div>
