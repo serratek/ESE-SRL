@@ -35,7 +35,7 @@ const BusinessUnits = () => {
           {/* row */}
           <div className="col-md-6 col-lg-3">
             {/*  featured-icon-box */}
-            <div className="featured-icon-box style6">
+            <div className="featured-icon-box style6 text-center">
               <div className="featured-content">
                 {/*  featured-content */}
                 <div className="featured-title">
@@ -62,7 +62,7 @@ const BusinessUnits = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             {/*  featured-icon-box */}
-            <div className="featured-icon-box style6">
+            <div className="featured-icon-box style6 text-center">
               <div className="featured-content">
                 {/*  featured-content */}
                 <div className="featured-title">
@@ -89,7 +89,7 @@ const BusinessUnits = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             {/*  featured-icon-box */}
-            <div className="featured-icon-box style6">
+            <div className="featured-icon-box style6 text-center">
               <div className="featured-content">
                 {/*  featured-content */}
                 <div className="featured-title">
@@ -116,7 +116,7 @@ const BusinessUnits = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             {/*  featured-icon-box */}
-            <div className="featured-icon-box style6">
+            <div className="featured-icon-box style6 text-center">
               <div className="featured-content">
                 {/*  featured-content */}
                 <div className="featured-title">
@@ -144,7 +144,7 @@ const BusinessUnits = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             {/*  featured-icon-box */}
-            <div className="featured-icon-box style6">
+            <div className="featured-icon-box style6 text-center">
               <div className="featured-content">
                 {/*  featured-content */}
                 <div className="featured-title">
@@ -171,7 +171,7 @@ const BusinessUnits = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             {/*  featured-icon-box */}
-            <div className="featured-icon-box style6">
+            <div className="featured-icon-box style6 text-center">
               <div className="featured-content">
                 {/*  featured-content */}
                 <div className="featured-title">
@@ -198,7 +198,7 @@ const BusinessUnits = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             {/*  featured-icon-box */}
-            <div className="featured-icon-box style6">
+            <div className="featured-icon-box style6 text-center">
               <div className="featured-content">
                 {/*  featured-content */}
                 <div className="featured-title">
