@@ -125,8 +125,8 @@ const Header = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="container-xl">
-                    <div className="row align-items-center ml-auto">
+                  <div className="container-xl pos-r">
+                    <div className="row align-items-center pos-r">
                       <div className="ml-auto">
                         <Menu />
                         <div className="mobilemenu">
