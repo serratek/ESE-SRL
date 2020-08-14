@@ -9,9 +9,9 @@ import Footer from './Footer';
 // Styles
 import '../assets/styles/main.scss';
 
-const Layout = ({ isMainPage = false, isPageTitle, children, title, ...props }) => {
+const Layout = ({ isMainPage = false, isPageTitle, children, title }) => {
   return (
-    <div>
+    <>
       <SEO title={title} />
 
       <div className="page">
@@ -24,7 +24,7 @@ const Layout = ({ isMainPage = false, isPageTitle, children, title, ...props }) 
           <Footer />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
