@@ -37,8 +37,8 @@ const Header = () => {
   return (
     <header id="masthead" className="header ttm-header-style-03">
       {/* ttm-topbar-wrapper */}
-      <div className="ttm-header-wrap res-767-mb-80">
-        <div className="site-header-menu">
+      <div className="ttm-header-wrap">
+        <div className="site-header-menu pos-r">
           <div
             id="navbar"
             className={`ttm-stickable-header clearfix ${

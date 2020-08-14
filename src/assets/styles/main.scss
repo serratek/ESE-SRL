@@ -654,6 +654,7 @@ body .page {
 /** SiteNavigation(Menu) **/
 .site-navigation {
   position: relative;
+  min-height: 80px;
   .ttm-right-header {
     float: right;
     padding-left: 35px;
