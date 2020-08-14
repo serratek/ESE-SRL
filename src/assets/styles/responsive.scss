@@ -1,6 +1,21 @@
 @import './global';
 @import './mixin';
 
+/*topbar*/
+.ttm-stickable-header.fixed-header {
+  z-index: 111;
+  background-color: #fff;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.06);
+}
+.fixed-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+  transition: all 0.5s;
+}
+
 @media only screen and (min-width: 1200px) {
   .container,
   .container-lg,
@@ -10,18 +25,8 @@
     max-width: 1170px;
   }
   /*topbar*/
-  .ttm-stickable-header.fixed-header {
-    z-index: 111;
-    background-color: #fff;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.06);
-  }
+
   .fixed-header {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9;
-    transition: all 0.5s;
     .site-branding img {
       max-height: 70px;
     }
