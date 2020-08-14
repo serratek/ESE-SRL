@@ -6,7 +6,11 @@ import { injectIntl } from 'react-intl';
 
 import Link from './LocalizedLink';
 
+import useResizeScreen from '../utils/useResizeScreen';
+
 const LatestNews = ({ intl: { locale } }) => {
+  const { isTablet } = useResizeScreen();
+
   return (
     <StaticQuery
       query={graphql`
@@ -57,7 +61,7 @@ const LatestNews = ({ intl: { locale } }) => {
                 </Link>
                 <div>
                   <Link to={`/news/${node._meta.uid}`}>
-                    {RichText.asText(node.title).length > 45
+                    {RichText.asText(node.title).length > 45 && !isTablet
                       ? `${RichText.asText(node.title).slice(0, 45)}...`
                       : RichText.asText(node.title)}
                   </Link>
