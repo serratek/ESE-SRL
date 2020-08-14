@@ -6,7 +6,7 @@ import contactUsPage from './es/contact-us-page';
 import footer from './es/footer';
 import homePage from './es/home-page';
 import inputs from './es/inputs';
-import jobsPage from './en/jobs-page';
+import jobsPage from './es/jobs-page';
 import menu from './es/menu';
 import newsPage from './es/news-page';
 import projectsPage from './es/projects-page';
