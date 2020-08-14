@@ -318,7 +318,7 @@ const IndexPage = ({ data }) => {
         <div className="container-xl pb-5 res-991-pb-0">
           <div className="row align-items-center ttm-textcolor-white">
             <div className="col-lg-5 res-991-text-center">
-              <div className="section-title style1 mb-0 clearfix">
+              <div className="section-title style3 mb-0 clearfix">
                 <div className="title-header mb-0">
                   <h3 className="title">
                     <FormattedMessage id={'home.5s.title'} />
