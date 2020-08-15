@@ -34,6 +34,7 @@ module.exports = {
           '/bootstrap.min.css',
           '/animate.css',
           '/slick.css',
+          '/fontawesome.min.css',
         ],
       },
     },
