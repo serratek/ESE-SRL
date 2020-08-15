@@ -35,6 +35,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-subfont`,
+      options: {
+        silent: true,
+        fallback: false,
+        inlineFonts: true,
+      },
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-catch-links', // This plugin intercepts all local links that have not been created in React using gatsby-link, and replaces their behavior with that of the gatsby-link navigate.
@@ -53,6 +61,7 @@ module.exports = {
         previews: false, // optional, default: true
       },
     },
+
     // {
     //   resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
     //   options: {},
