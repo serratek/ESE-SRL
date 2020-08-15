@@ -57,6 +57,6 @@ module.exports = {
     //   resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
     //   options: {},
     // },
-    'gatsby-plugin-no-javascript',
+    // 'gatsby-plugin-no-javascript',
   ],
 };
