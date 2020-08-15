@@ -56,7 +56,10 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
+    "install-build-deps": "pip3 install fonttools brotli zopfli || pip install fonttools brotli zopfli",
+    "build-gatsby": "gatsby build",
+    "optimize-fonts": "cd public && find . -type f -name '*.html' | xargs subfont --root . --canonical-root https://ese-srl.vercel.app/ --in-place --inline-css --subset-per-page",
+    "build": "yarn install-build-deps && yarn build-gatsby && yarn optimize-fonts",
     "develop": "gatsby develop",
     "start": "yarn develop",
     "serve": "gatsby serve",
