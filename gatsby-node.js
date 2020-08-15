@@ -74,6 +74,17 @@ exports.createPages = async ({ actions, graphql }) => {
                   title
                   date
                   image
+                  imageSharp {
+                    childImageSharp {
+                      fluid(maxWidth: 789) {
+                        aspectRatio
+                        base64
+                        sizes
+                        src
+                        srcSet
+                      }
+                    }
+                  }
                   author
                   content
                 }

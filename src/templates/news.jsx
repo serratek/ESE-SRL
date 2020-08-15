@@ -1,6 +1,7 @@
 import React from 'react';
 import { Date, RichText } from 'prismic-reactjs';
 import { FormattedMessage } from 'react-intl';
+import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import Link from '../components/LocalizedLink';
@@ -30,9 +31,8 @@ const NewsPage = ({ pageContext }) => {
                     {/* post-featured-wrapper */}
                     <div className="ttm-post-featured-wrapper ttm-featured-wrapper">
                       <div className="ttm-post-featured">
-                        <img
-                          className="img-fluid w-100"
-                          src={node.image.url}
+                        <Img
+                          fluid={node.imageSharp.childImageSharp.fluid}
                           alt={RichText.asText(node.title)}
                         />
                       </div>
