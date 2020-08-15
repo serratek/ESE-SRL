@@ -3,6 +3,14 @@ const fs = require('fs');
 
 const config = require('./src/constants/site-config');
 
+const LoadablePlugin = require('@loadable/webpack-plugin');
+
+exports.onCreateWebpackConfig = ({ stage, getConfig, rules, loaders, plugins, actions }) => {
+  actions.setWebpackConfig({
+    plugins: [new LoadablePlugin()],
+  });
+};
+
 const makeRequest = (graphql, request) =>
   new Promise((resolve, reject) => {
     resolve(

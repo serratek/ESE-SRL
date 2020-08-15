@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import { useIntl, FormattedMessage } from 'react-intl';
+import Loadable from '@loadable/component';
 
 import Link from './LocalizedLink';
 import Menu from './Menu';
-import Mobilemenu from './Mobile_menu';
 
 import imageLogo from '../assets/images/LOGO_ESE.png';
 import iconES from '../assets/images/flag_Espana.jpg';
 import iconEN from '../assets/images/flag_United Kingdom.jpg';
+
+const Mobilemenu = Loadable(() => import('./Mobile_menu'));
 
 const useScroll = () => {
   const [isStickyHeader, setStickyHeader] = useState(false);
