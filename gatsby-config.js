@@ -13,7 +13,6 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-purgecss',
       options: {
-        printRejected: true,
         whitelist: ['header', 'mobilemenu', 'nav-icon1'],
         whitelistPatternsChildren: [
           /^ti-/,
