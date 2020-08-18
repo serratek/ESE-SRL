@@ -71,6 +71,7 @@ module.exports = {
         previews: false, // optional, default: true
       },
     },
+    `gatsby-plugin-netlify`,
     // {
     //   resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
     //   options: {},

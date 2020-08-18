@@ -98,7 +98,7 @@ const IndexPage = ({ data }) => {
 
                         <p>
                           <Link
-                            to="/#about-us"
+                            to="/about-us/"
                             className="ttm-btn ttm-btn-size-md ttm-bgcolor-skincolor ttm-textcolor-white mr-3"
                           >
                             <FormattedMessage id={'buttons.readMore'} />
