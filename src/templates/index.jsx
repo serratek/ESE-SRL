@@ -387,7 +387,7 @@ const IndexPage = ({ data }) => {
 export const query = graphql`
   query($lang: String!) {
     prismic {
-      allArticles(first: 10, lang: $lang) {
+      allArticles(first: 10, lang: $lang, sortBy: date_DESC) {
         edges {
           node {
             _meta {
