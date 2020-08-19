@@ -280,10 +280,12 @@ const IndexPage = ({ data }) => {
                           <time className="entry-date" dateTime={node.date}>
                             {Date(node.date).toLocaleDateString('en-GB', {
                               day: 'numeric',
+                              timeZone: 'UTC',
                             })}
                             <span className="entry-month entry-year">
                               {Date(node.date).toLocaleDateString('en-GB', {
                                 month: 'short',
+                                timeZone: 'UTC',
                               })}
                             </span>
                           </time>
