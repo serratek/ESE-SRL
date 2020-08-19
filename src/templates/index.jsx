@@ -340,7 +340,7 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
       </section>
-      <section className="ttm-row mt-10 zero-padding-section clearfix">
+      <section className="ttm-row mt-10 zero-padding-section clearfix c-mp-projects">
         <div className="container-fluid p-0">
           <Slider
             className="row slick_slider ttm-boxes-spacing-10px"
@@ -348,7 +348,7 @@ const IndexPage = ({ data }) => {
             slidesToShow={5}
           >
             {prismicAllProjectsData.map(({ node }, index) => (
-              <div className="ttm-box-col-wrapper" key={index}>
+              <div className="ttm-box-col-wrapper h-100" key={index}>
                 {/* featured-imagebox-services */}
                 <div className="featured-imagebox featured-imagebox-services style1">
                   <div className="featured-thumbnail">
