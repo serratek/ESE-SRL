@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-boilerplate",
   "description": "Gatsby starter boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Vadym Necheporenko <ne4eporenko.v@gmail.com> (https://devhance.co/)",
   "dependencies": {
     "@loadable/component": "^5.13.1",
