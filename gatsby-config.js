@@ -73,9 +73,9 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
-    {
-      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
-      options: {},
-    },
+    // {
+    //   resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+    //   options: {},
+    // },
   ],
 };

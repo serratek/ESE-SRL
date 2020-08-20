@@ -46,6 +46,7 @@ var slick_slider = {
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
+        speed: 2000,
       },
     },
     {
@@ -53,6 +54,7 @@ var slick_slider = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
+        speed: 2000,
       },
     },
   ],
