@@ -214,7 +214,7 @@ export default class Footer extends Component {
                 <div>
                   <span>
                     Copyright © 2020&nbsp;<a to="/">ESE SRL</a>. All rights reserved. Created by{' '}
-                    <a to="https://devhance.co/" target="_blank">
+                    <a href="https://devhance.co/" target="_blank" rel="noopener noreferrer">
                       Devhance
                     </a>
                     .
