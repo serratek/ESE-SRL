@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: config.siteUrl,
   },
   plugins: [
+    `gatsby-plugin-preact`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-lodash',
     'gatsby-plugin-sass',
@@ -72,9 +73,9 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify`,
-    // {
-    //   resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
-    //   options: {},
-    // },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: {},
+    },
   ],
 };
