@@ -16,7 +16,7 @@ exports.handler = async (event, context) => {
 
   try {
     await sendgrid.send({
-      to: 'ne4eporenko.v@gmail.com',
+      to: 'info@ese-srl.com',
       from: 'website@ese-srl.com',
       subject: jobDescription
         ? `New sign up at the Job form - ${jobDescription} position!`

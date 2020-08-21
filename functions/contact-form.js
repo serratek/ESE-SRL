@@ -8,7 +8,7 @@ exports.handler = async (event, context) => {
 
   try {
     await sendgrid.send({
-      to: 'ne4eporenko.v@gmail.com',
+      to: 'info@ese-srl.com',
       from: 'website@ese-srl.com',
       subject: 'New message from the Contact Us form!',
       html: `
