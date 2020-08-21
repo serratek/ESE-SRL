@@ -7,6 +7,22 @@ const multiparty = require('multiparty');
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
+const write = (path, file) => {
+  try {
+    fs.writeFileSync(path, file);
+    return {
+      statusCode: 200,
+      body: 'data was written',
+    };
+  } catch (err) {
+    console.log(5, err);
+    return {
+      statusCode: 500,
+      body: 'data was not written',
+    };
+  }
+};
+
 exports.handler = async (event, context) => {
   var data = {};
   try {
@@ -32,6 +48,10 @@ exports.handler = async (event, context) => {
         message,
         resume,
       } = data;
+      console.log(data);
+
+      write(`/tmp/${resume[0].originalFilename}`, resume);
+      // console.log(fs.readFileSync(`/tmp/${resume[0].originalFilename}`));
 
       await sendgrid.send({
         to: 'ne4eporenko.v@gmail.com',
@@ -58,7 +78,7 @@ exports.handler = async (event, context) => {
           `,
         attachments: [
           {
-            content: fs.readFileSync(resume[0].path).toString('base64'),
+            content: fs.readFileSync(`/tmp/${resume[0].originalFilename}`).toString('base64'),
             filename: resume[0].originalFilename,
             type: resume[0].headers['content-type'],
             disposition: 'attachment',
@@ -75,6 +95,6 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ error: '' }),
+    body: JSON.stringify({ error: '0', data }),
   };
 };
