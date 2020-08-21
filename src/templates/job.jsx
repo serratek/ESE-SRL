@@ -14,10 +14,8 @@ const JobsPage = ({ data }) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const data = {
-      jobTitle: RichText.asText(jobData.title),
-      jobDescription: RichText.asText(jobData.description),
-    };
+    formData.append('jobTitle', RichText.asText(jobData.title));
+    formData.append('jobDescription', RichText.asText(jobData.description));
 
     for (let entry of formData.entries()) {
       data[entry[0]] = entry[1];
@@ -25,7 +23,7 @@ const JobsPage = ({ data }) => {
 
     fetch('/.netlify/functions/job-form', {
       method: 'POST',
-      body: JSON.stringify(data),
+      body: formData,
     });
 
     event.target.reset();

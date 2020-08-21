@@ -21,9 +21,10 @@ const JobsPage = ({ data }) => {
       data[entry[0]] = entry[1];
     }
 
+    console.log(data, JSON.stringify(data));
     fetch('/.netlify/functions/job-form', {
       method: 'POST',
-      body: JSON.stringify(data),
+      body: formData,
     });
 
     event.target.reset();
