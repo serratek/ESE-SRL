@@ -33,7 +33,7 @@ exports.handler = async (event, context) => {
     stream.push(null);
     stream.headers = event.headers;
 
-    var result = multipart.parse(event, false);
+    var result = multipart.parse(event, true);
     const {
       jobTitle = '',
       jobDescription = '',
@@ -70,14 +70,14 @@ exports.handler = async (event, context) => {
           </body>
         </html>
         `,
-      attachments: [
-        {
-          content: resume.content.toString('base64'),
-          filename: resume.filename,
-          type: resume.contentType,
-          disposition: 'attachment',
-        },
-      ],
+      // attachments: [
+      //   {
+      //     content: resume.content.toString('base64'),
+      //     filename: resume.filename,
+      //     type: resume.contentType,
+      //     disposition: 'attachment',
+      //   },
+      // ],
     });
 
     // form.parse(stream, async function (err, fields, files) {
