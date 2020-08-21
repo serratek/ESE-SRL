@@ -4,7 +4,8 @@ const sendgrid = require('@sendgrid/mail');
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 exports.handler = async (event, context) => {
-  const { fullName, phone, email, subject, message } = event.body;
+  const { fullName, phone, email, subject, message } = JSON.parse(event.body);
+
   try {
     await sendgrid.send({
       to: 'ne4eporenko.v@gmail.com',
@@ -16,7 +17,6 @@ exports.handler = async (event, context) => {
         <body>
           <h2>Dear Admin,</h2>
           <p>Another user has submitted the form at the ESE-SRL website.</p>
-        
           <h3>Info:</h3>
           <div><b>Full name:</b> ${fullName}</div>
           <div><b>Phone number:</b> ${phone}</div>
