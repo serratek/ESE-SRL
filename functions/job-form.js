@@ -8,6 +8,7 @@ const multiparty = require('multiparty');
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 exports.handler = async (event, context) => {
+  var data = {};
   try {
     var form = new multiparty.Form();
 
@@ -19,7 +20,6 @@ exports.handler = async (event, context) => {
     form.parse(stream, async function (err, fields, files) {
       if (err) throw err;
 
-      var data = {};
       data = { ...fields, ...files };
 
       const {
@@ -69,7 +69,7 @@ exports.handler = async (event, context) => {
   } catch (error) {
     return {
       statusCode: error.statusCode || 500,
-      body: JSON.stringify({ error: error.message, path: resume[0].path }),
+      body: JSON.stringify({ error: error.message, path: resume[0].path, data, resume }),
     };
   }
 
