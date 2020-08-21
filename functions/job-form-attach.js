@@ -6,7 +6,7 @@ const sendgrid = require('@sendgrid/mail');
 const multiparty = require('multiparty');
 const multipart = require('aws-lambda-multipart-parser');
 
-sendgrid.setApiKey('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');
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 const write = (path, file) => {
   try {
