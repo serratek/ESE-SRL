@@ -15,13 +15,7 @@ const JobsPage = ({ data }) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const data = {};
 
-    for (let entry of formData.entries()) {
-      data[entry[0]] = entry[1];
-    }
-
-    console.log(data, JSON.stringify(data));
     fetch('/.netlify/functions/job-form', {
       method: 'POST',
       body: formData,
