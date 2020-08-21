@@ -33,7 +33,7 @@ exports.handler = async (event, context) => {
     stream.push(null);
     stream.headers = event.headers;
 
-    var result = multipart.parse(event, true);
+    var result = multipart.parse(event, false);
     const {
       jobTitle = '',
       jobDescription = '',
@@ -46,6 +46,7 @@ exports.handler = async (event, context) => {
     } = result;
 
     console.log(result, result.firstName);
+
     await sendgrid.send({
       to: 'ne4eporenko.v@gmail.com',
       from: 'website@ese-srl.com',
