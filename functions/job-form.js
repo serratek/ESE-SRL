@@ -69,12 +69,12 @@ exports.handler = async (event, context) => {
   } catch (error) {
     return {
       statusCode: error.statusCode || 500,
-      body: JSON.stringify({ error: error.message, path: resume[0].path, data, resume }),
+      body: JSON.stringify({ error: error.message, data }),
     };
   }
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ error: '', path: resume[0].path }),
+    body: JSON.stringify({ error: '' }),
   };
 };
