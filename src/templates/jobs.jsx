@@ -15,15 +15,10 @@ const JobsPage = ({ data }) => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const data = {};
-
-    for (let entry of formData.entries()) {
-      data[entry[0]] = entry[1];
-    }
 
     fetch('/.netlify/functions/job-form', {
       method: 'POST',
-      body: JSON.stringify(data),
+      body: formData,
     });
 
     event.target.reset();
@@ -144,7 +139,7 @@ const JobsPage = ({ data }) => {
                       />
                     </div>
                   </div>
-                  {/* <div className="col-sm-6 col-md-12">
+                  <div className="col-sm-6 col-md-12">
                     <div className="form-group">
                       <label htmlFor="resume">
                         <FormattedMessage id={'inputs.resume'} />*
@@ -158,7 +153,7 @@ const JobsPage = ({ data }) => {
                         required
                       />
                     </div>
-                  </div> */}
+                  </div>
                   <div className="col-md-12">
                     <div className="text-center">
                       <button

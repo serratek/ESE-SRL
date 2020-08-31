@@ -1,5 +1,6 @@
 'use strict';
 const sendgrid = require('@sendgrid/mail');
+const parser = require('lambda-multipart-parser');
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
@@ -12,11 +13,12 @@ exports.handler = async (event, context) => {
     phone,
     email,
     message,
-  } = JSON.parse(event.body);
+    files,
+  } = await parser.parse(event);
 
   try {
     await sendgrid.send({
-      to: 'info@ese-srl.com',
+      to: 'ne4eporenko.v@gmail.com',
       from: 'website@ese-srl.com',
       subject: jobDescription
         ? `New sign up at the Job form - ${jobDescription} position!`
@@ -38,6 +40,14 @@ exports.handler = async (event, context) => {
           </body>
         </html>
       `, // html body
+      attachments: [
+        {
+          content: files[0].content.toString('base64'),
+          filename: files[0].filename,
+          type: files[0].contentType,
+          disposition: 'attachment',
+        },
+      ],
     });
   } catch (error) {
     return {
