@@ -2,17 +2,16 @@ const translation = {
   "businessUnits.powerGeneration.shortDesc": "",
   "businessUnits.powerGeneration.text": `
   <p>
-  En Bolivia, según la Autoridad de electricidad, cerca de un 70% de la generación
-   de energía proviene de las termoeléctricas. Y de esta cifra al menos un 30% la 
+  En Bolivia, conforme al Comité Nacional de Despacho de Carga (CNDC), cerca de un 59% de la generación
+   de energía proviene de las termoeléctricas. Y de esta cifra al menos un 70% la 
    ha instalado ESE. En 2012, la compañía participó, por ejemplo como subcontratista, 
    de las obras de ingeniería, suministro, construcción y montaje de la central 
    termoeléctrica de El Kenko II (El Alto), que entrega 33 megavatios (MW) de potencia 
    efectiva al Sistema Interconectado Nacional (SIN).
-  Posteriormente, ESE se adjudicó también, la ingeniería, construcción y el montaje 
-  electromecánico de la Termoeléctrica del Sur (Tarija) en la cual se instaló cuatro 
-  turbogeneradores de la industria alemana Siemens SGT-800. Así también nos adjudicamos 
-  la ejecución de las obras civiles y el montaje electromecánico de la planta Termoeléctrica 
-  de Warnes con la instalación de cinco turbogeneradores Siemens SGT-800.
+  Posteriormente, ESE se adjudicó también, parte de la ingeniería, construcción y el montaje 
+  electromecánico de las tres centrales Termoeléctricas más importantes del país hasta hoy: 
+  Termoeléctrica del Sur (Tarija), Termoeléctrica de Warnes (Santa Cruz) y Termoeléctrica de Entre Ríos
+  (Cochabamba). Que juntas entregan 1,3 GW de potencia efectiva al Sistema Interconectado Nacional (SIN).
   </p>
   <p>
   ESE ha demostrado que tiene toda la capacidad técnica y operativa para trabajar como 
@@ -36,15 +35,15 @@ const translation = {
   <p>
   Nuestra empresa tiene experiencia de más de una década en la construcción, 
   realización de obras civiles y el montaje electromecánico de subestaciones 
-  de 11.5 kV y 230 kV tanto en geografías de los andes como en los llanos y 
+  de 115 kV y 230 kV tanto en geografías de los andes como en los llanos y 
   valles. Dentro de estos trabajos se incluye el levantamiento de estructuras, 
-  el cableado, conexionado, acompañamiento en Precom, com y puesta en servicio.
+  el cableado, conexionado, acompañamiento en Pre-comisionado, comisionado y puesta en marcha.
   </p>
   <p>
   Además, ESE ha realizado las obras civiles (cimentaciones, muros cortafuego 
     pórticos, equipos de patio, canalizaciones eléctricas, salas de control, 
     vías, etc) bajo la modalidad de obra vendida. ESE, por ejemplo, instaló 
-    100 Megavoltiamperios (MVA) para la empresa Siemens en la comunidad de 
+    100 MVA para la empresa Siemens en la comunidad de 
     Entre Ríos, en el Trópico de Cochabamba. Así también, la compañía conectó 
     a través de subestaciones el sistema eléctrico de Tarija al Sistema 
     Interconectado Nacional (SIN) a través de un proyecto EPC. Así también 
