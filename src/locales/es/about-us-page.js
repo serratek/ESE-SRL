@@ -30,10 +30,10 @@ const translation = {
   "about.tab1.content2": `
       <p>
       Un mes antes de que finalizara 1989, Arturo Vera Velasco, un cruceño 
-      que aprendió a colocar bobinas desde sus 15 años y que supo enfrentar 
+      que aprendió a embobinar desde sus 15 años y que supo enfrentar 
       con humildad y perseverancia los vaivenes de la vida, gestó la Empresa
        de Servicios Electromecánicos ESE. Los valores con los que empezó esta
-        firma eran inherentes a la personalidad de “don Arturo”: honradez, 
+        firma eran inherentes a la personalidad de “Don Arturo”: honradez, 
         responsabilidad y sobre todo el profesionalismo para cumplir con sus 
         labores y satisfacer al cliente. 
     </p>
@@ -52,7 +52,7 @@ const translation = {
     donde funciona actualmente la compañía.
     </p>
     <p>
-    Ya han pasado 27 años desde aquel día y durante este tiempo, Vera, junto 
+    Ya han pasado 31 años desde aquel día y durante este tiempo, Vera, junto 
     con sus dos hijos, Marco, Diego y el aporte profesional de cada uno de 
     sus trabajadores, ha desarrollado más de un centenar de proyectos de 
     relevancia económica y social que la llevaron a ser una de las pocas 
@@ -60,15 +60,15 @@ const translation = {
       Procurement & Construction) o también conocidas como firmas ‘llave en mano’.
     </p>
     <p>
-    Durante estos años, ESE junto con la CRE contribuyó en la expansión del 
+    Durante estos años, ESE junto con la CRE contribuyeron en la expansión del 
     alumbrado público en Santa Cruz y en la construcción de plantas de 
-    generación de energía. Así también se convirtió en una de las empresas 
+    generación de energía eléctrica. Así también se convirtió en una de las empresas 
     pioneras en incorporar equipo especializado para el servicio de mantenimiento 
     de líneas vivas en baja y media tensión y desarrolló experiencia en la 
-    construcción de redes eléctricas en el oriente, occidente, valle y la cordillera.
+    construcción de redes eléctricas en el oriente, occidente, valle y cordillera.
     </p>
     <p>
-    ESE, como subcontratista, participó y está participando en el diseño, 
+    ESE, como subcontratista, participó en el diseño, 
     construcción y montaje de grandes termoeléctricas en el país como la 
     de El Kenko 2 (El Alto), Del Sur (Tarija), Warnes (Santa Cruz) y Entre 
     Ríos (Cochabamba). Así también hemos realizado la construcción de una 
@@ -81,15 +81,15 @@ const translation = {
     vivo sus principios con los que empezó: ser una empresa que lidera 
     el sector de servicios electromecánicos cumpliendo las normas de gestión, 
     salud, seguridad y medioambiente. Genera más de 1.200 empleos directos y 
-    ha recibido diversos reconocimientos por el ser una empresa contratista 
+    ha recibido diversos reconocimientos por ser una empresa contratista 
     con grandes atributos técnicos.
     </p>`,
-  "about.tab1.timeline1": "Nace ESE S.R.L. como un emprendimiento que dé respuesta a la necesidad de contar con una empresa especializada en el área de servicios electromecánicos para la ciudad de Santa Cruz de la Sierra.",
+  "about.tab1.timeline1": "ESE S.R.L. nace como un emprendimiento para dar respuesta a la necesidad de contar con una empresa especializada en el área de servicios electromecánicos para la ciudad de Santa Cruz de la Sierra.",
   "about.tab1.timeline2": "Nos hemos convertido en el principal proveedor de servicios de la Cooperativa Rural de Electrificación – CRE Ltda.",
   "about.tab1.timeline3": "Se construyen las nuevas instalaciones de la empresa, ubicadas en el Parque Industrial Manzana 24.",
   "about.tab1.timeline4": "Se consolida un equilibrio tanto administrativo como financiero, que nos ha permitido encarar diversos proyectos de expansión de nuestras unidades de negocios.",
   "about.tab1.timeline5": "Se amplían nuestros horizontes, desarrollando proyectos a nivel internacional, en Argentina.",
-  "about.tab1.timeline6": "Se realiza la implantación de nuestro Sistema Integrado de Gestión (Calidad: ISO 9001, Seguridad y Salud Ocupacional: OHSAS 18001 y Medio Ambiente: ISO 14001).",
+  "about.tab1.timeline6": "Se realiza la implementación de nuestro Sistema Integrado de Gestión (Calidad: ISO 9001, Seguridad y Salud Ocupacional: OHSAS 18001 y Medio Ambiente: ISO 14001).",
   "about.tab1.timeline6.present": 'presente',
   "about.tab2.block1.title": "Misión",
   "about.tab2.block1.desc": "Desarrollamos soluciones electromecánicas integrales, alineados a los objetivos de nuestros clientes, a través de nuestra experiencia, el compromiso y la competencia de nuestros colaboradores, en cumplimiento con estándares de calidad, seguridad industrial, salud ocupacional y medio ambiente, generando así valor en nuestro entorno.",
