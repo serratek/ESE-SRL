@@ -2,7 +2,7 @@ const translation = {
   "socialContribution.seoTitle": "Aporte Social",
   "socialContribution.subtitle": "Aporte Social",
   "socialContribution.title": "Con la confianza de más de 5,000 <colored> Clientes Felices </colored>",
-  "socialContribution.desc": "Durante estos 29 años ESE, junto con otras instituciones, ha interconectado a muchas familias con sus planes de vida, sueños y metas a través de proyectos de alumbrado público, líneas de distribución de energía o simplemente en la resolución de algún problema electromecánico en una industria. Nuestros servicios, pese a trabajar en muchos casos como subcontratistas, tiene una incidencia social importante. Actualmente, además, generamos más de 1000+ empleos directos y al menos 1000+ indirectos. Algunos de los involucrados dan fe de esto:",
+  "socialContribution.desc": "Durante estos 31 años ESE, junto con otras instituciones, ha interconectado a muchas familias con sus planes de vida, sueños y metas a través de proyectos de alumbrado público, líneas de distribución de energía o simplemente en la resolución de algún problema electromecánico en una industria. Nuestros servicios, pese a trabajar en muchos casos como subcontratistas, tiene una incidencia social importante. Actualmente, además, generamos más de 500 empleos directos y al menos 1000+ indirectos. Algunos de los involucrados dan fe de esto:",
   "socialContribution.item1": "Satisfacción 100%",
   "socialContribution.item2": "Empresa de Clase Mundial",
   "socialContribution.item3": "Diseños de Clase Mundial",
