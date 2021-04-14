@@ -3,7 +3,7 @@ const translation = {
   'menu.aboutUs': 'Nosotros',
   'menu.businessUnits': 'Unidades de Negocio',
   'menu.powerGeneration': 'Generación de energía',
-  'menu.powerSubstations': 'Subestaciones de Potencia',
+  'menu.powerSubstations': 'Subestaciones Eléctricas',
   'menu.oilGas': 'Petróleo & Gas ',
   'menu.industry': 'Industria',
   'menu.distributionElectricalGrids': 'Redes de distribución',
